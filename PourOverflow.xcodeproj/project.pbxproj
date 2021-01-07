@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90BD41AC25A699E9002A2B78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41AB25A699E9002A2B78 /* AppDelegate.swift */; };
+		90BD41AE25A699E9002A2B78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */; };
+		90BD41B025A699E9002A2B78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41AF25A699E9002A2B78 /* ViewController.swift */; };
+		90BD41B325A699E9002A2B78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BD41B125A699E9002A2B78 /* Main.storyboard */; };
+		90BD41B525A699EE002A2B78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BD41B425A699EE002A2B78 /* Assets.xcassets */; };
+		90BD41B825A699EE002A2B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */; };
+		90BD41C325A699EE002A2B78 /* PourOverflowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41C225A699EE002A2B78 /* PourOverflowTests.swift */; };
+		90BD41CE25A699EF002A2B78 /* PourOverflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41CD25A699EF002A2B78 /* PourOverflowUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90BD41BF25A699EE002A2B78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90BD41A025A699E9002A2B78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90BD41A725A699E9002A2B78;
+			remoteInfo = PourOverflow;
+		};
+		90BD41CA25A699EF002A2B78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90BD41A025A699E9002A2B78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90BD41A725A699E9002A2B78;
+			remoteInfo = PourOverflow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90BD41A825A699E9002A2B78 /* PourOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PourOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90BD41AB25A699E9002A2B78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		90BD41AF25A699E9002A2B78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90BD41B225A699E9002A2B78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90BD41B425A699EE002A2B78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90BD41B725A699EE002A2B78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90BD41B925A699EE002A2B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90BD41BE25A699EE002A2B78 /* PourOverflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PourOverflowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90BD41C225A699EE002A2B78 /* PourOverflowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PourOverflowTests.swift; sourceTree = "<group>"; };
+		90BD41C425A699EE002A2B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90BD41C925A699EF002A2B78 /* PourOverflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PourOverflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90BD41CD25A699EF002A2B78 /* PourOverflowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PourOverflowUITests.swift; sourceTree = "<group>"; };
+		90BD41CF25A699EF002A2B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90BD41A525A699E9002A2B78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90BD41BB25A699EE002A2B78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90BD41C625A699EF002A2B78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90BD419F25A699E9002A2B78 = {
+			isa = PBXGroup;
+			children = (
+				90BD41AA25A699E9002A2B78 /* PourOverflow */,
+				90BD41C125A699EE002A2B78 /* PourOverflowTests */,
+				90BD41CC25A699EF002A2B78 /* PourOverflowUITests */,
+				90BD41A925A699E9002A2B78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90BD41A925A699E9002A2B78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90BD41A825A699E9002A2B78 /* PourOverflow.app */,
+				90BD41BE25A699EE002A2B78 /* PourOverflowTests.xctest */,
+				90BD41C925A699EF002A2B78 /* PourOverflowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90BD41AA25A699E9002A2B78 /* PourOverflow */ = {
+			isa = PBXGroup;
+			children = (
+				90BD41AB25A699E9002A2B78 /* AppDelegate.swift */,
+				90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */,
+				90BD41AF25A699E9002A2B78 /* ViewController.swift */,
+				90BD41B125A699E9002A2B78 /* Main.storyboard */,
+				90BD41B425A699EE002A2B78 /* Assets.xcassets */,
+				90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */,
+				90BD41B925A699EE002A2B78 /* Info.plist */,
+			);
+			path = PourOverflow;
+			sourceTree = "<group>";
+		};
+		90BD41C125A699EE002A2B78 /* PourOverflowTests */ = {
+			isa = PBXGroup;
+			children = (
+				90BD41C225A699EE002A2B78 /* PourOverflowTests.swift */,
+				90BD41C425A699EE002A2B78 /* Info.plist */,
+			);
+			path = PourOverflowTests;
+			sourceTree = "<group>";
+		};
+		90BD41CC25A699EF002A2B78 /* PourOverflowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				90BD41CD25A699EF002A2B78 /* PourOverflowUITests.swift */,
+				90BD41CF25A699EF002A2B78 /* Info.plist */,
+			);
+			path = PourOverflowUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90BD41A725A699E9002A2B78 /* PourOverflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90BD41D225A699EF002A2B78 /* Build configuration list for PBXNativeTarget "PourOverflow" */;
+			buildPhases = (
+				90BD41A425A699E9002A2B78 /* Sources */,
+				90BD41A525A699E9002A2B78 /* Frameworks */,
+				90BD41A625A699E9002A2B78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PourOverflow;
+			productName = PourOverflow;
+			productReference = 90BD41A825A699E9002A2B78 /* PourOverflow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90BD41BD25A699EE002A2B78 /* PourOverflowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90BD41D525A699EF002A2B78 /* Build configuration list for PBXNativeTarget "PourOverflowTests" */;
+			buildPhases = (
+				90BD41BA25A699EE002A2B78 /* Sources */,
+				90BD41BB25A699EE002A2B78 /* Frameworks */,
+				90BD41BC25A699EE002A2B78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90BD41C025A699EE002A2B78 /* PBXTargetDependency */,
+			);
+			name = PourOverflowTests;
+			productName = PourOverflowTests;
+			productReference = 90BD41BE25A699EE002A2B78 /* PourOverflowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90BD41C825A699EF002A2B78 /* PourOverflowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90BD41D825A699EF002A2B78 /* Build configuration list for PBXNativeTarget "PourOverflowUITests" */;
+			buildPhases = (
+				90BD41C525A699EF002A2B78 /* Sources */,
+				90BD41C625A699EF002A2B78 /* Frameworks */,
+				90BD41C725A699EF002A2B78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90BD41CB25A699EF002A2B78 /* PBXTargetDependency */,
+			);
+			name = PourOverflowUITests;
+			productName = PourOverflowUITests;
+			productReference = 90BD41C925A699EF002A2B78 /* PourOverflowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90BD41A025A699E9002A2B78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					90BD41A725A699E9002A2B78 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					90BD41BD25A699EE002A2B78 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 90BD41A725A699E9002A2B78;
+					};
+					90BD41C825A699EF002A2B78 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 90BD41A725A699E9002A2B78;
+					};
+				};
+			};
+			buildConfigurationList = 90BD41A325A699E9002A2B78 /* Build configuration list for PBXProject "PourOverflow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90BD419F25A699E9002A2B78;
+			productRefGroup = 90BD41A925A699E9002A2B78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90BD41A725A699E9002A2B78 /* PourOverflow */,
+				90BD41BD25A699EE002A2B78 /* PourOverflowTests */,
+				90BD41C825A699EF002A2B78 /* PourOverflowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90BD41A625A699E9002A2B78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90BD41B825A699EE002A2B78 /* LaunchScreen.storyboard in Resources */,
+				90BD41B525A699EE002A2B78 /* Assets.xcassets in Resources */,
+				90BD41B325A699E9002A2B78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90BD41BC25A699EE002A2B78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90BD41C725A699EF002A2B78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90BD41A425A699E9002A2B78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90BD41B025A699E9002A2B78 /* ViewController.swift in Sources */,
+				90BD41AC25A699E9002A2B78 /* AppDelegate.swift in Sources */,
+				90BD41AE25A699E9002A2B78 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90BD41BA25A699EE002A2B78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90BD41C325A699EE002A2B78 /* PourOverflowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90BD41C525A699EF002A2B78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90BD41CE25A699EF002A2B78 /* PourOverflowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90BD41C025A699EE002A2B78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90BD41A725A699E9002A2B78 /* PourOverflow */;
+			targetProxy = 90BD41BF25A699EE002A2B78 /* PBXContainerItemProxy */;
+		};
+		90BD41CB25A699EF002A2B78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90BD41A725A699E9002A2B78 /* PourOverflow */;
+			targetProxy = 90BD41CA25A699EF002A2B78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90BD41B125A699E9002A2B78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90BD41B225A699E9002A2B78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90BD41B725A699EE002A2B78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90BD41D025A699EF002A2B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90BD41D125A699EF002A2B78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90BD41D325A699EF002A2B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44UU9Z7ZHH;
+				INFOPLIST_FILE = PourOverflow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgx.PourOverflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90BD41D425A699EF002A2B78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44UU9Z7ZHH;
+				INFOPLIST_FILE = PourOverflow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgx.PourOverflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		90BD41D625A699EF002A2B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44UU9Z7ZHH;
+				INFOPLIST_FILE = PourOverflowTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgx.PourOverflowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PourOverflow.app/PourOverflow";
+			};
+			name = Debug;
+		};
+		90BD41D725A699EF002A2B78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44UU9Z7ZHH;
+				INFOPLIST_FILE = PourOverflowTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgx.PourOverflowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PourOverflow.app/PourOverflow";
+			};
+			name = Release;
+		};
+		90BD41D925A699EF002A2B78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44UU9Z7ZHH;
+				INFOPLIST_FILE = PourOverflowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgx.PourOverflowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PourOverflow;
+			};
+			name = Debug;
+		};
+		90BD41DA25A699EF002A2B78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44UU9Z7ZHH;
+				INFOPLIST_FILE = PourOverflowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgx.PourOverflowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PourOverflow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90BD41A325A699E9002A2B78 /* Build configuration list for PBXProject "PourOverflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90BD41D025A699EF002A2B78 /* Debug */,
+				90BD41D125A699EF002A2B78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90BD41D225A699EF002A2B78 /* Build configuration list for PBXNativeTarget "PourOverflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90BD41D325A699EF002A2B78 /* Debug */,
+				90BD41D425A699EF002A2B78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90BD41D525A699EF002A2B78 /* Build configuration list for PBXNativeTarget "PourOverflowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90BD41D625A699EF002A2B78 /* Debug */,
+				90BD41D725A699EF002A2B78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90BD41D825A699EF002A2B78 /* Build configuration list for PBXNativeTarget "PourOverflowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90BD41D925A699EF002A2B78 /* Debug */,
+				90BD41DA25A699EF002A2B78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90BD41A025A699E9002A2B78 /* Project object */;
+}
