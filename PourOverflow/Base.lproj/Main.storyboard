@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="neu-2c-wgf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Past Brews" id="KAl-Vb-By4"/>
+                    <tabBarItem key="tabBarItem" title="Past Brews" image="circle.grid.3x3" catalog="system" id="KAl-Vb-By4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYz-vi-gS2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,77 +32,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-cq-WJ8" userLabel="methodTextField">
-                                <rect key="frame" x="159" y="94" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-cq-WJ8" userLabel="methodTextField">
+                                <rect key="frame" x="82" y="81" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="rBj-Gm-5fY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-J3-ub1" userLabel="coffeeTextField">
-                                <rect key="frame" x="159" y="165" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-J3-ub1" userLabel="coffeeTextField">
+                                <rect key="frame" x="82" y="160" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="bZi-BW-CgW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-dG-XNW" userLabel="waterTextField">
-                                <rect key="frame" x="159" y="236" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-dG-XNW" userLabel="waterTextField">
+                                <rect key="frame" x="82" y="239" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="nvE-4C-rML"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-7j-5gX" userLabel="waterTextField">
-                                <rect key="frame" x="159" y="307" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-7j-5gX" userLabel="waterTextField">
+                                <rect key="frame" x="82" y="318" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="JEb-SS-XAr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w48-eB-F5R">
-                                <rect key="frame" x="178" y="65" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w48-eB-F5R">
+                                <rect key="frame" x="156" y="52" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coffee (g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-A8-gej">
-                                <rect key="frame" x="168" y="136" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee (g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-A8-gej">
+                                <rect key="frame" x="168" y="131" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Water (ml)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-R6-HfN">
-                                <rect key="frame" x="167" y="207" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water (ml)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-R6-HfN">
+                                <rect key="frame" x="167" y="210" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time (s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-HF-XSq">
-                                <rect key="frame" x="176" y="278" width="63" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time (s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-HF-XSq">
+                                <rect key="frame" x="175.5" y="289" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq9-vz-Byl">
-                                <rect key="frame" x="180" y="349" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq9-vz-Byl">
+                                <rect key="frame" x="180" y="384" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-Fm-Nd7">
-                                <rect key="frame" x="87" y="387" width="240" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI0-4W-GXK">
-                                <rect key="frame" x="171" y="732" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI0-4W-GXK">
+                                <rect key="frame" x="171" y="728" width="72" height="30"/>
                                 <state key="normal" title="Save Brew"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-Fm-Nd7">
+                                <rect key="frame" x="87" y="422" width="240" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="dEj-Ma-yLH"/>
+                                    <constraint firstAttribute="width" constant="240" id="rSH-6r-M4z"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R2X-FO-VfA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="THZ-dG-XNW" firstAttribute="top" secondItem="Dk4-R6-HfN" secondAttribute="bottom" constant="8" id="0Ii-Uk-ePO"/>
+                            <constraint firstItem="fzh-HF-XSq" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="1Tf-Pe-MLT"/>
+                            <constraint firstItem="w48-eB-F5R" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="2sT-xo-ZWb"/>
+                            <constraint firstItem="Mhs-A8-gej" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="5wX-8V-rfR"/>
+                            <constraint firstItem="wGr-7j-5gX" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="6tD-Gt-YFJ"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="top" secondItem="Vq9-vz-Byl" secondAttribute="bottom" constant="8" id="AQJ-yW-kQa"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="BUT-Hi-Ql3"/>
+                            <constraint firstItem="JtU-cq-WJ8" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="BXc-aJ-Ajd"/>
+                            <constraint firstItem="w48-eB-F5R" firstAttribute="top" secondItem="R2X-FO-VfA" secondAttribute="top" constant="8" id="Bow-cW-rns"/>
+                            <constraint firstItem="Vq9-vz-Byl" firstAttribute="top" secondItem="wGr-7j-5gX" secondAttribute="bottom" constant="32" id="FgY-05-wQq"/>
+                            <constraint firstItem="QI0-4W-GXK" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="Nsa-iZ-wm7"/>
+                            <constraint firstItem="Mhs-A8-gej" firstAttribute="top" secondItem="JtU-cq-WJ8" secondAttribute="bottom" constant="16" id="Tc7-GR-SJO"/>
+                            <constraint firstItem="Dk4-R6-HfN" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="UBX-c9-zBv"/>
+                            <constraint firstItem="Vq9-vz-Byl" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="ZVi-d2-812"/>
+                            <constraint firstItem="5Ms-J3-ub1" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="bDj-xr-PoB"/>
+                            <constraint firstItem="5Ms-J3-ub1" firstAttribute="top" secondItem="Mhs-A8-gej" secondAttribute="bottom" constant="8" id="hm1-BB-ePI"/>
+                            <constraint firstItem="wGr-7j-5gX" firstAttribute="top" secondItem="fzh-HF-XSq" secondAttribute="bottom" constant="8" id="ktH-yd-73W"/>
+                            <constraint firstItem="THZ-dG-XNW" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="lRX-ag-ngc"/>
+                            <constraint firstItem="Dk4-R6-HfN" firstAttribute="top" secondItem="5Ms-J3-ub1" secondAttribute="bottom" constant="16" id="lZv-hk-VcO"/>
+                            <constraint firstItem="fzh-HF-XSq" firstAttribute="top" secondItem="THZ-dG-XNW" secondAttribute="bottom" constant="16" id="ofL-Hh-pPz"/>
+                            <constraint firstItem="JtU-cq-WJ8" firstAttribute="top" secondItem="w48-eB-F5R" secondAttribute="bottom" constant="8" id="vaY-rR-5iF"/>
+                            <constraint firstItem="QI0-4W-GXK" firstAttribute="top" secondItem="CWQ-Fm-Nd7" secondAttribute="bottom" constant="16" id="wkM-ld-ydg"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Brew" id="sq1-P4-rEz"/>
+                    <tabBarItem key="tabBarItem" title="New Brew" image="light.max" catalog="system" id="sq1-P4-rEz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0T-cC-cL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +157,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle.grid.3x3" catalog="system" width="128" height="110"/>
+        <image name="light.max" catalog="system" width="128" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
