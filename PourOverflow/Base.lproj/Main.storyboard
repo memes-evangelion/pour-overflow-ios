@@ -89,18 +89,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq9-vz-Byl">
-                                <rect key="frame" x="180" y="384" width="54" height="30"/>
-                                <state key="normal" title="Camera"/>
+                                <rect key="frame" x="165" y="384" width="84" height="30"/>
+                                <state key="normal" title="Add a Photo"/>
+                                <connections>
+                                    <action selector="choosePhotoSource:" destination="30Z-r5-Kyo" eventType="touchUpInside" id="7KV-mq-2hN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI0-4W-GXK">
                                 <rect key="frame" x="171" y="728" width="72" height="30"/>
                                 <state key="normal" title="Save Brew"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-Fm-Nd7">
-                                <rect key="frame" x="87" y="422" width="240" height="290"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-Fm-Nd7">
+                                <rect key="frame" x="0.0" y="422" width="414" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="dEj-Ma-yLH"/>
-                                    <constraint firstAttribute="width" constant="240" id="rSH-6r-M4z"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -118,11 +120,13 @@
                             <constraint firstItem="w48-eB-F5R" firstAttribute="top" secondItem="R2X-FO-VfA" secondAttribute="top" constant="8" id="Bow-cW-rns"/>
                             <constraint firstItem="Vq9-vz-Byl" firstAttribute="top" secondItem="wGr-7j-5gX" secondAttribute="bottom" constant="32" id="FgY-05-wQq"/>
                             <constraint firstItem="QI0-4W-GXK" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="Nsa-iZ-wm7"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="trailing" secondItem="R2X-FO-VfA" secondAttribute="trailing" id="R9P-0R-m8Y"/>
                             <constraint firstItem="Mhs-A8-gej" firstAttribute="top" secondItem="JtU-cq-WJ8" secondAttribute="bottom" constant="16" id="Tc7-GR-SJO"/>
                             <constraint firstItem="Dk4-R6-HfN" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="UBX-c9-zBv"/>
                             <constraint firstItem="Vq9-vz-Byl" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="ZVi-d2-812"/>
                             <constraint firstItem="5Ms-J3-ub1" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="bDj-xr-PoB"/>
                             <constraint firstItem="5Ms-J3-ub1" firstAttribute="top" secondItem="Mhs-A8-gej" secondAttribute="bottom" constant="8" id="hm1-BB-ePI"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="leading" secondItem="R2X-FO-VfA" secondAttribute="leading" id="hyY-0F-xfM"/>
                             <constraint firstItem="wGr-7j-5gX" firstAttribute="top" secondItem="fzh-HF-XSq" secondAttribute="bottom" constant="8" id="ktH-yd-73W"/>
                             <constraint firstItem="THZ-dG-XNW" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="lRX-ag-ngc"/>
                             <constraint firstItem="Dk4-R6-HfN" firstAttribute="top" secondItem="5Ms-J3-ub1" secondAttribute="bottom" constant="16" id="lZv-hk-VcO"/>
@@ -132,6 +136,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Brew" image="light.max" catalog="system" id="sq1-P4-rEz"/>
+                    <connections>
+                        <outlet property="imageView" destination="CWQ-Fm-Nd7" id="etd-DJ-pVA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0T-cC-cL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
