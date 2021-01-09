@@ -1,4 +1,4 @@
 xcuserdata/
 *.xcuserstate
 .DS_Store
-
+build/
