@@ -7,24 +7,26 @@
 
 import UIKit
 
-class Brew {
-    let id: String
+// Use class when pointerA === pointerB
+// Default to struct instead of class
+struct Brew {
+    let id: UUID
     let brewMethod: String
     let coffee: Int // in grams
     let water: Int // in ml
-    let brewTime: Int? // in seconds
+    let duration: UnitDuration? // in seconds
     let score: Int // 0 - 100 score
-    let dateCreated: Date
+    let creationDate: Date
     
     // Designated initializer.
-    init(brewMethod: String, coffee: Int, water: Int, brewTime: Int?, score: Int) {
-        self.id = UUID().uuidString
+    init(brewMethod: String, coffee: Int, water: Int, duration: UnitDuration?, score: Int) {
+        self.id = UUID()
         self.brewMethod = brewMethod
         self.coffee = coffee
         self.water = water
-        self.brewTime = brewTime
+        self.duration = duration
         self.score = score
-        self.dateCreated = Date()
+        self.creationDate = Date()
     }
 
 }
