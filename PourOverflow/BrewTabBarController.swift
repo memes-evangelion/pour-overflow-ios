@@ -14,7 +14,8 @@ class BrewTabBarController: UITabBarController {
         super.viewDidLoad()
         // send store as well?
         if let firstController = viewControllers?.first  {
-            let brewListViewController = firstController as! BrewListViewController
+            
+            let brewListViewController = firstController as! BrewListNavigationController
             brewListViewController.brewStore = brewStore
         }
         
