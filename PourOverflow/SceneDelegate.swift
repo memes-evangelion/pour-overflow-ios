@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // inject brewStore
         let brewStore = BrewStore()
-        let newBrewController = window!.rootViewController as! NewBrewViewController
-        newBrewController.brewStore = brewStore
+        let brewTabController = window!.rootViewController as! BrewTabBarController
+        brewTabController.brewStore = brewStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
