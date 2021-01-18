@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         // inject brewStore
-        let brewStore = BrewStore()
+        let brewStore = LocalBrewStore()
         let brewTabController = window!.rootViewController as! BrewTabBarController
         brewTabController.brewStore = brewStore
     }
