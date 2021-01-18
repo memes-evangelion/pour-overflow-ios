@@ -2,28 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJq-FH-YHS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Past Brews-->
-        <scene sceneID="GkV-zP-wEm">
-            <objects>
-                <viewController id="a7d-Uk-aER" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7LU-fE-9vg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="neu-2c-wgf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Past Brews" image="circle.grid.3x3" catalog="system" id="KAl-Vb-By4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JYz-vi-gS2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="757" y="329"/>
-        </scene>
         <!--New Brew-->
         <scene sceneID="enB-qT-VSh">
             <objects>
@@ -142,30 +127,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0T-cC-cL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.52173913043487" y="-323.4375"/>
+            <point key="canvasLocation" x="828" y="297"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Brew Tab Bar Controller-->
         <scene sceneID="9E5-qF-yVx">
             <objects>
-                <tabBarController id="LJq-FH-YHS" sceneMemberID="viewController">
+                <tabBarController id="LJq-FH-YHS" customClass="BrewTabBarController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3LC-uP-6tf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="fE6-UW-eXK" kind="relationship" relationship="viewControllers" id="rGs-Dk-vHn"/>
                         <segue destination="30Z-r5-Kyo" kind="relationship" relationship="viewControllers" id="fvx-7f-FcY"/>
-                        <segue destination="a7d-Uk-aER" kind="relationship" relationship="viewControllers" id="vTf-O4-PYs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyk-XJ-Tel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-133" y="26"/>
         </scene>
+        <!--Brew Logs-->
+        <scene sceneID="ARf-t0-6fS">
+            <objects>
+                <tableViewController id="fE6-UW-eXK" customClass="BrewListViewController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VLi-d6-Coi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BrewCell" textLabel="I1V-wN-Chp" detailTextLabel="xW6-dd-ddI" style="IBUITableViewCellStyleSubtitle" id="Rai-ye-FFB">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rai-ye-FFB" id="d2P-d5-tQ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I1V-wN-Chp">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xW6-dd-ddI">
+                                            <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fE6-UW-eXK" id="C6p-wA-AFB"/>
+                            <outlet property="delegate" destination="fE6-UW-eXK" id="H40-Nc-RJS"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Brew Logs" image="list.triangle" catalog="system" selectedImage="list.bullet" id="oQY-cx-vg0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8O-Bb-TX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-360"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="circle.grid.3x3" catalog="system" width="128" height="110"/>
         <image name="light.max" catalog="system" width="128" height="72"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="list.triangle" catalog="system" width="128" height="91"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
