@@ -9,14 +9,19 @@ import UIKit
 
 class BrewTabBarController: UITabBarController {
     var brewStore: BrewStore!
-    // send to segues or views or such
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // send store as well?
+        
         if let firstController = viewControllers?.first  {
-            
             let brewListViewController = firstController as! BrewListNavigationController
             brewListViewController.brewStore = brewStore
+        }
+        
+        if viewControllers?[1] != nil {
+            let calendarController = viewControllers![1]
+            let calendarViewController = calendarController as! CalendarViewController
+            calendarViewController.brewStore = brewStore
         }
         
     }

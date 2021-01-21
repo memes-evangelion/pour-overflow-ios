@@ -4,6 +4,7 @@
 //
 //  Created by marto on 11/01/21.
 //
+import Foundation
 
 class LocalBrewStore: BrewStore {
     
@@ -16,7 +17,12 @@ class LocalBrewStore: BrewStore {
         return randomBrew
     }
     
-    // init create unos brew random
+    func brewsInDateRange(from: Date, to: Date) -> [Brew] {
+        //filter
+        return []
+    }
+    
+    // Crear unos brew random
     init() {
         for _ in 0..<5 {
             createRandomBrew()
