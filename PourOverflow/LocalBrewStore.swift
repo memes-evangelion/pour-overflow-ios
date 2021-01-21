@@ -18,13 +18,12 @@ class LocalBrewStore: BrewStore {
     }
     
     func brewsInDateRange(from: Date, to: Date) -> [Brew] {
-        //filter
-        return []
+        return allBrews.filter { $0.creationDate >= from && $0.creationDate <= to }
     }
     
     // Crear unos brew random
     init() {
-        for _ in 0..<5 {
+        for _ in 0..<40 {
             createRandomBrew()
         }
     }

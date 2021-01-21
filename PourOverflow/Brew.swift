@@ -8,7 +8,7 @@
 import UIKit
 
 enum BrewMethod: CaseIterable {
-    case Switch, AeroPress, v60, KalitaWave, Chemex
+    case Switch, AeroPress, v60, KalitaWave, Chemex, Espresso
 }
 
 enum GrainMethod: CaseIterable {
@@ -22,12 +22,12 @@ struct Brew {
     let grains: GrainMethod?
     let coffee: Int // in grams
     let water: Int // in ml
-    let duration: UnitDuration? // in seconds
+    let duration: Measurement<UnitDuration>? // in seconds
     let score: Int // 0 - 100 score
     let creationDate: Date
     
     // Designated initializer.
-    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: UnitDuration?, score: Int) {
+    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, score: Int, creationDate: Date) {
         self.id = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -35,7 +35,7 @@ struct Brew {
         self.water = water
         self.duration = duration
         self.score = score
-        self.creationDate = Date()
+        self.creationDate = creationDate
     }
     
     static func createRandomBrew() -> Brew {
@@ -45,10 +45,15 @@ struct Brew {
         let randomCoffee = Int.random(in: 10...30)
         let randomWater = Int.random(in: 100...300)
         
-        let randomSeconds = Int.random(in: 30...540)
-        let randomDuration = UnitDuration(symbol: "\(randomSeconds) seconds")
+        let randomSeconds = Double.random(in: 20...400)
+        let randomDuration = Measurement(value:randomSeconds, unit: UnitDuration.seconds)
+        
         let randomScore = Int.random(in: 0...100)
         
-        return self.init(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater, duration: randomDuration, score: randomScore)
+        let previousDays = Int.random(in: 1...120)
+        let randomCreationDate = Calendar.current.date(byAdding: .day, value: -previousDays, to: Date())!
+
+        
+        return self.init(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater, duration: randomDuration, score: randomScore, creationDate: randomCreationDate)
     }
 }
