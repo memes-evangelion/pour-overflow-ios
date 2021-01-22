@@ -14,8 +14,7 @@ enum BrewMethod: CaseIterable {
 enum GrainMethod: CaseIterable {
     case Lavado, Honey, Natural
 }
-// Use class when pointerA === pointerB
-// Default to struct instead of class
+
 struct Brew {
     let id: UUID
     let brewMethod: BrewMethod
@@ -26,7 +25,6 @@ struct Brew {
     let score: Int // 0 - 100 score
     let creationDate: Date
     
-    // Designated initializer.
     init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, score: Int, creationDate: Date) {
         self.id = UUID()
         self.brewMethod = brewMethod

@@ -12,11 +12,8 @@ class NewBrewViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     var brewStore: BrewStore!
     
-    // For taking the photo   
     @IBAction func choosePhotoSource(_ sender: UIButton) {
-        // Create alert
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        // Add camera if available
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { _ in
                 let imagePicker = self.imagePicker(for: .camera)
@@ -24,13 +21,11 @@ class NewBrewViewController: UIViewController, UIImagePickerControllerDelegate, 
             })
             alertController.addAction(cameraAction)
         }
-        // Add photo from library
         let photoLibraryAction = UIAlertAction(title: "Photos", style: .default, handler: { _ in
             let imagePicker = self.imagePicker(for: .photoLibrary)
             self.present(imagePicker, animated: true, completion: nil)
         })
         alertController.addAction(photoLibraryAction)
-        // cancel
         present(alertController, animated: true, completion: nil)
     }
     

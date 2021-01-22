@@ -18,8 +18,7 @@ class BrewTabBarController: UITabBarController {
             brewListViewController.brewStore = brewStore
         }
         
-        if viewControllers?[1] != nil {
-            let calendarController = viewControllers![1]
+        if let calendarController = viewControllers?[1] {
             let calendarViewController = calendarController as! CalendarViewController
             calendarViewController.brewStore = brewStore
         }
