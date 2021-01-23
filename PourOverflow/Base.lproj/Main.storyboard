@@ -155,24 +155,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myT-Lz-RV3">
-                                <rect key="frame" x="152" y="52" width="110" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Septiembre 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myT-Lz-RV3">
+                                <rect key="frame" x="132" y="52" width="150" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="cY7-lc-vSI"/>
+                                    <constraint firstAttribute="width" constant="150" id="cY7-lc-vSI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwK-SI-WcE">
-                                <rect key="frame" x="270" y="47.5" width="30" height="30"/>
+                                <rect key="frame" x="290" y="47.5" width="30" height="30"/>
                                 <state key="normal" title="&gt;"/>
                                 <connections>
                                     <action selector="increaseMonth:" destination="qWT-rL-fXr" eventType="touchUpInside" id="DUA-nk-71b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un2-3J-pP6">
-                                <rect key="frame" x="114" y="47.5" width="30" height="30"/>
+                                <rect key="frame" x="94" y="47.5" width="30" height="30"/>
                                 <state key="normal" title="&lt;"/>
                                 <connections>
                                     <action selector="decreaseMonth:" destination="qWT-rL-fXr" eventType="touchUpInside" id="cAh-wr-Aur"/>

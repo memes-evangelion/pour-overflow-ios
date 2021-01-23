@@ -13,23 +13,25 @@ class CalendarViewController: UIViewController {
     @IBOutlet var currentMonthLabel: UILabel!
     @IBOutlet var dayButtons: [UIButton]!
     
-    var lastOfMonth = Date()
+    var selectedDate: Date!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSelectedMonthString()
+        selectedDate = getFirstDayOfMonth(date: Date())
+        
+        displayMonthLabel()
         fillCalendar()
     }
     
     func fillCalendar() {
-        let firstDay = getFirstDayOfMonth(date: lastOfMonth)
-        let brews = brewStore.brewsInDateRange(from: firstDay, to:lastOfMonth)
+        let lastDayOfMonth = getLastDayOfMonth(date: selectedDate)
+        let brews = brewStore.brewsInDateRange(from: selectedDate, to:lastDayOfMonth)
         for index in 0...41 {
             let button = dayButtons[index]
             button.setTitle("-", for: .normal)
         }
         if brews.count > 0 {
-            let weekday = Calendar.current.component(.weekday, from: lastOfMonth)
+            let weekday = Calendar.current.component(.weekday, from: selectedDate)
             // Initial weeday of the month
             let brewIndex = weekday - 1
             for brew in brews {
@@ -41,38 +43,34 @@ class CalendarViewController: UIViewController {
         }
     }
     
-    func setSelectedMonthString() {
+    func displayMonthLabel() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "LLLL"
-        currentMonthLabel.text = dateFormatter.string(from: lastOfMonth)
+        dateFormatter.dateFormat = "LLLL Y"
+        currentMonthLabel.text = dateFormatter.string(from: selectedDate)
     }
     
     @IBAction func decreaseMonth(_ sender: UIButton) {
-        if let newSelectedDate = Calendar.current.date(byAdding: .month, value: -1, to: lastOfMonth) {
-
-            let startOfMonth = getFirstDayOfMonth(date: newSelectedDate)
-            let lastDayOfMonth = getLastDayOfMonth(date: startOfMonth)
-
-            lastOfMonth = lastDayOfMonth
-            setSelectedMonthString()
-            fillCalendar()
+        guard let newSelectedDate = Calendar.current.date(byAdding: .month, value: -1, to: selectedDate) else {
+            preconditionFailure("Error substracting a month from date")
         }
+
+        selectedDate = getFirstDayOfMonth(date: newSelectedDate)
+        displayMonthLabel()
+        fillCalendar()
     }
     
     @IBAction func increaseMonth(_ sender: UIButton) {
-        if let newSelectedDate = Calendar.current.date(byAdding: .month, value: +1, to: lastOfMonth) {
-            if newSelectedDate < Date() {
-                let startOfMonth = getFirstDayOfMonth(date: newSelectedDate)
-                let lastDayOfMonth = getLastDayOfMonth(date: startOfMonth)
-
-                lastOfMonth = lastDayOfMonth
-            } else {
-                lastOfMonth = Date()
-            }
-            
-            setSelectedMonthString()
-            fillCalendar()
+        guard let newSelectedDate = Calendar.current.date(byAdding: .month, value: +1, to: selectedDate) else {
+            preconditionFailure("Error increasing a month from date")
         }
+
+        guard newSelectedDate <= Date() else {
+            return
+        }
+        
+        selectedDate = getFirstDayOfMonth(date: newSelectedDate)
+        displayMonthLabel()
+        fillCalendar()
     }
     
     func getFirstDayOfMonth(date: Date) -> Date {
