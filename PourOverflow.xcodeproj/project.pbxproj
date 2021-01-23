@@ -21,6 +21,7 @@
 		90BD41B825A699EE002A2B78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */; };
 		90BD41C325A699EE002A2B78 /* PourOverflowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41C225A699EE002A2B78 /* PourOverflowTests.swift */; };
 		90BD41CE25A699EF002A2B78 /* PourOverflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41CD25A699EF002A2B78 /* PourOverflowUITests.swift */; };
+		90F6C20925B7EB5300F3BFB2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */; };
 		FB3B0DEB25B5281D00A16936 /* BrewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B0DEA25B5281D00A16936 /* BrewStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		90BD41C925A699EF002A2B78 /* PourOverflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PourOverflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BD41CD25A699EF002A2B78 /* PourOverflowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PourOverflowUITests.swift; sourceTree = "<group>"; };
 		90BD41CF25A699EF002A2B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FB3B0DEA25B5281D00A16936 /* BrewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				90BD41AB25A699E9002A2B78 /* AppDelegate.swift */,
 				90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */,
 				90BD41B125A699E9002A2B78 /* Main.storyboard */,
+				90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */,
 				9035A85D25B4C41800653D49 /* BrewDetailViewController.swift */,
 				9035A85825B4C09D00653D49 /* BrewListNavigationController.swift */,
 				90B5D6D525B4106300E92FAE /* BrewListViewController.swift */,
@@ -282,6 +285,7 @@
 				90BD41AC25A699E9002A2B78 /* AppDelegate.swift in Sources */,
 				FB3B0DEB25B5281D00A16936 /* BrewStore.swift in Sources */,
 				9035A85925B4C09D00653D49 /* BrewListNavigationController.swift in Sources */,
+				90F6C20925B7EB5300F3BFB2 /* CalendarViewController.swift in Sources */,
 				90B5D6CB25AD530800E92FAE /* LocalBrewStore.swift in Sources */,
 				9016D81425AA62B9003F6446 /* Brew.swift in Sources */,
 				90BD41AE25A699E9002A2B78 /* SceneDelegate.swift in Sources */,

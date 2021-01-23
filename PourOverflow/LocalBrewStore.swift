@@ -4,6 +4,7 @@
 //
 //  Created by marto on 11/01/21.
 //
+import Foundation
 
 class LocalBrewStore: BrewStore {
     
@@ -16,9 +17,15 @@ class LocalBrewStore: BrewStore {
         return randomBrew
     }
     
-    // init create unos brew random
+    func brewsInDateRange(from: Date, to: Date) -> [Brew] {
+        let filteredBrews = allBrews.filter { $0.creationDate >= from && $0.creationDate <= to }
+        return filteredBrews.sorted {
+            $0.creationDate < $1.creationDate
+        }
+    }
+    
     init() {
-        for _ in 0..<5 {
+        for _ in 0..<30 {
             createRandomBrew()
         }
     }

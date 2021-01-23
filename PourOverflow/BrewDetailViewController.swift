@@ -21,11 +21,20 @@ class BrewDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+
         brewMethodTextField.text = "\(brew.brewMethod)"
         coffeeTextField.text = "\(brew.coffee) g"
         waterTextField.text = "\(brew.water) ml"
-        timeTextField.text = "\(String(describing: brew.duration)) seconds"
-        brewDateTextField.text = "\(brew.creationDate)"
+        if let duration = brew.duration {
+            let truncatedValue = String(format: "%.2f", duration.value)
+
+            timeTextField.text = "\(truncatedValue) seconds"
+        }
+        brewDateTextField.text = "\(dateFormatter.string(from: brew.creationDate))"
         scoreLabel.text = "\(brew.score)"
     }
 }
