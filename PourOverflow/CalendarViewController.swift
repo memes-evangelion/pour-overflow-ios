@@ -38,7 +38,11 @@ class CalendarViewController: UIViewController {
                 let day = Calendar.current.component(.day, from: brew.creationDate)
                 // Set position against initial weekday in array
                 let button = dayButtons[brewIndex + day]
-                button.setTitle("\(brew.score)", for: .normal)
+                if let valuationValue = brew.valuation?.rawValue {
+                    button.setTitle(valuationValue, for: .normal)
+                } else {
+                    button.setTitle("☕️", for: .normal)
+                }
             }
         }
     }
