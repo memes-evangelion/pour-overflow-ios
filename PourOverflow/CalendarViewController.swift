@@ -30,18 +30,29 @@ class CalendarViewController: UIViewController {
             let button = dayButtons[index]
             button.setTitle("-", for: .normal)
         }
+        
+        let firstWeekdayOfMonth = Calendar.current.component(.weekday, from: selectedDate)
+        let daysRange = Calendar.current.range(of: .day, in: .month, for:selectedDate)!
+        for dayNumber in daysRange {
+            let firstButtonOfMonth = firstWeekdayOfMonth - 1
+            let dayInButtons = firstButtonOfMonth + dayNumber
+            let button = dayButtons[dayInButtons]
+            button.setTitle("\(dayNumber)\n", for: .normal)
+        }
+        // Get lastdayOfMonth
+        
+
         if brews.count > 0 {
-            let weekday = Calendar.current.component(.weekday, from: selectedDate)
             // Initial weeday of the month
-            let brewIndex = weekday - 1
+            let brewIndex = firstWeekdayOfMonth - 1
             for brew in brews {
                 let day = Calendar.current.component(.day, from: brew.creationDate)
                 // Set position against initial weekday in array
                 let button = dayButtons[brewIndex + day]
                 if let valuationValue = brew.valuation?.rawValue {
-                    button.setTitle(valuationValue, for: .normal)
+                    button.setTitle("\(day)\n\(valuationValue)", for: .normal)
                 } else {
-                    button.setTitle("☕️", for: .normal)
+                    button.setTitle("\(day)\n☕️", for: .normal)
                 }
             }
         }
