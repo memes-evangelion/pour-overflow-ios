@@ -8,19 +8,19 @@
 import UIKit
 
 class BrewDetailViewController: UIViewController {
-    
+
     @IBOutlet var brewMethodTextField: UITextField!
     @IBOutlet var coffeeTextField: UITextField!
     @IBOutlet var waterTextField: UITextField!
     @IBOutlet var timeTextField: UITextField!
     @IBOutlet var brewDateTextField: UITextField!
     @IBOutlet var scoreLabel: UILabel!
-    
+
     var brew: Brew!
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none

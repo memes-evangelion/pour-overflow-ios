@@ -12,16 +12,16 @@ class BrewTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let firstController = viewControllers?.first  {
+
+        if let firstController = viewControllers?.first {
             let brewListViewController = firstController as! BrewListNavigationController
             brewListViewController.brewStore = brewStore
         }
-        
+
         if let calendarController = viewControllers?[1] {
             let calendarViewController = calendarController as! CalendarViewController
             calendarViewController.brewStore = brewStore
         }
-        
+
     }
 }

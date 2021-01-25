@@ -12,20 +12,20 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet var currentMonthLabel: UILabel!
     @IBOutlet var dayButtons: [UIButton]!
-    
+
     var selectedDate: Date!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedDate = getFirstDayOfMonth(date: Date())
-        
+
         displayMonthLabel()
         fillCalendar()
     }
-    
+
     func fillCalendar() {
         let lastDayOfMonth = getLastDayOfMonth(date: selectedDate)
-        let brews = brewStore.brewsInDateRange(from: selectedDate, to:lastDayOfMonth)
+        let brews = brewStore.brewsInDateRange(from: selectedDate, to: lastDayOfMonth)
         for index in 0...41 {
             let button = dayButtons[index]
             button.setTitle("-", for: .normal)
@@ -42,13 +42,13 @@ class CalendarViewController: UIViewController {
             }
         }
     }
-    
+
     func displayMonthLabel() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "LLLL Y"
         currentMonthLabel.text = dateFormatter.string(from: selectedDate)
     }
-    
+
     @IBAction func decreaseMonth(_ sender: UIButton) {
         guard let newSelectedDate = Calendar.current.date(byAdding: .month, value: -1, to: selectedDate) else {
             preconditionFailure("Error substracting a month from date")
@@ -58,7 +58,7 @@ class CalendarViewController: UIViewController {
         displayMonthLabel()
         fillCalendar()
     }
-    
+
     @IBAction func increaseMonth(_ sender: UIButton) {
         guard let newSelectedDate = Calendar.current.date(byAdding: .month, value: +1, to: selectedDate) else {
             preconditionFailure("Error increasing a month from date")
@@ -67,17 +67,17 @@ class CalendarViewController: UIViewController {
         guard newSelectedDate <= Date() else {
             return
         }
-        
+
         selectedDate = getFirstDayOfMonth(date: newSelectedDate)
         displayMonthLabel()
         fillCalendar()
     }
-    
+
     func getFirstDayOfMonth(date: Date) -> Date {
         let startComponents = Calendar.current.dateComponents([.year, .month], from: date)
         return Calendar.current.date(from: startComponents)!
     }
-    
+
     func getLastDayOfMonth(date: Date) -> Date {
         var components = DateComponents()
         components.month = 1

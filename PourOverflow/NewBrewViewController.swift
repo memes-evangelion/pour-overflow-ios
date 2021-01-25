@@ -11,7 +11,7 @@ class NewBrewViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var imageView: UIImageView!
 
     var brewStore: BrewStore!
-    
+
     @IBAction func choosePhotoSource(_ sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -28,17 +28,17 @@ class NewBrewViewController: UIViewController, UIImagePickerControllerDelegate, 
         alertController.addAction(photoLibraryAction)
         present(alertController, animated: true, completion: nil)
     }
-    
+
     func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = sourceType
         imagePicker.delegate = self
         return imagePicker
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let image = info[.originalImage] as! UIImage
-        
+
         imageView.image = image
         dismiss(animated: true, completion: nil)
     }
