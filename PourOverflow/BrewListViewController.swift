@@ -20,8 +20,8 @@ class BrewListViewController: UITableViewController {
         let brew = brewStore.allBrews[indexPath.row]
         
         cell.textLabel?.text = "\(brew.brewMethod)"
-        if let valuationValue = brew.valuation?.rawValue {
-            cell.detailTextLabel?.text = valuationValue
+        if let score = brew.brewScore?.rawValue {
+            cell.detailTextLabel?.text = score
         } else {
             cell.detailTextLabel?.text = "-"
         }

@@ -35,6 +35,6 @@ class BrewDetailViewController: UIViewController {
             timeTextField.text = "\(truncatedValue) seconds"
         }
         brewDateTextField.text = "\(dateFormatter.string(from: brew.creationDate))"
-        scoreLabel.text = brew.valuation?.rawValue
+        scoreLabel.text = brew.brewScore?.rawValue
     }
 }

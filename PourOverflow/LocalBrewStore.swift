@@ -10,7 +10,7 @@ class LocalBrewStore: BrewStore {
     
     var allBrews = [Brew]()
     
-    @discardableResult func createRandomBrew(hasValuation: Bool = false) -> Brew {
+    @discardableResult func addRandomBrew(hasValuation: Bool = false) -> Brew {
         let randomBrew = LocalBrewStore.createRandomBrew(withValuation: hasValuation)
         allBrews.append(randomBrew)
         
@@ -36,7 +36,7 @@ class LocalBrewStore: BrewStore {
         let randomCreationDate = Calendar.current.date(byAdding: .day, value: -previousDays, to: Date())!
 
         
-        return Brew(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater, duration: randomDuration, valuation: randomValuation, creationDate: randomCreationDate)
+        return Brew(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater, duration: randomDuration, brewScore: randomValuation, creationDate: randomCreationDate)
     }
     
     func brewsInDateRange(from: Date, to: Date) -> [Brew] {
@@ -48,10 +48,10 @@ class LocalBrewStore: BrewStore {
     
     init() {
         for _ in 0..<30 {
-            createRandomBrew(hasValuation: true)
+            addRandomBrew(hasValuation: true)
         }
         for _ in 0..<10 {
-            createRandomBrew()
+            addRandomBrew()
         }
     }
 }
