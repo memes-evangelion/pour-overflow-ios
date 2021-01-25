@@ -17,8 +17,8 @@ class LocalBrewStore: BrewStore {
         return randomBrew
     }
 
-    func brewsInDateRange(from: Date, to: Date) -> [Brew] {
-        let filteredBrews = allBrews.filter { $0.creationDate >= from && $0.creationDate <= to }
+    func brewsInDateRange(fromDate: Date, toDate: Date) -> [Brew] {
+        let filteredBrews = allBrews.filter { $0.creationDate >= fromDate && $0.creationDate <= toDate }
         return filteredBrews.sorted {
             $0.creationDate < $1.creationDate
         }

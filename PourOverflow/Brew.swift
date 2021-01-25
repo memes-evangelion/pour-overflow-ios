@@ -8,15 +8,15 @@
 import UIKit
 
 enum BrewMethod: CaseIterable {
-    case Switch, AeroPress, v60, KalitaWave, Chemex, Espresso
+    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso
 }
 
 enum GrainMethod: CaseIterable {
-    case Lavado, Honey, Natural
+    case lavado, honey, natural
 }
 
 struct Brew {
-    let id: UUID
+    let brewId: UUID
     let brewMethod: BrewMethod
     let grains: GrainMethod?
     let coffee: Int // in grams
@@ -25,8 +25,9 @@ struct Brew {
     let score: Int // 0 - 100 score
     let creationDate: Date
 
-    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, score: Int, creationDate: Date) {
-        self.id = UUID()
+    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?,
+         score: Int, creationDate: Date) {
+        self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
         self.coffee = coffee
@@ -51,6 +52,7 @@ struct Brew {
         let previousDays = Int.random(in: 1...120)
         let randomCreationDate = Calendar.current.date(byAdding: .day, value: -previousDays, to: Date())!
 
-        return self.init(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater, duration: randomDuration, score: randomScore, creationDate: randomCreationDate)
+        return self.init(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater,
+                         duration: randomDuration, score: randomScore, creationDate: randomCreationDate)
     }
 }

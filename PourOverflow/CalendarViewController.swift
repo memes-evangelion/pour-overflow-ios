@@ -25,7 +25,7 @@ class CalendarViewController: UIViewController {
 
     func fillCalendar() {
         let lastDayOfMonth = getLastDayOfMonth(date: selectedDate)
-        let brews = brewStore.brewsInDateRange(from: selectedDate, to: lastDayOfMonth)
+        let brews = brewStore.brewsInDateRange(fromDate: selectedDate, toDate: lastDayOfMonth)
         for index in 0...41 {
             let button = dayButtons[index]
             button.setTitle("-", for: .normal)

@@ -13,8 +13,7 @@ class BrewListNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let firstController = viewControllers.first {
-            let brewListViewController = firstController as! BrewListViewController
+        if let brewListViewController = viewControllers.first as? BrewListViewController {
             brewListViewController.brewStore = brewStore
         }
 

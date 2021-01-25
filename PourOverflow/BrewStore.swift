@@ -6,5 +6,5 @@ import Foundation
 
 protocol BrewStore {
     var allBrews: [Brew] { get }
-    func brewsInDateRange(from: Date, to: Date) -> [Brew]
+    func brewsInDateRange(fromDate: Date, toDate: Date) -> [Brew]
 }

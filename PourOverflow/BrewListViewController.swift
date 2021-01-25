@@ -30,8 +30,9 @@ class BrewListViewController: UITableViewController {
         case "showBrew":
             if let row = tableView.indexPathForSelectedRow?.row {
                 let brew = brewStore.allBrews[row]
-                let brewDetailViewController = segue.destination as! BrewDetailViewController
-                brewDetailViewController.brew = brew
+                if let brewDetailViewController = segue.destination as? BrewDetailViewController {
+                    brewDetailViewController.brew = brew
+                }
             }
         default:
             preconditionFailure("Unexpected segue")
