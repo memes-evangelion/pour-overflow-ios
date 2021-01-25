@@ -8,11 +8,11 @@
 import UIKit
 
 enum BrewMethod: CaseIterable {
-    case Switch, AeroPress, v60, KalitaWave, Chemex, Espresso
+    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso
 }
 
 enum GrainMethod: CaseIterable {
-    case Lavado, Honey, Natural
+    case lavado, honey, natural
 }
 
 enum CoffeeValuation: String, CaseIterable {
@@ -25,7 +25,7 @@ enum CoffeeValuation: String, CaseIterable {
 
 
 struct Brew {
-    let id: UUID
+    let brewId: UUID
     let brewMethod: BrewMethod
     let grains: GrainMethod?
     let coffee: Int // in grams

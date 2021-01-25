@@ -7,13 +7,13 @@
 import Foundation
 
 class LocalBrewStore: BrewStore {
-    
+
     var allBrews = [Brew]()
-    
+
     @discardableResult func addRandomBrew(hasValuation: Bool = false) -> Brew {
         let randomBrew = LocalBrewStore.createRandomBrew(withValuation: hasValuation)
         allBrews.append(randomBrew)
-        
+
         return randomBrew
     }
     
@@ -45,7 +45,7 @@ class LocalBrewStore: BrewStore {
             $0.creationDate < $1.creationDate
         }
     }
-    
+
     init() {
         for _ in 0..<30 {
             addRandomBrew(hasValuation: true)

@@ -162,6 +162,7 @@
 				90BD41A425A699E9002A2B78 /* Sources */,
 				90BD41A525A699E9002A2B78 /* Frameworks */,
 				90BD41A625A699E9002A2B78 /* Resources */,
+				FBB24FEC25BE558100F61F16 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -276,6 +277,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FBB24FEC25BE558100F61F16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -x bin/swiftlint ]]; then\n    bin/swiftlint\nelse\n    \"warning: linter not found. Run **make install**\"\n    exit 0\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90BD41A425A699E9002A2B78 /* Sources */ = {

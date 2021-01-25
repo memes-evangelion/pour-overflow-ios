@@ -3,7 +3,7 @@ export MODIFIED_FILES = git diff --name-status --diff-filter=d origin/master HEA
 lint: bin/swiftlint
 	@$(MODIFIED_FILES) | xargs bin/swiftlint lint
 
-install: .git/hooks/pre-push
+install: bin/swiftlint .git/hooks/pre-push
 
 bin/swiftlint:
 	@mkdir -p bin
