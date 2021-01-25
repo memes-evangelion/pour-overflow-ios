@@ -179,261 +179,303 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGC-hY-1rx" userLabel="Calendar Holder View">
-                                <rect key="frame" x="20" y="80.5" width="374" height="580"/>
+                                <rect key="frame" x="8" y="80.5" width="398" height="580"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-1p-m02" userLabel="Calendar Stack View">
-                                        <rect key="frame" x="0.0" y="10" width="374" height="560"/>
+                                        <rect key="frame" x="0.0" y="55" width="398" height="470"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RAX-U6-xda">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-P1-nGY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="S"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-Vy-fD6">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="50"/>
                                                         <state key="normal" title="M"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBU-1N-fGw">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="T"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-YN-YCh">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="W"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-NX-e1g">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="T"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKr-eC-RlB">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="50"/>
                                                         <state key="normal" title="F"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDj-Jt-rYG">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="S"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="bJK-6C-fei"/>
+                                                    <constraint firstAttribute="height" constant="50" id="bJK-6C-fei"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tVk-sW-I92">
-                                                <rect key="frame" x="0.0" y="80" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="50" width="398" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-st-sZK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-st-sZK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yw-qp-Gx2">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Yw-qp-Gx2">
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpt-m8-cXE">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dpt-m8-cXE">
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-fP-2XP">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-fP-2XP">
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-Z5-pQv">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-Z5-pQv">
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-8D-Iuk">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-8D-Iuk">
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6U-4i-MuV">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="z6U-4i-MuV">
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="BMW-yr-RLc"/>
+                                                    <constraint firstAttribute="height" constant="70" id="BMW-yr-RLc"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MCr-cx-sPy">
-                                                <rect key="frame" x="0.0" y="160" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="120" width="398" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-xs-Cme">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-xs-Cme">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-vX-zyJ">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-vX-zyJ">
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-Z8-J8O">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-Z8-J8O">
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cz-7g-LaX">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0cz-7g-LaX">
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Ry-syd">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Ry-syd">
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-cl-zeJ">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-cl-zeJ">
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-Fj-A3O">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-Fj-A3O">
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="aHE-Ex-DC4"/>
+                                                    <constraint firstAttribute="height" constant="70" id="aHE-Ex-DC4"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-rr-2A1">
-                                                <rect key="frame" x="0.0" y="240" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="190" width="398" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWE-Wc-WJV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uWE-Wc-WJV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cn9-M7-ea1">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Cn9-M7-ea1">
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-LU-bzE">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-LU-bzE">
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-0z-gWl">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-0z-gWl">
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCC-cE-rWi">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aCC-cE-rWi">
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-nP-uaE">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-nP-uaE">
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-3X-PSm">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-3X-PSm">
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="jfc-M1-YKh"/>
+                                                    <constraint firstAttribute="height" constant="70" id="jfc-M1-YKh"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3hO-cG-Vkp">
-                                                <rect key="frame" x="0.0" y="320" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="260" width="398" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G80-WB-zpP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="G80-WB-zpP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0D-Te-ePQ">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="O0D-Te-ePQ">
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL8-04-cCR">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uL8-04-cCR">
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oer-LE-Zjd">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oer-LE-Zjd">
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THm-Pi-4ca">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="THm-Pi-4ca">
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-0I-EtD">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-0I-EtD">
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-tb-Rf0">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-tb-Rf0">
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="khm-4D-Idu"/>
+                                                    <constraint firstAttribute="height" constant="70" id="khm-4D-Idu"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uNv-Io-ZYe">
-                                                <rect key="frame" x="0.0" y="400" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="330" width="398" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaM-lu-fgX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HaM-lu-fgX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-Wb-RTT">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-Wb-RTT">
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4e-vi-GOk">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F4e-vi-GOk">
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-Xm-qBF">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-Xm-qBF">
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi0-qR-Qmh">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Wi0-qR-Qmh">
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-tf-Dg7">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-tf-Dg7">
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tt-Uq-lWv">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9tt-Uq-lWv">
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="aJG-0n-Ixm"/>
+                                                    <constraint firstAttribute="height" constant="70" id="aJG-0n-Ixm"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6WW-7Y-UGx">
-                                                <rect key="frame" x="0.0" y="480" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="400" width="398" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD6-Qy-Zm1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mD6-Qy-Zm1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-sM-7Nj">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-sM-7Nj">
+                                                        <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17Q-vP-gv8">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="17Q-vP-gv8">
+                                                        <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-un-sU7">
-                                                        <rect key="frame" x="160.5" y="0.0" width="53" height="80"/>
+                                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-un-sU7">
+                                                        <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGi-W0-rYj">
-                                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QGi-W0-rYj">
+                                                        <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXk-TJ-fZa">
-                                                        <rect key="frame" x="267" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vXk-TJ-fZa">
+                                                        <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
-                                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-yd-beD">
-                                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="80"/>
+                                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-yd-beD">
+                                                        <rect key="frame" x="341" y="0.0" width="57" height="70"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="fTc-Mj-rsQ"/>
+                                                    <constraint firstAttribute="height" constant="70" id="fTc-Mj-rsQ"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -452,7 +494,7 @@
                         <viewLayoutGuide key="safeArea" id="GSN-j4-rdT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GSN-j4-rdT" firstAttribute="trailing" secondItem="xGC-hY-1rx" secondAttribute="trailing" constant="20" id="01S-P2-W1n"/>
+                            <constraint firstItem="GSN-j4-rdT" firstAttribute="trailing" secondItem="xGC-hY-1rx" secondAttribute="trailing" constant="8" id="01S-P2-W1n"/>
                             <constraint firstItem="myT-Lz-RV3" firstAttribute="centerX" secondItem="GSN-j4-rdT" secondAttribute="centerX" id="FPu-lf-cdi"/>
                             <constraint firstItem="un2-3J-pP6" firstAttribute="centerY" secondItem="myT-Lz-RV3" secondAttribute="centerY" id="FZG-BB-ugb"/>
                             <constraint firstItem="RwK-SI-WcE" firstAttribute="leading" secondItem="myT-Lz-RV3" secondAttribute="trailing" constant="8" id="Pf5-Jc-Dbp"/>
@@ -460,7 +502,7 @@
                             <constraint firstItem="myT-Lz-RV3" firstAttribute="top" secondItem="GSN-j4-rdT" secondAttribute="top" constant="8" id="kK6-A1-pD4"/>
                             <constraint firstItem="myT-Lz-RV3" firstAttribute="leading" secondItem="un2-3J-pP6" secondAttribute="trailing" constant="8" id="lHC-HL-GAi"/>
                             <constraint firstItem="RwK-SI-WcE" firstAttribute="centerY" secondItem="myT-Lz-RV3" secondAttribute="centerY" id="pZD-KT-2hn"/>
-                            <constraint firstItem="xGC-hY-1rx" firstAttribute="leading" secondItem="GSN-j4-rdT" secondAttribute="leading" constant="20" id="tdC-XL-lFr"/>
+                            <constraint firstItem="xGC-hY-1rx" firstAttribute="leading" secondItem="GSN-j4-rdT" secondAttribute="leading" constant="8" id="tdC-XL-lFr"/>
                             <constraint firstItem="xGC-hY-1rx" firstAttribute="centerX" secondItem="GSN-j4-rdT" secondAttribute="centerX" id="uf1-Ae-5At"/>
                         </constraints>
                     </view>
