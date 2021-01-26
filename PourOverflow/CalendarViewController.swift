@@ -45,6 +45,7 @@ class CalendarViewController: UIViewController {
             // Initial weekday of the month
             let brewIndex = firstWeekdayOfMonth - 2
             for brew in brews {
+                print("brew: \(brew.brewMethod), created: \(brew.creationDate)")
                 let day = Calendar.current.component(.day, from: brew.creationDate)
                 // Set position against initial weekday in array
                 let button = dayButtons[brewIndex + day]
