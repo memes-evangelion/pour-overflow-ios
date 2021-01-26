@@ -16,13 +16,12 @@ enum GrainMethod: CaseIterable {
 }
 
 enum CoffeeValuation: String, CaseIterable {
-    case Horrible = "🤮"
-    case Bad = "☹️"
-    case Neutral = "😐"
-    case Good = "🙂"
-    case Amazing = "🤩"
+    case horrible = "🤮"
+    case bad = "☹️"
+    case neutral = "😐"
+    case good = "🙂"
+    case amazing = "🤩"
 }
-
 
 struct Brew {
     let brewId: UUID
@@ -33,9 +32,9 @@ struct Brew {
     let duration: Measurement<UnitDuration>? // in seconds
     let creationDate: Date
     let brewScore: CoffeeValuation?
-    
+
     init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, brewScore: CoffeeValuation?, creationDate: Date) {
-        self.id = UUID()
+        self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
         self.coffee = coffee

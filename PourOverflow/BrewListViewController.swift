@@ -25,7 +25,6 @@ class BrewListViewController: UITableViewController {
         } else {
             cell.detailTextLabel?.text = "-"
         }
-        
         return cell
     }
 
