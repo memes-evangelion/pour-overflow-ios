@@ -31,10 +31,8 @@ class CalendarViewController: UIViewController {
             button.setTitle("-", for: .normal)
             button.isEnabled = false
         }
-        
         let firstWeekdayOfMonth = Calendar.current.component(.weekday, from: selectedDate)
-        
-        let daysRange = Calendar.current.range(of: .day, in: .month, for:selectedDate)!
+        let daysRange = Calendar.current.range(of: .day, in: .month, for: selectedDate)!
         for dayNumber in daysRange {
             let firstButtonOfMonth = firstWeekdayOfMonth - 1
             let dayInButtons = firstButtonOfMonth + dayNumber
