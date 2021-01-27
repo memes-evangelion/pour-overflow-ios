@@ -9,15 +9,22 @@ import UIKit
 
 class BrewListViewController: UITableViewController {
     var brewStore: BrewStore!
+    var selectedDay: Date?
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if selectedDay != nil {
+            return brewStore.brewsInDate(date: selectedDay!).count
+        }
         return brewStore.allBrews.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrewCell", for: indexPath)
+        var brew = brewStore.allBrews[indexPath.row]
 
-        let brew = brewStore.allBrews[indexPath.row]
+        if selectedDay != nil {
+            brew = brewStore.brewsInDate(date: selectedDay!)[indexPath.row]
+        }
 
         cell.textLabel?.text = "\(brew.brewMethod)"
         if let score = brew.brewScore?.rawValue {
@@ -32,7 +39,10 @@ class BrewListViewController: UITableViewController {
         switch segue.identifier {
         case "showBrew":
             if let row = tableView.indexPathForSelectedRow?.row {
-                let brew = brewStore.allBrews[row]
+                var brew = brewStore.allBrews[row]
+                if selectedDay != nil {
+                    brew = brewStore.brewsInDate(date: selectedDay!)[row]
+                }
                 if let brewDetailViewController = segue.destination as? BrewDetailViewController {
                     brewDetailViewController.brew = brew
                 }

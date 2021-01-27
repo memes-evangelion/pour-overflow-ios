@@ -46,6 +46,13 @@ class LocalBrewStore: BrewStore {
         }
     }
 
+    func brewsInDate(date: Date) -> [Brew] {
+        let filteredBrews = allBrews.filter { Calendar.current.compare($0.creationDate, to: date, toGranularity: .day) == .orderedSame  }
+        return filteredBrews.sorted {
+            $0.creationDate < $1.creationDate
+        }
+    }
+
     init() {
         for _ in 0..<80 {
             addRandomBrew(hasValuation: true)
