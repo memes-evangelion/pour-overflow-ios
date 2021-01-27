@@ -34,7 +34,7 @@ class CalendarViewController: UIViewController {
         let firstWeekdayOfMonth = Calendar.current.component(.weekday, from: selectedDate)
         let daysRange = Calendar.current.range(of: .day, in: .month, for: selectedDate)!
         for dayNumber in daysRange {
-            let firstButtonOfMonth = firstWeekdayOfMonth - 1
+            let firstButtonOfMonth = firstWeekdayOfMonth - 2
             let dayInButtons = firstButtonOfMonth + dayNumber
             let button = dayButtons[dayInButtons]
             button.setTitle("\(dayNumber)\n", for: .normal)
@@ -43,15 +43,19 @@ class CalendarViewController: UIViewController {
 
         if brews.count > 0 {
             // Initial weekday of the month
-            let brewIndex = firstWeekdayOfMonth - 1
+            let brewIndex = firstWeekdayOfMonth - 2
             for brew in brews {
                 let day = Calendar.current.component(.day, from: brew.creationDate)
                 // Set position against initial weekday in array
                 let button = dayButtons[brewIndex + day]
-                if let score = brew.brewScore?.rawValue {
-                    button.setTitle("\(day)\n\(score)", for: .normal)
+                let buttonTitle = button.currentTitle!
+                let lines = buttonTitle.split(whereSeparator: \.isNewline)
+                let score = brew.brewScore?.rawValue ?? "☕️"
+
+                if lines.count > 1 {
+                    button.setTitle("\(day)\n\(score)+", for: .normal)
                 } else {
-                    button.setTitle("\(day)\n☕️", for: .normal)
+                    button.setTitle("\(day)\n\(score)", for: .normal)
                 }
                 button.isEnabled = true
             }

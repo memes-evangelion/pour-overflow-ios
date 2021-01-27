@@ -32,7 +32,7 @@ class LocalBrewStore: BrewStore {
             randomValuation = CoffeeValuation.allCases.randomElement()!
         }
 
-        let previousDays = Int.random(in: 1...120)
+        let previousDays = Int.random(in: 1...90)
         let randomCreationDate = Calendar.current.date(byAdding: .day, value: -previousDays, to: Date())!
 
         return Brew(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater,
@@ -47,7 +47,7 @@ class LocalBrewStore: BrewStore {
     }
 
     init() {
-        for _ in 0..<30 {
+        for _ in 0..<80 {
             addRandomBrew(hasValuation: true)
         }
         for _ in 0..<10 {
