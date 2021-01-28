@@ -47,10 +47,11 @@ class LocalBrewStore: BrewStore {
     }
 
     func brewsInDate(date: Date) -> [Brew] {
-        let filteredBrews = allBrews.filter { Calendar.current.compare($0.creationDate, to: date, toGranularity: .day) == .orderedSame  }
-        return filteredBrews.sorted {
-            $0.creationDate < $1.creationDate
-        }
+        let start = Calendar.current.startOfDay(for: date)
+        let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: start)!
+        let endOfDay = Calendar.current.date(byAdding: .second, value: -1, to: nextDay)!
+
+        return brewsInDateRange(fromDate: start, toDate: endOfDay)
     }
 
     init() {
