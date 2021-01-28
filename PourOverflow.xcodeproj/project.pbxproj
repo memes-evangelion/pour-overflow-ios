@@ -26,6 +26,7 @@
 		90BD41CE25A699EF002A2B78 /* PourOverflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD41CD25A699EF002A2B78 /* PourOverflowUITests.swift */; };
 		90F6C20925B7EB5300F3BFB2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */; };
 		FB3B0DEB25B5281D00A16936 /* BrewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B0DEA25B5281D00A16936 /* BrewStore.swift */; };
+		FB455F1825C30B30003E94BB /* BrewList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB455F1625C30B30003E94BB /* BrewList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		90BD41CF25A699EF002A2B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FB3B0DEA25B5281D00A16936 /* BrewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStore.swift; sourceTree = "<group>"; };
+		FB455F1725C30B30003E94BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PourOverflow/PourOverflow/Base.lproj/BrewList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				9083D51E25C305B300F7FA51 /* Calendar.storyboard */,
+				FB455F1625C30B30003E94BB /* BrewList.storyboard */,
 				9083D51525C304C600F7FA51 /* BrewDetail.storyboard */,
 				9019B92925C3000B0029A30A /* CreateBrew.storyboard */,
 				90BD41AB25A699E9002A2B78 /* AppDelegate.swift */,
@@ -268,6 +271,7 @@
 				9083D51F25C305B300F7FA51 /* Calendar.storyboard in Resources */,
 				9083D51725C304C600F7FA51 /* BrewDetail.storyboard in Resources */,
 				9019B92B25C3000B0029A30A /* CreateBrew.storyboard in Resources */,
+				FB455F1825C30B30003E94BB /* BrewList.storyboard in Resources */,
 				90BD41B825A699EE002A2B78 /* LaunchScreen.storyboard in Resources */,
 				90BD41B525A699EE002A2B78 /* Assets.xcassets in Resources */,
 				90BD41B325A699E9002A2B78 /* Main.storyboard in Resources */,
@@ -392,6 +396,14 @@
 				90BD41B725A699EE002A2B78 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FB455F1625C30B30003E94BB /* BrewList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB455F1725C30B30003E94BB /* Base */,
+			);
+			name = BrewList.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

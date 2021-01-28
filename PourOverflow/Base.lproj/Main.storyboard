@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJq-FH-YHS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJq-FH-YHS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,65 +25,17 @@
             </objects>
             <point key="canvasLocation" x="-133" y="26"/>
         </scene>
-        <!--Brew List Controller-->
-        <scene sceneID="fap-Qw-N4C">
-            <objects>
-                <tableViewController storyboardIdentifier="UITableViewController-qbR-lS-hXT" id="qbR-lS-hXT" userLabel="Brew List Controller" customClass="BrewListViewController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E7h-R1-hTc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BrewCell" textLabel="XPh-A0-779" detailTextLabel="OJa-wO-Ruc" style="IBUITableViewCellStyleValue1" id="ACG-TI-UGw">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ACG-TI-UGw" id="Ick-Cv-xNp">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XPh-A0-779">
-                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OJa-wO-Ruc">
-                                            <rect key="frame" x="316.5" y="12" width="58.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="doY-5y-9Xi" kind="show" identifier="showBrew" id="gth-Uh-Efc"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="qbR-lS-hXT" id="vGV-1w-V0R"/>
-                            <outlet property="delegate" destination="qbR-lS-hXT" id="fuu-PE-XeL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Past Brews" id="ASt-PW-8o2"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rWs-hN-W6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1923" y="-470"/>
-        </scene>
         <!--Past Brews-->
         <scene sceneID="pIq-oW-YRe">
             <objects>
                 <navigationController id="zyR-bg-LNw" customClass="BrewListNavigationController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Past Brews" image="clock.arrow.circlepath" catalog="system" id="ifr-wX-iIc"/>
+                    <tabBarItem key="tabBarItem" title="Past Brews" id="ifr-wX-iIc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pks-nI-yJK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qbR-lS-hXT" kind="relationship" relationship="rootViewController" id="fae-fX-RFP"/>
+                        <segue destination="d3f-1M-oxi" kind="relationship" relationship="rootViewController" id="fae-fX-RFP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwv-IN-JYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,16 +52,6 @@
             </objects>
             <point key="canvasLocation" x="-133" y="479"/>
         </scene>
-        <!--BrewDetail-->
-        <scene sceneID="iJ7-uy-fJf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BrewDetail" id="doY-5y-9Xi" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="pxN-0f-HeR"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P5p-8r-uH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1710" y="227"/>
-        </scene>
         <!--Calendar-->
         <scene sceneID="NH1-7x-Mgh">
             <objects>
@@ -122,11 +62,15 @@
             </objects>
             <point key="canvasLocation" x="631" y="25"/>
         </scene>
+        <!--BrewList-->
+        <scene sceneID="Ft8-R9-RPc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UITableViewController-qbR-lS-hXT" storyboardName="BrewList" referencedIdentifier="BrewList" id="d3f-1M-oxi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mBY-RH-mB5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lR0-eC-HEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="-470"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="clock.arrow.circlepath" catalog="system" width="128" height="110"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
