@@ -46,6 +46,14 @@ class LocalBrewStore: BrewStore {
         }
     }
 
+    func brewsInDate(date: Date) -> [Brew] {
+        let start = Calendar.current.startOfDay(for: date)
+        let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: start)!
+        let endOfDay = Calendar.current.date(byAdding: .second, value: -1, to: nextDay)!
+
+        return brewsInDateRange(fromDate: start, toDate: endOfDay)
+    }
+
     init() {
         for _ in 0..<80 {
             addRandomBrew(hasValuation: true)

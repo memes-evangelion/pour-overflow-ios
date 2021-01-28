@@ -227,36 +227,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="Bjz-x0-a4E"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Yw-qp-Gx2">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="QMQ-lY-gCo"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dpt-m8-cXE">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="Nj0-ef-Njq"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-fP-2XP">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="8z9-Rg-RUV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-Z5-pQv">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="ejG-Gi-FE4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-8D-Iuk">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="NxJ-RB-y3h"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="z6U-4i-MuV">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="nR1-UO-ir5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -270,36 +291,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="JVJ-PG-LQA"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-vX-zyJ">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="ABO-kK-eiY"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-Z8-J8O">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="7yV-5K-os1"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0cz-7g-LaX">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="3Qd-d3-b8d"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Ry-syd">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="oQu-Uh-m7D"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-cl-zeJ">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="Re4-8w-vqa"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-Fj-A3O">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="SjH-KK-Yyy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -313,36 +355,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="BqY-wr-Y48"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Cn9-M7-ea1">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="Ndk-8h-f68"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-LU-bzE">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="HrT-hO-kve"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-0z-gWl">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="P9J-dx-LhW"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aCC-cE-rWi">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="qrW-e5-wTg"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-nP-uaE">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="yHS-Vl-Ksb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-3X-PSm">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="dtG-EF-UHB"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -356,36 +419,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="MRX-Br-LXl"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="O0D-Te-ePQ">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="qKz-2n-ayI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uL8-04-cCR">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="3nj-of-r6K"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oer-LE-Zjd">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="CA2-3J-RCy"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="THm-Pi-4ca">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="qEG-Jq-xac"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-0I-EtD">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="fcC-vG-pUq"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-tb-Rf0">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="z8Y-W8-U2n"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -399,36 +483,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="KwA-Iw-OAg"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-Wb-RTT">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="jyg-Ua-isn"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F4e-vi-GOk">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="ScJ-ws-2l9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pH2-Xm-qBF">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="g7a-vA-tWI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Wi0-qR-Qmh">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="hLx-hT-FdN"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-tf-Dg7">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="c4K-Oy-wb4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9tt-Uq-lWv">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="97i-93-T5g"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -442,36 +547,57 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="Fcc-p8-qsB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-sM-7Nj">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="IoK-h7-FwC"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="17Q-vP-gv8">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="Z5Q-aF-FQE"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-un-sU7">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="3H0-Wa-8nm"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QGi-W0-rYj">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="b8X-gA-3pm"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vXk-TJ-fZa">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="2BI-kH-O1z"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-yd-beD">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="displayDayBrews:" destination="qWT-rL-fXr" eventType="touchUpInside" id="MId-RJ-i8r"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -551,6 +677,8 @@
                         <outletCollection property="dayButtons" destination="QGi-W0-rYj" collectionClass="NSMutableArray" id="YD6-P2-fnh"/>
                         <outletCollection property="dayButtons" destination="vXk-TJ-fZa" collectionClass="NSMutableArray" id="uth-XP-91J"/>
                         <outletCollection property="dayButtons" destination="zqk-yd-beD" collectionClass="NSMutableArray" id="EaD-Oi-cJV"/>
+                        <segue destination="qbR-lS-hXT" kind="show" identifier="showDayBrews" id="CEl-qf-Rck"/>
+                        <segue destination="NRC-sC-YcR" kind="showDetail" identifier="showDayBrewDetail" id="YQ5-NG-JBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjJ-KJ-2dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -581,7 +709,7 @@
             <objects>
                 <tableViewController id="qbR-lS-hXT" userLabel="Brew List Controller" customClass="BrewListViewController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E7h-R1-hTc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -622,18 +750,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWs-hN-W6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="-524"/>
+            <point key="canvasLocation" x="1832" y="-224"/>
         </scene>
         <!--Brew Detail View Controller-->
         <scene sceneID="07I-Wd-Ez5">
             <objects>
                 <viewController id="NRC-sC-YcR" customClass="BrewDetailViewController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zot-Lq-tlK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3qp-Nu-7tK">
-                                <rect key="frame" x="8" y="96" width="398" height="709"/>
+                                <rect key="frame" x="8" y="8" width="398" height="792"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H9X-UT-eUr">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -716,7 +844,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cey-5c-HvJ">
-                                        <rect key="frame" x="0.0" y="210" width="398" height="499"/>
+                                        <rect key="frame" x="0.0" y="210" width="398" height="582"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -751,7 +879,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVt-E2-7O5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="-370"/>
+            <point key="canvasLocation" x="2100" y="528"/>
         </scene>
         <!--Past Brews-->
         <scene sceneID="pIq-oW-YRe">
@@ -771,6 +899,10 @@
             <point key="canvasLocation" x="1014" y="-516"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YQ5-NG-JBw"/>
+        <segue reference="CEl-qf-Rck"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="110"/>

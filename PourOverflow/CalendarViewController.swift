@@ -14,10 +14,12 @@ class CalendarViewController: UIViewController {
     @IBOutlet var dayButtons: [UIButton]!
 
     var selectedDate: Date!
+    var displayDate: Date!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedDate = getFirstDayOfMonth(date: Date())
+        displayDate = getFirstDayOfMonth(date: Date())
 
         displayMonthLabel()
         fillCalendar()
@@ -102,5 +104,41 @@ class CalendarViewController: UIViewController {
         components.month = 1
         components.second = -1
         return Calendar.current.date(byAdding: components, to: date)!
+    }
+
+    @IBAction func displayDayBrews(_ sender: UIButton) {
+        guard let buttonTitle = sender.currentTitle else {
+            preconditionFailure("Unknown sender")
+        }
+        let lines = buttonTitle.split(whereSeparator: \.isNewline)
+        let daySelected = Int(lines[0])
+        var dateComponents = Calendar.current.dateComponents([.year, .month], from: selectedDate)
+        dateComponents.day = daySelected
+
+        displayDate = Calendar.current.date(from: dateComponents)!
+
+        let dayBrews = brewStore.brewsInDate(date: displayDate)
+        if dayBrews.count > 1 {
+            performSegue(withIdentifier: "showDayBrews", sender: dayBrews)
+        } else {
+            performSegue(withIdentifier: "showDayBrewDetail", sender: dayBrews)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showDayBrews":
+            if let brewListViewController = segue.destination as? BrewListViewController {
+                brewListViewController.brewStore = brewStore
+                brewListViewController.selectedDay = displayDate
+            }
+        case "showDayBrewDetail":
+            let dayBrews = brewStore.brewsInDate(date: displayDate)
+            if let brewDetailViewController = segue.destination as? BrewDetailViewController {
+                brewDetailViewController.brew = dayBrews[0]
+            }
+        default:
+            preconditionFailure("Unknown segue")
+        }
     }
 }
