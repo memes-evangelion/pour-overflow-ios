@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="30Z-r5-Kyo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Brew-->
+        <scene sceneID="enB-qT-VSh">
+            <objects>
+                <viewController id="30Z-r5-Kyo" customClass="NewBrewViewController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FP9-Yt-qVc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-cq-WJ8" userLabel="methodTextField">
+                                <rect key="frame" x="82" y="81" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="rBj-Gm-5fY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-J3-ub1" userLabel="coffeeTextField">
+                                <rect key="frame" x="82" y="160" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="bZi-BW-CgW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ag-Wx-bLV" userLabel="scoreTextField">
+                                <rect key="frame" x="82" y="397" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="DbN-zP-a7C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-dG-XNW" userLabel="waterTextField">
+                                <rect key="frame" x="82" y="239" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="nvE-4C-rML"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-7j-5gX" userLabel="timeTextField">
+                                <rect key="frame" x="82" y="318" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="JEb-SS-XAr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w48-eB-F5R">
+                                <rect key="frame" x="156" y="52" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee (g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-A8-gej">
+                                <rect key="frame" x="168" y="131" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water (ml)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-R6-HfN">
+                                <rect key="frame" x="167" y="210" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time (s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-HF-XSq">
+                                <rect key="frame" x="175.5" y="289" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI0-4W-GXK">
+                                <rect key="frame" x="334" y="605" width="72" height="30"/>
+                                <state key="normal" title="Save Brew"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWQ-Fm-Nd7">
+                                <rect key="frame" x="0.0" y="447" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Rpa-ti-X0s"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hai-Yw-MTg">
+                                <rect key="frame" x="184.5" y="368" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq9-vz-Byl">
+                                <rect key="frame" x="8" y="605" width="84" height="30"/>
+                                <state key="normal" title="Add a Photo"/>
+                                <connections>
+                                    <action selector="choosePhotoSource:" destination="30Z-r5-Kyo" eventType="touchUpInside" id="7KV-mq-2hN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R2X-FO-VfA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="THZ-dG-XNW" firstAttribute="top" secondItem="Dk4-R6-HfN" secondAttribute="bottom" constant="8" id="0Ii-Uk-ePO"/>
+                            <constraint firstItem="fzh-HF-XSq" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="1Tf-Pe-MLT"/>
+                            <constraint firstItem="R2X-FO-VfA" firstAttribute="trailing" secondItem="QI0-4W-GXK" secondAttribute="trailing" constant="8" id="1yL-GO-vWe"/>
+                            <constraint firstItem="w48-eB-F5R" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="2sT-xo-ZWb"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="top" secondItem="5ag-Wx-bLV" secondAttribute="bottom" constant="16" id="3H4-jp-Odb"/>
+                            <constraint firstItem="Mhs-A8-gej" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="5wX-8V-rfR"/>
+                            <constraint firstItem="wGr-7j-5gX" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="6tD-Gt-YFJ"/>
+                            <constraint firstItem="hai-Yw-MTg" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="9qO-Uo-Naw"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="BUT-Hi-Ql3"/>
+                            <constraint firstItem="JtU-cq-WJ8" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="BXc-aJ-Ajd"/>
+                            <constraint firstItem="w48-eB-F5R" firstAttribute="top" secondItem="R2X-FO-VfA" secondAttribute="top" constant="8" id="Bow-cW-rns"/>
+                            <constraint firstItem="hai-Yw-MTg" firstAttribute="top" secondItem="wGr-7j-5gX" secondAttribute="bottom" constant="16" id="LSP-Fx-3wb"/>
+                            <constraint firstItem="5ag-Wx-bLV" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="QYX-nC-UT2"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="trailing" secondItem="R2X-FO-VfA" secondAttribute="trailing" id="R9P-0R-m8Y"/>
+                            <constraint firstItem="Mhs-A8-gej" firstAttribute="top" secondItem="JtU-cq-WJ8" secondAttribute="bottom" constant="16" id="Tc7-GR-SJO"/>
+                            <constraint firstItem="Vq9-vz-Byl" firstAttribute="leading" secondItem="R2X-FO-VfA" secondAttribute="leading" constant="8" id="Tg6-nt-vKQ"/>
+                            <constraint firstItem="Dk4-R6-HfN" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="UBX-c9-zBv"/>
+                            <constraint firstItem="5ag-Wx-bLV" firstAttribute="top" secondItem="hai-Yw-MTg" secondAttribute="bottom" constant="8" id="Vkv-6t-eYf"/>
+                            <constraint firstItem="5Ms-J3-ub1" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="bDj-xr-PoB"/>
+                            <constraint firstItem="5Ms-J3-ub1" firstAttribute="top" secondItem="Mhs-A8-gej" secondAttribute="bottom" constant="8" id="hm1-BB-ePI"/>
+                            <constraint firstItem="CWQ-Fm-Nd7" firstAttribute="leading" secondItem="R2X-FO-VfA" secondAttribute="leading" id="hyY-0F-xfM"/>
+                            <constraint firstItem="Vq9-vz-Byl" firstAttribute="top" secondItem="CWQ-Fm-Nd7" secondAttribute="bottom" constant="8" id="jSV-F8-ro3"/>
+                            <constraint firstItem="wGr-7j-5gX" firstAttribute="top" secondItem="fzh-HF-XSq" secondAttribute="bottom" constant="8" id="ktH-yd-73W"/>
+                            <constraint firstItem="THZ-dG-XNW" firstAttribute="centerX" secondItem="FP9-Yt-qVc" secondAttribute="centerX" id="lRX-ag-ngc"/>
+                            <constraint firstItem="Dk4-R6-HfN" firstAttribute="top" secondItem="5Ms-J3-ub1" secondAttribute="bottom" constant="16" id="lZv-hk-VcO"/>
+                            <constraint firstItem="fzh-HF-XSq" firstAttribute="top" secondItem="THZ-dG-XNW" secondAttribute="bottom" constant="16" id="ofL-Hh-pPz"/>
+                            <constraint firstItem="QI0-4W-GXK" firstAttribute="top" secondItem="CWQ-Fm-Nd7" secondAttribute="bottom" constant="8" id="v45-VB-JDm"/>
+                            <constraint firstItem="JtU-cq-WJ8" firstAttribute="top" secondItem="w48-eB-F5R" secondAttribute="bottom" constant="8" id="vaY-rR-5iF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="New Brew" image="light.max" catalog="system" id="sq1-P4-rEz"/>
+                    <connections>
+                        <outlet property="imageView" destination="CWQ-Fm-Nd7" id="etd-DJ-pVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0T-cC-cL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="light.max" catalog="system" width="128" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
