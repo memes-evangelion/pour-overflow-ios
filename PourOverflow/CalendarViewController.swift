@@ -40,7 +40,6 @@ class CalendarViewController: UIViewController {
             let dayInButtons = firstButtonOfMonth + dayNumber
             let button = dayButtons[dayInButtons]
             button.setTitle("\(dayNumber)\n", for: .normal)
-            button.isEnabled = true
         }
 
         if brews.count > 0 {
@@ -110,7 +109,13 @@ class CalendarViewController: UIViewController {
         guard let buttonTitle = sender.currentTitle else {
             preconditionFailure("Unknown sender")
         }
+
         let lines = buttonTitle.split(whereSeparator: \.isNewline)
+
+        guard lines.count >= 2 && !lines[1].trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return
+        }
+
         let daySelected = Int(lines[0])
         var dateComponents = Calendar.current.dateComponents([.year, .month], from: selectedDate)
         dateComponents.day = daySelected
