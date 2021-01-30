@@ -128,9 +128,10 @@ class CalendarViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showDayBrews":
-            if let brewListViewController = segue.destination as? BrewListViewController {
-                brewListViewController.brewStore = brewStore
-                brewListViewController.selectedDay = displayDate
+            if let brewListNavViewController = segue.destination as? BrewListNavigationController {
+                brewListNavViewController.brewStore = brewStore
+                brewListNavViewController.selectedDay = displayDate
+                brewListNavViewController.setDoneButton = true
             }
         case "showDayBrewDetail":
             let dayBrews = brewStore.brewsInDate(date: displayDate)

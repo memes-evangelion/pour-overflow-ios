@@ -11,7 +11,7 @@ class BrewListViewController: UITableViewController {
     var brewStore: BrewStore!
     var selectedDay: Date?
     var selectedBrews: [Brew]!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if selectedDay != nil {
