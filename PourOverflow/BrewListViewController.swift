@@ -10,17 +10,17 @@ import UIKit
 class BrewListViewController: UITableViewController {
     var brewStore: BrewStore!
     var selectedDay: Date?
-    var selectedBrews: [Brew]!
 
-    var selectedBrewsByMonth: [[Brew]]!
     var monthSections: [String]!
+    var selectedBrewsByMonth: [[Brew]]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if selectedDay != nil {
-            selectedBrews = brewStore.brewsInDate(date: selectedDay!)
+            let selectedBrewsMonths = brewStore.brewsInDateByMethod(date: selectedDay!)
+            monthSections = selectedBrewsMonths.0
+            selectedBrewsByMonth = selectedBrewsMonths.1
         } else {
-            selectedBrews = brewStore.allBrews
             let selectedBrewsMonths = brewStore.allBrewsByMonth()
             monthSections = selectedBrewsMonths.0
             selectedBrewsByMonth = selectedBrewsMonths.1
@@ -29,7 +29,7 @@ class BrewListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return monthSections[section].count
+        return selectedBrewsByMonth[section].count
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,8 +56,8 @@ class BrewListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showBrew":
-            if let row = tableView.indexPathForSelectedRow?.row {
-                let brew = selectedBrews[row]
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let brew = selectedBrewsByMonth[indexPath.section][indexPath.row]
                 if let brewDetailViewController = segue.destination as? BrewDetailViewController {
                     brewDetailViewController.brew = brew
                 }
