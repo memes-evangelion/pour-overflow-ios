@@ -12,22 +12,37 @@ class BrewListViewController: UITableViewController {
     var selectedDay: Date?
     var selectedBrews: [Brew]!
 
+    var selectedBrewsByMonth: [[Brew]]!
+    var monthSections: [String]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if selectedDay != nil {
             selectedBrews = brewStore.brewsInDate(date: selectedDay!)
         } else {
             selectedBrews = brewStore.allBrews
+            let selectedBrewsMonths = brewStore.allBrewsByMonth()
+            monthSections = selectedBrewsMonths.0
+            selectedBrewsByMonth = selectedBrewsMonths.1
+
         }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedBrews.count
+        return monthSections[section].count
+    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return monthSections.count
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return monthSections[section]
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrewCell", for: indexPath)
-        let brew = selectedBrews[indexPath.row]
+        let brew = selectedBrewsByMonth[indexPath.section][indexPath.row]
 
         cell.textLabel?.text = "\(brew.brewMethod)"
         if let score = brew.brewScore?.rawValue {

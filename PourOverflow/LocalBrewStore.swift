@@ -46,6 +46,33 @@ class LocalBrewStore: BrewStore {
         }
     }
 
+    func allBrewsByMonth() -> ([String], [[Brew]]) {
+        var months: [String] = []
+        var monthBrews: [[Brew]] = []
+
+        let sortedAndFiltered = allBrews.sorted {
+            $0.creationDate > $1.creationDate // Descending so recent brews are shown at the top
+        }
+
+        for brew in sortedAndFiltered {
+            let dateComponents = Calendar.current.dateComponents([.year, .month], from: brew.creationDate)
+
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "LLLL Y"
+            let dateWithMonthOnly = Calendar.current.date(from: dateComponents)!
+            let monthYearString = dateFormatter.string(from: dateWithMonthOnly)
+            // Do the array dance
+            if months.contains(monthYearString) {
+                let existingMonthIndex = months.firstIndex(of: monthYearString)!
+                monthBrews[existingMonthIndex].append(brew)
+            } else {
+                months.append(monthYearString)
+                monthBrews.append([brew])
+            }
+        }
+        return (months, monthBrews)
+    }
+
     func brewsInDate(date: Date) -> [Brew] {
         let start = Calendar.current.startOfDay(for: date)
         let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: start)!
