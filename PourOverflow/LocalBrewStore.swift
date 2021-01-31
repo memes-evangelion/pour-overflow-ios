@@ -46,61 +46,6 @@ class LocalBrewStore: BrewStore {
         }
     }
 
-    func allBrewsByMonth() -> ([String], [[Brew]]) {
-        var months: [String] = []
-        var monthBrews: [[Brew]] = []
-
-        let sortedAndFiltered = allBrews.sorted {
-            $0.creationDate > $1.creationDate // Descending so recent brews are shown at the top
-        }
-
-        for brew in sortedAndFiltered {
-            let dateComponents = Calendar.current.dateComponents([.year, .month], from: brew.creationDate)
-
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "LLLL Y"
-            let dateWithMonthOnly = Calendar.current.date(from: dateComponents)!
-            let monthYearString = dateFormatter.string(from: dateWithMonthOnly)
-            // Do the array dance
-            if months.contains(monthYearString) {
-                let existingMonthIndex = months.firstIndex(of: monthYearString)!
-                monthBrews[existingMonthIndex].append(brew)
-            } else {
-                months.append(monthYearString)
-                monthBrews.append([brew])
-            }
-        }
-        return (months, monthBrews)
-    }
-
-    func brewsInDateByMethod(date: Date) -> ([String], [[Brew]]) {
-        var methods: [String] = []
-        var monthBrews: [[Brew]] = []
-
-        let start = Calendar.current.startOfDay(for: date)
-        let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: start)!
-        let endOfDay = Calendar.current.date(byAdding: .second, value: -1, to: nextDay)!
-
-        let brews = brewsInDateRange(fromDate: start, toDate: endOfDay)
-
-        let sortedAndFiltered = brews.sorted {
-            $0.creationDate > $1.creationDate // Descending so recent brews are shown at the top
-        }
-        
-        for brew in sortedAndFiltered {
-            let brewType = "\(brew.brewMethod)"
-            // Do the array dance
-            if methods.contains(brewType) {
-                let existingMonthIndex = methods.firstIndex(of: brewType)!
-                monthBrews[existingMonthIndex].append(brew)
-            } else {
-                methods.append(brewType)
-                monthBrews.append([brew])
-            }
-        }
-        return (methods, monthBrews)
-    }
-
     func brewsInDate(date: Date) -> [Brew] {
         let start = Calendar.current.startOfDay(for: date)
         let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: start)!

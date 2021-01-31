@@ -17,13 +17,15 @@ class BrewListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if selectedDay != nil {
-            let selectedBrewsMonths = brewStore.brewsInDateByMethod(date: selectedDay!)
-            monthSections = selectedBrewsMonths.0
-            selectedBrewsByMonth = selectedBrewsMonths.1
+            let selectedBrews = brewStore.brewsInDate(date: selectedDay!)
+            let sectionsByMethod = BrewUtilities.sectionsByDay(brews: selectedBrews)
+            monthSections = sectionsByMethod.0
+            selectedBrewsByMonth = sectionsByMethod.1
         } else {
-            let selectedBrewsMonths = brewStore.allBrewsByMonth()
-            monthSections = selectedBrewsMonths.0
-            selectedBrewsByMonth = selectedBrewsMonths.1
+            let selectedBrews = brewStore.allBrews
+            let sectionsByMonth = BrewUtilities.sectionsByMonth(brews: selectedBrews)
+            monthSections = sectionsByMonth.0
+            selectedBrewsByMonth = sectionsByMonth.1
 
         }
     }
