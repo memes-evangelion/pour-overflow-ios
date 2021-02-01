@@ -10,24 +10,40 @@ import UIKit
 class BrewListViewController: UITableViewController {
     var brewStore: BrewStore!
     var selectedDay: Date?
-    var selectedBrews: [Brew]!
+
+    var sectionNames: [String]!
+    var selectedBrewsBySections: [[Brew]]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if selectedDay != nil {
-            selectedBrews = brewStore.brewsInDate(date: selectedDay!)
+            let selectedBrews = brewStore.brewsInDate(date: selectedDay!)
+            let sectionsByDay = BrewUtilities.sectionsByDay(brews: selectedBrews)
+            sectionNames = sectionsByDay.0
+            selectedBrewsBySections = sectionsByDay.1
         } else {
-            selectedBrews = brewStore.allBrews
+            let selectedBrews = brewStore.allBrews
+            let sectionsByMonth = BrewUtilities.sectionsByMonth(brews: selectedBrews)
+            sectionNames = sectionsByMonth.0
+            selectedBrewsBySections = sectionsByMonth.1
         }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedBrews.count
+        return selectedBrewsBySections[section].count
+    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionNames.count
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionNames[section]
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrewCell", for: indexPath)
-        let brew = selectedBrews[indexPath.row]
+        let brew = selectedBrewsBySections[indexPath.section][indexPath.row]
 
         cell.textLabel?.text = "\(brew.brewMethod)"
         if let score = brew.brewScore?.rawValue {
@@ -41,8 +57,8 @@ class BrewListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showBrew":
-            if let row = tableView.indexPathForSelectedRow?.row {
-                let brew = selectedBrews[row]
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let brew = selectedBrewsBySections[indexPath.section][indexPath.row]
                 if let brewDetailViewController = segue.destination as? BrewDetailViewController {
                     brewDetailViewController.brew = brew
                 }
