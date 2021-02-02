@@ -494,7 +494,7 @@
                             <constraint firstItem="xGC-hY-1rx" firstAttribute="centerX" secondItem="GSN-j4-rdT" secondAttribute="centerX" id="uf1-Ae-5At"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" selectedImage="calendar" catalog="system" id="CsK-Gi-rWq"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="CsK-Gi-rWq"/>
                     <connections>
                         <outlet property="currentMonthLabel" destination="myT-Lz-RV3" id="huD-DH-9v2"/>
                         <outletCollection property="dayButtons" destination="fe2-st-sZK" collectionClass="NSMutableArray" id="Awc-rr-dNB"/>

@@ -59,18 +59,20 @@
         <!--BrewDetail-->
         <scene sceneID="iJ7-uy-fJf">
             <objects>
-                <viewControllerPlaceholder storyboardName="BrewDetail" id="doY-5y-9Xi" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="BrewDetail" referencedIdentifier="BrewDetail" id="doY-5y-9Xi" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pxN-0f-HeR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5p-8r-uH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416" y="-516"/>
+            <point key="canvasLocation" x="3475" y="-449"/>
         </scene>
-        <!--Brew List Navigation Controller-->
+        <!--Brews-->
         <scene sceneID="h3X-os-upg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bXS-k9-ayF" customClass="BrewListNavigationController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Brews" image="list.dash" catalog="system" id="lz3-qh-EZ2"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ct-RL-Mup">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,6 +88,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
