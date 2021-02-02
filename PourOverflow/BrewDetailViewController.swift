@@ -37,4 +37,27 @@ class BrewDetailViewController: UIViewController {
         brewDateTextField.text = "\(dateFormatter.string(from: brew.creationDate))"
         scoreLabel.text = brew.brewScore?.rawValue
     }
+
+    override func viewWillLayoutSubviews() {
+        let navigationBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
+        self.view.addSubview(navigationBar)
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+
+        let navigationItem = UINavigationItem(title: "Brew detail")
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        navigationItem.rightBarButtonItem = doneButton
+        navigationBar.setItems([navigationItem], animated: false)
+
+        var newSafeArea = UIEdgeInsets()
+        newSafeArea.top += 60
+        self.additionalSafeAreaInsets = newSafeArea
+    }
+
+    @objc func donePressed() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
