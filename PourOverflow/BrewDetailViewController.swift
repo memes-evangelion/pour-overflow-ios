@@ -47,8 +47,8 @@ class BrewDetailViewController: UIViewController {
         dateFormatter.timeStyle = .none
         dateFormatter.locale = Locale(identifier: "en_US")
 
-        let navigationItem = UINavigationItem(title: "Brew detail")
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        let navigationItem = UINavigationItem(title: "")
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: #selector(donePressed))
         navigationItem.rightBarButtonItem = doneButton
         navigationBar.setItems([navigationItem], animated: false)
 
