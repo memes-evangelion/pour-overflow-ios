@@ -59,12 +59,12 @@
         <!--BrewDetail-->
         <scene sceneID="iJ7-uy-fJf">
             <objects>
-                <viewControllerPlaceholder storyboardName="BrewDetail" id="doY-5y-9Xi" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="BrewDetail" referencedIdentifier="BrewDetail" id="doY-5y-9Xi" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pxN-0f-HeR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5p-8r-uH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416" y="-516"/>
+            <point key="canvasLocation" x="3475" y="-449"/>
         </scene>
         <!--Brews-->
         <scene sceneID="h3X-os-upg">

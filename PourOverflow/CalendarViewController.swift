@@ -140,8 +140,8 @@ class CalendarViewController: UIViewController {
             }
         case "showDayBrewDetail":
             let dayBrews = brewStore.brewsInDate(date: displayDate)
-            if let brewDetailViewController = segue.destination as? BrewDetailViewController {
-                brewDetailViewController.brew = dayBrews[0]
+            if let brewDetailNavigationViewController = segue.destination as? BrewDetailNavigationController {
+                brewDetailNavigationViewController.brew = dayBrews[0]
             }
         default:
             preconditionFailure("Unknown segue")
