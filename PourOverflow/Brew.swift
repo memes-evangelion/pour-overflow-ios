@@ -32,8 +32,9 @@ struct Brew {
     let duration: Measurement<UnitDuration>? // in seconds
     let creationDate: Date
     let brewScore: CoffeeValuation?
+    let imageAddress: String?
 
-    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, brewScore: CoffeeValuation?, creationDate: Date) {
+    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -42,5 +43,6 @@ struct Brew {
         self.duration = duration
         self.brewScore = brewScore
         self.creationDate = creationDate
+        self.imageAddress = imageAddress
     }
 }

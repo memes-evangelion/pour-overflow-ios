@@ -15,6 +15,7 @@ class BrewDetailViewController: UIViewController {
     @IBOutlet var timeTextField: UITextField!
     @IBOutlet var brewDateTextField: UITextField!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var brewImage: UIImageView!
 
     var brew: Brew!
 
@@ -36,5 +37,8 @@ class BrewDetailViewController: UIViewController {
         }
         brewDateTextField.text = "\(dateFormatter.string(from: brew.creationDate))"
         scoreLabel.text = brew.brewScore?.rawValue
+        if let imageFromBrew = brew.imageAddress {
+            brewImage.image = UIImage(named: imageFromBrew)
+        }
     }
 }
