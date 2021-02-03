@@ -50,6 +50,16 @@ class LocalBrewStore: BrewStore {
         }
     }
 
+    func brewsByMethod(brewMethod: BrewMethod, fromDate: Date?, toDate: Date?) -> [Brew] {
+        if let from = fromDate, let until = toDate  {
+            let brewsInRange = brewsInDateRange(fromDate: from, toDate: until)
+            let byMethod = brewsInRange.filter { $0.brewMethod == brewMethod }
+            return byMethod
+        } else {
+            return allBrews.filter { $0.brewMethod == brewMethod }
+        }
+    }
+
     func brewsInDate(date: Date) -> [Brew] {
         let start = Calendar.current.startOfDay(for: date)
         let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: start)!

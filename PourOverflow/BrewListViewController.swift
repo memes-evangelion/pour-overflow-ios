@@ -7,7 +7,9 @@
 
 import UIKit
 
-class BrewListViewController: UITableViewController {
+class BrewListViewController: UITableViewController, UISearchBarDelegate {
+    @IBOutlet var searchBar: UISearchBar!
+
     var brewStore: BrewStore!
     var selectedDay: Date?
 
@@ -16,11 +18,14 @@ class BrewListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBar.delegate = self
+
         if selectedDay != nil {
             let selectedBrews = brewStore.brewsInDate(date: selectedDay!)
             let sectionsByDay = BrewUtilities.sectionsByDay(brews: selectedBrews)
             sectionNames = sectionsByDay.0
             selectedBrewsBySections = sectionsByDay.1
+            tableView.tableHeaderView = nil
         } else {
             let selectedBrews = brewStore.allBrews
             let sectionsByMonth = BrewUtilities.sectionsByMonth(brews: selectedBrews)
@@ -65,6 +70,12 @@ class BrewListViewController: UITableViewController {
             }
         default:
             preconditionFailure("Unexpected segue")
+        }
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let searchMethod = BrewMethod(value: searchText) {
+            let _ = brewStore.brewsByMethod(brewMethod: searchMethod, fromDate: nil, toDate: nil)
         }
     }
 }
