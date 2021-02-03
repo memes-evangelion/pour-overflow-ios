@@ -7,8 +7,26 @@
 
 import UIKit
 
-enum BrewMethod: CaseIterable {
+enum BrewMethod: String, CaseIterable {
     case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso
+    init?(value: String) {
+        switch value.lowercased() {
+        case BrewMethod.harioSwitch.rawValue.lowercased():
+            self = BrewMethod.harioSwitch
+        case BrewMethod.aeroPress.rawValue.lowercased():
+            self = BrewMethod.aeroPress
+        case BrewMethod.v60.rawValue.lowercased():
+            self = BrewMethod.v60
+        case BrewMethod.kalitaWave.rawValue.lowercased():
+            self = BrewMethod.kalitaWave
+        case BrewMethod.chemex.rawValue.lowercased():
+            self = BrewMethod.chemex
+        case BrewMethod.espresso.rawValue.lowercased():
+            self = BrewMethod.espresso
+        default:
+            return nil
+        }
+    }
 }
 
 enum GrainMethod: CaseIterable {
