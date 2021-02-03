@@ -8,6 +8,8 @@
 import UIKit
 
 class BrewListViewController: UITableViewController {
+    @IBOutlet var searchBar: UISearchBar!
+
     var brewStore: BrewStore!
     var selectedDay: Date?
 
@@ -21,6 +23,7 @@ class BrewListViewController: UITableViewController {
             let sectionsByDay = BrewUtilities.sectionsByDay(brews: selectedBrews)
             sectionNames = sectionsByDay.0
             selectedBrewsBySections = sectionsByDay.1
+            tableView.tableHeaderView = nil
         } else {
             let selectedBrews = brewStore.allBrews
             let sectionsByMonth = BrewUtilities.sectionsByMonth(brews: selectedBrews)
