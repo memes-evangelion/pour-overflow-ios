@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3qp-Nu-7tK">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="96" width="398" height="231"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H9X-UT-eUr">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -116,33 +116,47 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cey-5c-HvJ">
-                                        <rect key="frame" x="0.0" y="210" width="398" height="548"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cey-5c-HvJ">
+                                        <rect key="frame" x="0.0" y="210" width="398" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="jGH-fT-YvO"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="G0a-yF-5JH" firstAttribute="height" secondItem="H9X-UT-eUr" secondAttribute="height" id="Ani-5g-4IF"/>
                                     <constraint firstItem="4xe-dO-IXT" firstAttribute="leading" secondItem="H58-PB-j3x" secondAttribute="leading" id="Jl5-SW-SiN"/>
                                     <constraint firstItem="2px-X9-wQJ" firstAttribute="leading" secondItem="4xe-dO-IXT" secondAttribute="leading" id="OP0-FN-tku"/>
+                                    <constraint firstItem="ePp-Op-sZo" firstAttribute="height" secondItem="H9X-UT-eUr" secondAttribute="height" id="Spg-LV-V9C"/>
+                                    <constraint firstItem="4Q6-MW-yGD" firstAttribute="height" secondItem="H9X-UT-eUr" secondAttribute="height" id="baP-40-HLT"/>
                                     <constraint firstItem="GhK-3S-vRG" firstAttribute="leading" secondItem="FMF-a9-CKz" secondAttribute="leading" id="snq-hY-w9W"/>
+                                    <constraint firstItem="CFe-vo-JWC" firstAttribute="height" secondItem="H9X-UT-eUr" secondAttribute="height" id="ugp-te-o2g"/>
                                     <constraint firstItem="H58-PB-j3x" firstAttribute="leading" secondItem="GhK-3S-vRG" secondAttribute="leading" id="vwz-QE-pEt"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="oBk-WZ-Dj1">
+                                <rect key="frame" x="8" y="343" width="398" height="511"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QNh-bR-xUJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QNh-bR-xUJ" firstAttribute="trailing" secondItem="3qp-Nu-7tK" secondAttribute="trailing" constant="8" id="2Ue-vS-Ng4"/>
                             <constraint firstItem="3qp-Nu-7tK" firstAttribute="top" secondItem="QNh-bR-xUJ" secondAttribute="top" constant="8" id="GzK-xZ-T0k"/>
+                            <constraint firstItem="QNh-bR-xUJ" firstAttribute="bottom" secondItem="oBk-WZ-Dj1" secondAttribute="bottom" constant="8" id="SCO-86-Yx2"/>
+                            <constraint firstItem="QNh-bR-xUJ" firstAttribute="trailing" secondItem="oBk-WZ-Dj1" secondAttribute="trailing" constant="8" id="T0i-sc-Bpq"/>
                             <constraint firstItem="3qp-Nu-7tK" firstAttribute="leading" secondItem="QNh-bR-xUJ" secondAttribute="leading" constant="8" id="e26-dc-Yss"/>
-                            <constraint firstItem="QNh-bR-xUJ" firstAttribute="bottom" secondItem="3qp-Nu-7tK" secondAttribute="bottom" constant="8" id="tzp-p1-2xh"/>
+                            <constraint firstItem="oBk-WZ-Dj1" firstAttribute="top" secondItem="3qp-Nu-7tK" secondAttribute="bottom" constant="16" id="mr6-bo-WuZ"/>
+                            <constraint firstItem="oBk-WZ-Dj1" firstAttribute="leading" secondItem="QNh-bR-xUJ" secondAttribute="leading" constant="8" id="wyC-cQ-omd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TtU-bB-Wea"/>
                     <connections>
                         <outlet property="brewDateTextField" destination="FMF-a9-CKz" id="ufa-sS-Y5R"/>
+                        <outlet property="brewImage" destination="oBk-WZ-Dj1" id="bwp-qV-YCo"/>
                         <outlet property="brewMethodTextField" destination="2px-X9-wQJ" id="M1V-hv-NsZ"/>
                         <outlet property="coffeeTextField" destination="4xe-dO-IXT" id="h9I-SR-gAw"/>
                         <outlet property="scoreLabel" destination="cey-5c-HvJ" id="N2s-9A-LGB"/>
