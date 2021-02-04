@@ -27,11 +27,14 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
             selectedBrewsBySections = sectionsByDay.1
             tableView.tableHeaderView = nil
         } else {
-            let selectedBrews = brewStore.allBrews
-            let sectionsByMonth = BrewUtilities.sectionsByMonth(brews: selectedBrews)
-            sectionNames = sectionsByMonth.0
-            selectedBrewsBySections = sectionsByMonth.1
+            setBrewsByMonth(brews: brewStore.allBrews)
         }
+    }
+
+    func setBrewsByMonth(brews: [Brew]) {
+        let sectionsByMonth = BrewUtilities.sectionsByMonth(brews: brews)
+        sectionNames = sectionsByMonth.0
+        selectedBrewsBySections = sectionsByMonth.1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,7 +78,12 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let searchMethod = BrewMethod(value: searchText) {
-            let _ = brewStore.brewsByMethod(brewMethod: searchMethod, fromDate: nil, toDate: nil)
+            let brewsFound = brewStore.brewsByMethod(brewMethod: searchMethod, fromDate: nil, toDate: nil)
+            setBrewsByMonth(brews: brewsFound)
+            tableView.reloadData()
+        } else {
+            setBrewsByMonth(brews: brewStore.allBrews)
+            tableView.reloadData()
         }
     }
 }
