@@ -10,6 +10,7 @@
 		90054D8325A69EC700941B32 /* NewBrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90054D8225A69EC700941B32 /* NewBrewViewController.swift */; };
 		9016D81425AA62B9003F6446 /* Brew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016D81325AA62B9003F6446 /* Brew.swift */; };
 		9019B92B25C3000B0029A30A /* CreateBrew.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9019B92925C3000B0029A30A /* CreateBrew.storyboard */; };
+		903432C025CD993E0030EF25 /* BrewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903432BF25CD993E0030EF25 /* BrewImageViewController.swift */; };
 		9035A85925B4C09D00653D49 /* BrewListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035A85825B4C09D00653D49 /* BrewListNavigationController.swift */; };
 		9035A85E25B4C41800653D49 /* BrewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035A85D25B4C41800653D49 /* BrewDetailViewController.swift */; };
 		9083D51725C304C600F7FA51 /* BrewDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9083D51525C304C600F7FA51 /* BrewDetail.storyboard */; };
@@ -52,6 +53,7 @@
 		90054D8225A69EC700941B32 /* NewBrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBrewViewController.swift; sourceTree = "<group>"; };
 		9016D81325AA62B9003F6446 /* Brew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brew.swift; sourceTree = "<group>"; };
 		9019B92A25C3000B0029A30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PourOverflow/Base.lproj/CreateBrew.storyboard; sourceTree = "<group>"; };
+		903432BF25CD993E0030EF25 /* BrewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewImageViewController.swift; sourceTree = "<group>"; };
 		9035A85825B4C09D00653D49 /* BrewListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewListNavigationController.swift; sourceTree = "<group>"; };
 		9035A85D25B4C41800653D49 /* BrewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewDetailViewController.swift; sourceTree = "<group>"; };
 		9083D51625C304C600F7FA51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PourOverflow/Base.lproj/BrewDetail.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				9083D51E25C305B300F7FA51 /* Calendar.storyboard */,
 				FB455F1625C30B30003E94BB /* BrewList.storyboard */,
 				9083D51525C304C600F7FA51 /* BrewDetail.storyboard */,
+				903432BF25CD993E0030EF25 /* BrewImageViewController.swift */,
 				9019B92925C3000B0029A30A /* CreateBrew.storyboard */,
 				90BD41B125A699E9002A2B78 /* Main.storyboard */,
 				90BD41AB25A699E9002A2B78 /* AppDelegate.swift */,
@@ -338,6 +341,7 @@
 				9035A85E25B4C41800653D49 /* BrewDetailViewController.swift in Sources */,
 				9097751225C9978E00C72235 /* BrewDetailNavigationController.swift in Sources */,
 				90B5D6D625B4106300E92FAE /* BrewListViewController.swift in Sources */,
+				903432C025CD993E0030EF25 /* BrewImageViewController.swift in Sources */,
 				90054D8325A69EC700941B32 /* NewBrewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
