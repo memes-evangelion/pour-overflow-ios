@@ -50,13 +50,13 @@ class LocalBrewStore: BrewStore {
         }
     }
 
-    func brewsByMethod(brewMethod: BrewMethod, fromDate: Date?, toDate: Date?) -> [Brew] {
-        if let from = fromDate, let until = toDate  {
+    func brewsByMethod(brewMethods: [BrewMethod], fromDate: Date?, toDate: Date?) -> [Brew] {
+        if let from = fromDate, let until = toDate {
             let brewsInRange = brewsInDateRange(fromDate: from, toDate: until)
-            let byMethod = brewsInRange.filter { $0.brewMethod == brewMethod }
+            let byMethod = brewsInRange.filter { brewMethods.contains($0.brewMethod) }
             return byMethod
         } else {
-            return allBrews.filter { $0.brewMethod == brewMethod }
+            return allBrews.filter { brewMethods.contains($0.brewMethod) }
         }
     }
 
