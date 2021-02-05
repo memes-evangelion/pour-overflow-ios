@@ -555,7 +555,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5p-8r-uH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="289"/>
+            <point key="canvasLocation" x="1599" y="281"/>
         </scene>
         <!--BrewList-->
         <scene sceneID="CFD-Kg-R5U">
@@ -563,7 +563,7 @@
                 <viewControllerPlaceholder storyboardName="BrewList" id="lZ6-d3-68A" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lb9-w4-uWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="101"/>
+            <point key="canvasLocation" x="1599" y="117"/>
         </scene>
     </scenes>
     <resources>

@@ -8,37 +8,43 @@
 import UIKit
 
 class BrewDetailViewController: UIViewController {
+    @IBOutlet var waterLabel: UILabel!
+    @IBOutlet var coffeeLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var grindLabel: UILabel!
 
-    @IBOutlet var brewMethodTextField: UITextField!
-    @IBOutlet var coffeeTextField: UITextField!
-    @IBOutlet var waterTextField: UITextField!
-    @IBOutlet var timeTextField: UITextField!
-    @IBOutlet var brewDateTextField: UITextField!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var brewImage: UIImageView!
+    @IBOutlet var brewDateLabel: UILabel!
+
+    @IBOutlet var squareViews: [UIView]!
 
     var brew: Brew!
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         dateFormatter.locale = Locale(identifier: "en_US")
 
-        brewMethodTextField.text = "\(brew.brewMethod)"
-        coffeeTextField.text = "\(brew.coffee) g"
-        waterTextField.text = "\(brew.water) ml"
+        navigationItem.title = "\(brew.brewMethod)"
+        coffeeLabel.text = "\(brew.coffee)"
+        waterLabel.text = "\(brew.water)"
         if let duration = brew.duration {
             let truncatedValue = String(format: "%.2f", duration.value)
 
-            timeTextField.text = "\(truncatedValue) seconds"
+            timeLabel.text = "\(truncatedValue) s"
         }
-        brewDateTextField.text = "\(dateFormatter.string(from: brew.creationDate))"
+        brewDateLabel.text = "Brewed: \(dateFormatter.string(from: brew.creationDate))"
         scoreLabel.text = brew.brewScore?.rawValue
         if let imageFromBrew = brew.imageAddress {
             brewImage.image = UIImage(named: imageFromBrew)
+        }
+
+        for roundView in squareViews {
+            roundView.layer.cornerRadius = 5
         }
     }
 }
