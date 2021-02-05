@@ -77,13 +77,14 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let matchingMethods = BrewMethod.matchingMethods(text: searchText)
-        if matchingMethods.isEmpty {
+        if searchText.isEmpty {
             setBrewsByMonth(brews: brewStore.allBrews)
         } else {
+            let matchingMethods = BrewMethod.matchingMethods(text: searchText)
             let brewsFound = brewStore.brewsByMethod(brewMethods: matchingMethods, fromDate: nil, toDate: nil)
             setBrewsByMonth(brews: brewsFound)
         }
+
         tableView.reloadData()
     }
 }
