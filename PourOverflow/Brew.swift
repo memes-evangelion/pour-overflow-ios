@@ -27,6 +27,13 @@ enum BrewMethod: String, CaseIterable {
             return nil
         }
     }
+
+    static func matchingMethods(text: String) -> [BrewMethod] {
+        let lowercasedText = text.lowercased()
+        let methodsNames = BrewMethod.allCases.map { $0.rawValue.lowercased() }
+        let matchingMethodNames = methodsNames.filter { $0.starts(with: lowercasedText) }
+        return matchingMethodNames.compactMap { BrewMethod(value: $0) }
+    }
 }
 
 enum GrainMethod: CaseIterable {
@@ -52,7 +59,8 @@ struct Brew {
     let brewScore: CoffeeValuation?
     let imageAddress: String?
 
-    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?, brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?) {
+    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?,
+         brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
