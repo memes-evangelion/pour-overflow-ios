@@ -21,6 +21,10 @@ class BrewDetailViewController: UIViewController {
 
     var brew: Brew!
 
+    @IBAction func showImageDetail(_ sender: UIButton) {
+        performSegue(withIdentifier: "showFullImage", sender: sender)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +49,17 @@ class BrewDetailViewController: UIViewController {
 
         for roundView in squareViews {
             roundView.layer.cornerRadius = 5
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showFullImage":
+            if let brewImageViewController = segue.destination as? BrewImageViewController {
+                    brewImageViewController.brewImage = brewImage.image
+            }
+        default:
+            preconditionFailure("Unknown segue")
         }
     }
 }
