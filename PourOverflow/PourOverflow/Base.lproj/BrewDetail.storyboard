@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-wg-fY0" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="983"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1059"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-IO-iez" userLabel="Water View">
                                                 <rect key="frame" x="16" y="39" width="183" height="80"/>
@@ -225,16 +225,19 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-UU-H0N">
-                                                <rect key="frame" x="16" y="299" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="907" width="382" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="rTp-AC-F1U"/>
+                                                </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJd-VS-58I">
-                                                <rect key="frame" x="16" y="299" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="907" width="382" height="120"/>
                                                 <connections>
                                                     <action selector="showImageDetail:" destination="sOU-WP-I23" eventType="touchUpInside" id="qan-3q-Bnr"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdX-kq-hM5" userLabel="Aroma View">
-                                                <rect key="frame" x="16" y="375" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="299" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAt-qF-0TU">
                                                         <rect key="frame" x="8" y="8" width="63" height="27"/>
@@ -248,7 +251,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="w0p-FA-h1n">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="w0p-FA-h1n">
                                                         <rect key="frame" x="257" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -261,7 +264,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ETx-la-B27">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ETx-la-B27">
                                                         <rect key="frame" x="96" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </slider>
@@ -283,7 +286,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSn-3d-B8c" userLabel="Acidity View">
-                                                <rect key="frame" x="16" y="471" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="395" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-6c-Oag">
                                                         <rect key="frame" x="8" y="8" width="66" height="27"/>
@@ -297,7 +300,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-nQ-5ny">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-nQ-5ny">
                                                         <rect key="frame" x="257" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -310,7 +313,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-rg-rn4">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-rg-rn4">
                                                         <rect key="frame" x="96" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </slider>
@@ -332,7 +335,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtz-1C-wZY" userLabel="Sweetness View">
-                                                <rect key="frame" x="16" y="567" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="491" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweetness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQO-w6-nGY">
                                                         <rect key="frame" x="8" y="8" width="65.5" height="16"/>
@@ -347,7 +350,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-NK-zM0">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-NK-zM0">
                                                         <rect key="frame" x="96" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </slider>
@@ -357,7 +360,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hVO-x5-iPl">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="hVO-x5-iPl">
                                                         <rect key="frame" x="257" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -380,7 +383,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-oI-yFu" userLabel="Aftertaste View">
-                                                <rect key="frame" x="16" y="759" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="683" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aftertaste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06a-H6-vba">
                                                         <rect key="frame" x="16" y="8" width="65" height="17"/>
@@ -394,7 +397,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-4J-Kb3">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-4J-Kb3">
                                                         <rect key="frame" x="257" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -407,7 +410,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JIc-Qs-0iS">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="JIc-Qs-0iS">
                                                         <rect key="frame" x="96" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </slider>
@@ -429,7 +432,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uv4-e2-7x2" userLabel="Body View">
-                                                <rect key="frame" x="16" y="663" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="587" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-3k-HzY">
                                                         <rect key="frame" x="8" y="8" width="49.5" height="26.5"/>
@@ -443,7 +446,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7ey-fP-fd6">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="7ey-fP-fd6">
                                                         <rect key="frame" x="96" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </slider>
@@ -453,7 +456,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ryI-tN-PTY">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ryI-tN-PTY">
                                                         <rect key="frame" x="257" y="42" width="104" height="31"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -478,7 +481,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Notes" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-hB-QNM">
-                                                <rect key="frame" x="16" y="871" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="795" width="382" height="80"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -486,12 +489,11 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="uv4-e2-7x2" firstAttribute="leading" secondItem="Rtz-1C-wZY" secondAttribute="leading" id="0BQ-9r-paN"/>
-                                            <constraint firstItem="o4w-UU-H0N" firstAttribute="top" secondItem="208-yd-c94" secondAttribute="bottom" constant="16" id="1Hm-jq-oQz"/>
+                                            <constraint firstItem="o4w-UU-H0N" firstAttribute="top" secondItem="fPE-hB-QNM" secondAttribute="bottom" constant="32" id="1Hm-jq-oQz"/>
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="height" secondItem="o4w-UU-H0N" secondAttribute="height" id="2Jj-0a-flZ"/>
                                             <constraint firstItem="gdD-M5-Kzm" firstAttribute="height" secondItem="SDl-IO-iez" secondAttribute="height" id="31s-wF-RfR"/>
-                                            <constraint firstItem="RdX-kq-hM5" firstAttribute="top" secondItem="o4w-UU-H0N" secondAttribute="bottom" constant="16" id="3Q4-y4-KCB"/>
+                                            <constraint firstItem="RdX-kq-hM5" firstAttribute="top" secondItem="208-yd-c94" secondAttribute="bottom" constant="16" id="3Q4-y4-KCB"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="top" secondItem="E8C-Ab-HNY" secondAttribute="top" id="7Ha-cY-ArQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="fPE-hB-QNM" secondAttribute="bottom" constant="32" id="7Ib-0V-mx5"/>
                                             <constraint firstItem="Rtz-1C-wZY" firstAttribute="top" secondItem="bSn-3d-B8c" secondAttribute="bottom" constant="16" id="8ct-gc-Dkl"/>
                                             <constraint firstItem="jxa-oI-yFu" firstAttribute="leading" secondItem="uv4-e2-7x2" secondAttribute="leading" id="8cx-fb-s6e"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="width" secondItem="gdD-M5-Kzm" secondAttribute="width" id="ByZ-xR-dmL"/>
@@ -500,7 +502,6 @@
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="leading" secondItem="o4w-UU-H0N" secondAttribute="leading" id="KLh-G8-kE7"/>
                                             <constraint firstItem="Rtz-1C-wZY" firstAttribute="leading" secondItem="bSn-3d-B8c" secondAttribute="leading" id="M5i-ut-xze"/>
                                             <constraint firstItem="uv4-e2-7x2" firstAttribute="top" secondItem="Rtz-1C-wZY" secondAttribute="bottom" constant="16" id="PAn-Gw-Hd1"/>
-                                            <constraint firstItem="o4w-UU-H0N" firstAttribute="height" secondItem="208-yd-c94" secondAttribute="height" id="T12-7s-wTi"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="width" secondItem="gdD-M5-Kzm" secondAttribute="width" id="T1o-Ou-9kL"/>
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="width" secondItem="o4w-UU-H0N" secondAttribute="width" id="TPe-u2-dPh"/>
                                             <constraint firstItem="bSn-3d-B8c" firstAttribute="height" secondItem="RdX-kq-hM5" secondAttribute="height" id="TfW-8q-5Zr"/>
@@ -534,6 +535,7 @@
                                             <constraint firstItem="jxa-oI-yFu" firstAttribute="trailing" secondItem="uv4-e2-7x2" secondAttribute="trailing" id="s6U-Qc-Dpw"/>
                                             <constraint firstItem="208-yd-c94" firstAttribute="leading" secondItem="aAb-wg-fY0" secondAttribute="leading" constant="16" id="sdq-D3-vNm"/>
                                             <constraint firstItem="bSn-3d-B8c" firstAttribute="trailing" secondItem="RdX-kq-hM5" secondAttribute="trailing" id="u1J-Ix-Gac"/>
+                                            <constraint firstAttribute="bottom" secondItem="o4w-UU-H0N" secondAttribute="bottom" constant="32" id="uTa-ad-qMI"/>
                                             <constraint firstItem="bSn-3d-B8c" firstAttribute="leading" secondItem="RdX-kq-hM5" secondAttribute="leading" id="up7-SJ-zTy"/>
                                             <constraint firstItem="208-yd-c94" firstAttribute="leading" secondItem="o4w-UU-H0N" secondAttribute="leading" id="wVA-jW-QEf"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="height" secondItem="SDl-IO-iez" secondAttribute="height" id="xd7-Tx-V0x"/>
