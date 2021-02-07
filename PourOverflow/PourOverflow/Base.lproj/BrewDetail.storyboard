@@ -37,10 +37,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-wg-fY0" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1059"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1067"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-IO-iez" userLabel="Water View">
-                                                <rect key="frame" x="16" y="39" width="183" height="80"/>
+                                                <rect key="frame" x="16" y="47" width="183" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1I-Qb-IfG">
                                                         <rect key="frame" x="8" y="8" width="46" height="21"/>
@@ -84,7 +84,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8C-Ab-HNY" userLabel="Grind View">
-                                                <rect key="frame" x="16" y="127" width="183" height="80"/>
+                                                <rect key="frame" x="16" y="135" width="183" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qep-w1-Xnm">
                                                         <rect key="frame" x="8" y="8" width="42" height="21"/>
@@ -118,7 +118,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="208-yd-c94" userLabel="Rating View">
-                                                <rect key="frame" x="16" y="223" width="382" height="60"/>
+                                                <rect key="frame" x="16" y="231" width="382" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaP-De-7Ha">
                                                         <rect key="frame" x="8" y="8" width="61" height="27"/>
@@ -143,13 +143,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brewed: February 3, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd1-NP-1M2">
-                                                <rect key="frame" x="134.5" y="8" width="145" height="15"/>
+                                                <rect key="frame" x="134.5" y="16" width="145" height="15"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="placeholderTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZC-r3-kTZ" userLabel="Time View">
-                                                <rect key="frame" x="215" y="127" width="183" height="80"/>
+                                                <rect key="frame" x="215" y="135" width="183" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbj-mh-dnQ">
                                                         <rect key="frame" x="8" y="8" width="38" height="21"/>
@@ -183,7 +183,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-M5-Kzm" userLabel="Coffee View">
-                                                <rect key="frame" x="215" y="39" width="183" height="80"/>
+                                                <rect key="frame" x="215" y="47" width="183" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-JO-7lp">
                                                         <rect key="frame" x="8" y="8" width="51" height="21"/>
@@ -225,19 +225,19 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-UU-H0N">
-                                                <rect key="frame" x="16" y="907" width="382" height="120"/>
+                                                <rect key="frame" x="16" y="915" width="382" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="rTp-AC-F1U"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJd-VS-58I">
-                                                <rect key="frame" x="16" y="907" width="382" height="120"/>
+                                                <rect key="frame" x="16" y="915" width="382" height="120"/>
                                                 <connections>
                                                     <action selector="showImageDetail:" destination="sOU-WP-I23" eventType="touchUpInside" id="qan-3q-Bnr"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdX-kq-hM5" userLabel="Aroma View">
-                                                <rect key="frame" x="16" y="299" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="307" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAt-qF-0TU">
                                                         <rect key="frame" x="8" y="8" width="63" height="27"/>
@@ -286,7 +286,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSn-3d-B8c" userLabel="Acidity View">
-                                                <rect key="frame" x="16" y="395" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="403" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-6c-Oag">
                                                         <rect key="frame" x="8" y="8" width="66" height="27"/>
@@ -335,7 +335,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtz-1C-wZY" userLabel="Sweetness View">
-                                                <rect key="frame" x="16" y="491" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="499" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweetness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQO-w6-nGY">
                                                         <rect key="frame" x="8" y="8" width="65.5" height="16"/>
@@ -383,7 +383,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-oI-yFu" userLabel="Aftertaste View">
-                                                <rect key="frame" x="16" y="683" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="691" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aftertaste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06a-H6-vba">
                                                         <rect key="frame" x="16" y="8" width="65" height="17"/>
@@ -432,7 +432,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uv4-e2-7x2" userLabel="Body View">
-                                                <rect key="frame" x="16" y="587" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="595" width="382" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-3k-HzY">
                                                         <rect key="frame" x="8" y="8" width="49.5" height="26.5"/>
@@ -481,7 +481,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Notes" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-hB-QNM">
-                                                <rect key="frame" x="16" y="795" width="382" height="80"/>
+                                                <rect key="frame" x="16" y="803" width="382" height="80"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -519,7 +519,7 @@
                                             <constraint firstItem="E8C-Ab-HNY" firstAttribute="height" secondItem="SDl-IO-iez" secondAttribute="height" id="ezC-gm-7zt"/>
                                             <constraint firstItem="gdD-M5-Kzm" firstAttribute="top" secondItem="SDl-IO-iez" secondAttribute="top" id="f4U-w5-Xkn"/>
                                             <constraint firstItem="Rtz-1C-wZY" firstAttribute="trailing" secondItem="bSn-3d-B8c" secondAttribute="trailing" id="fAv-hE-t9b"/>
-                                            <constraint firstItem="Sd1-NP-1M2" firstAttribute="top" secondItem="aAb-wg-fY0" secondAttribute="top" constant="8" id="fe2-Ee-3UA"/>
+                                            <constraint firstItem="Sd1-NP-1M2" firstAttribute="top" secondItem="aAb-wg-fY0" secondAttribute="top" constant="16" id="fe2-Ee-3UA"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="trailing" secondItem="gdD-M5-Kzm" secondAttribute="trailing" id="fnf-LH-xfz"/>
                                             <constraint firstItem="208-yd-c94" firstAttribute="top" secondItem="PZC-r3-kTZ" secondAttribute="bottom" constant="16" id="gPN-eA-mJZ"/>
                                             <constraint firstItem="E8C-Ab-HNY" firstAttribute="trailing" secondItem="SDl-IO-iez" secondAttribute="trailing" id="gnV-ef-4Vr"/>
@@ -565,11 +565,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="qGR-je-yo4"/>
                     <connections>
+                        <outlet property="acidityQualitySlider" destination="ip1-nQ-5ny" id="F5U-Tx-usD"/>
+                        <outlet property="acidityQuantitySlider" destination="OFs-rg-rn4" id="QPp-uF-sBu"/>
+                        <outlet property="aftertasteQualitySlider" destination="6Hk-4J-Kb3" id="FPN-sx-6kd"/>
+                        <outlet property="aftertasteQuantitySlider" destination="JIc-Qs-0iS" id="pjT-go-pe0"/>
+                        <outlet property="aromaQualitySlider" destination="w0p-FA-h1n" id="Gnc-w1-rRJ"/>
+                        <outlet property="aromaQuantitySlider" destination="ETx-la-B27" id="nfB-yF-Gi4"/>
+                        <outlet property="bodyQualitySlider" destination="ryI-tN-PTY" id="L6f-Cm-PgR"/>
+                        <outlet property="bodyQuantitySlider" destination="7ey-fP-fd6" id="qj9-dC-NMK"/>
                         <outlet property="brewDateLabel" destination="Sd1-NP-1M2" id="Wmk-qf-Buz"/>
                         <outlet property="brewImage" destination="o4w-UU-H0N" id="8yx-B5-bsY"/>
                         <outlet property="coffeeLabel" destination="mjL-bt-BeA" id="Yoj-gR-5J4"/>
                         <outlet property="grindLabel" destination="Oll-c0-tzh" id="8zy-4v-O6e"/>
+                        <outlet property="notesTextField" destination="fPE-hB-QNM" id="E4t-Vb-oQh"/>
                         <outlet property="scoreLabel" destination="hNw-2g-GR1" id="Wdn-iT-p93"/>
+                        <outlet property="sweetnessQualitySlider" destination="hVO-x5-iPl" id="pX3-Ey-FWj"/>
+                        <outlet property="sweetnessQuantitySlider" destination="a7f-NK-zM0" id="34n-sM-Lfn"/>
                         <outlet property="timeLabel" destination="GQ3-OX-KnF" id="zr8-fm-V8Z"/>
                         <outlet property="waterLabel" destination="fxw-hX-igW" id="EVj-wV-2aI"/>
                         <outletCollection property="squareViews" destination="SDl-IO-iez" collectionClass="NSMutableArray" id="dxa-R9-0uv"/>

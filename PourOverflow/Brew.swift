@@ -59,8 +59,22 @@ struct Brew {
     let brewScore: CoffeeValuation?
     let imageAddress: String?
 
+    let aromaQuantity: Int?
+    let aromaQuality: Int?
+    let acidityQuantity: Int?
+    let acidityQuality: Int?
+    let sweetnessQuantity: Int?
+    let sweetnessQuality: Int?
+    let bodyQuantity: Int?
+    let bodyQuality: Int?
+    let aftertasteQuantity: Int?
+    let aftertasteQuality: Int?
+
+    let flavourNotes: String?
+    let notes: String?
+
     init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?,
-         brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?) {
+         brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?, aromaQuantity: Int?, aromaQuality: Int?, acidityQuantity: Int?, acidityQuality: Int?, sweetnessQuantity: Int?, sweetnessQuality: Int?, bodyQuantity: Int?, bodyQuality: Int?, aftertasteQuantity: Int?, aftertasteQuality: Int?, flavourNotes: String?, notes: String?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -70,5 +84,17 @@ struct Brew {
         self.brewScore = brewScore
         self.creationDate = creationDate
         self.imageAddress = imageAddress
+        self.aromaQuantity = aromaQuantity
+        self.aromaQuality = aromaQuality
+        self.acidityQuantity = acidityQuantity
+        self.acidityQuality = acidityQuality
+        self.sweetnessQuantity = sweetnessQuantity
+        self.sweetnessQuality = sweetnessQuality
+        self.bodyQuantity = bodyQuantity
+        self.bodyQuality = bodyQuality
+        self.aftertasteQuantity = aftertasteQuantity
+        self.aftertasteQuality = aftertasteQuality
+        self.flavourNotes = flavourNotes
+        self.notes = notes
     }
 }
