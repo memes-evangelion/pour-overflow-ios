@@ -41,14 +41,23 @@ class LocalBrewStore: BrewStore {
 
         let randomAromaQuantity = Int.random(in: 1...5)
         let randomAromaQuality = Int.random(in: 1...5)
+        let aroma = TastingProperty(quantity: randomAromaQuantity, quality: randomAromaQuality)
+
         let randomAcidityQuantity = Int.random(in: 1...5)
         let randomAcidityQuality = Int.random(in: 1...5)
+        let acidity = TastingProperty(quantity: randomAcidityQuantity, quality: randomAcidityQuality)
+
         let randomSweetnessQuantity = Int.random(in: 1...5)
         let randomSweetnessQuality = Int.random(in: 1...5)
+        let sweetness = TastingProperty(quantity: randomSweetnessQuantity, quality: randomSweetnessQuality)
+
         let randomBodyQuantity = Int.random(in: 1...5)
         let randomBodyQuality = Int.random(in: 1...5)
+        let body = TastingProperty(quantity: randomBodyQuantity, quality: randomBodyQuality)
+
         let randomAftertasteQuantity = Int.random(in: 1...5)
         let randomAftertasteQuality = Int.random(in: 1...5)
+        let finish = TastingProperty(quantity: randomAftertasteQuantity, quality: randomAftertasteQuality)
 
         let availableFlavourNotes = ["A dark roast, loved it but hard to find.", "Brew was too fast.", ""]
         let randomFlavourNotes = availableFlavourNotes[Int.random(in: 0...2)]
@@ -64,16 +73,11 @@ class LocalBrewStore: BrewStore {
                     brewScore: randomValuation,
                     creationDate: randomCreationDate,
                     imageAddress: selectedImage,
-                    aromaQuantity: randomAromaQuantity,
-                    aromaQuality: randomAromaQuality,
-                    acidityQuantity: randomAcidityQuantity,
-                    acidityQuality: randomAcidityQuality,
-                    sweetnessQuantity: randomSweetnessQuantity,
-                    sweetnessQuality: randomSweetnessQuality,
-                    bodyQuantity: randomBodyQuantity,
-                    bodyQuality: randomBodyQuality,
-                    aftertasteQuantity: randomAftertasteQuantity,
-                    aftertasteQuality: randomAftertasteQuality,
+                    aroma: aroma,
+                    acidity: acidity,
+                    sweetness: sweetness,
+                    body: body,
+                    finish: finish,
                     flavourNotes: randomFlavourNotes,
                     notes: randomNotes)
     }

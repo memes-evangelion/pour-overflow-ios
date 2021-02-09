@@ -48,6 +48,11 @@ enum CoffeeValuation: String, CaseIterable {
     case amazing = "🤩"
 }
 
+struct TastingProperty {
+    let quantity: Int
+    let quality: Int
+}
+
 struct Brew {
     let brewId: UUID
     let brewMethod: BrewMethod
@@ -59,22 +64,21 @@ struct Brew {
     let brewScore: CoffeeValuation?
     let imageAddress: String?
 
-    let aromaQuantity: Int?
-    let aromaQuality: Int?
-    let acidityQuantity: Int?
-    let acidityQuality: Int?
-    let sweetnessQuantity: Int?
-    let sweetnessQuality: Int?
-    let bodyQuantity: Int?
-    let bodyQuality: Int?
-    let aftertasteQuantity: Int?
-    let aftertasteQuality: Int?
+    let aroma: TastingProperty?
+    let acidity: TastingProperty?
+    let sweetness: TastingProperty?
+    let body: TastingProperty?
+    let finish: TastingProperty?
 
     let flavourNotes: String?
     let notes: String?
 
-    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int, duration: Measurement<UnitDuration>?,
-         brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?, aromaQuantity: Int?, aromaQuality: Int?, acidityQuantity: Int?, acidityQuality: Int?, sweetnessQuantity: Int?, sweetnessQuality: Int?, bodyQuantity: Int?, bodyQuality: Int?, aftertasteQuantity: Int?, aftertasteQuality: Int?, flavourNotes: String?, notes: String?) {
+    init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int,
+         duration: Measurement<UnitDuration>?,
+         brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?,
+         aroma: TastingProperty?, acidity: TastingProperty?, sweetness: TastingProperty?,
+         body: TastingProperty?, finish: TastingProperty?, flavourNotes: String?,
+         notes: String?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -84,16 +88,11 @@ struct Brew {
         self.brewScore = brewScore
         self.creationDate = creationDate
         self.imageAddress = imageAddress
-        self.aromaQuantity = aromaQuantity
-        self.aromaQuality = aromaQuality
-        self.acidityQuantity = acidityQuantity
-        self.acidityQuality = acidityQuality
-        self.sweetnessQuantity = sweetnessQuantity
-        self.sweetnessQuality = sweetnessQuality
-        self.bodyQuantity = bodyQuantity
-        self.bodyQuality = bodyQuality
-        self.aftertasteQuantity = aftertasteQuantity
-        self.aftertasteQuality = aftertasteQuality
+        self.aroma = aroma
+        self.acidity = acidity
+        self.sweetness = sweetness
+        self.body = body
+        self.finish = finish
         self.flavourNotes = flavourNotes
         self.notes = notes
     }
