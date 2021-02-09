@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-wg-fY0" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="996.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1132.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-IO-iez" userLabel="Water View">
                                                 <rect key="frame" x="16" y="46.5" width="183" height="80"/>
@@ -200,22 +200,29 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-UU-H0N">
-                                                <rect key="frame" x="16" y="844.5" width="382" height="120"/>
+                                                <rect key="frame" x="16" y="980.5" width="382" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="rTp-AC-F1U"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJd-VS-58I">
-                                                <rect key="frame" x="16" y="844.5" width="382" height="120"/>
+                                                <rect key="frame" x="16" y="980.5" width="382" height="120"/>
                                                 <connections>
                                                     <action selector="showImageDetail:" destination="sOU-WP-I23" eventType="touchUpInside" id="qan-3q-Bnr"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Notes" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-hB-QNM">
-                                                <rect key="frame" x="16" y="778.5" width="382" height="34"/>
+                                                <rect key="frame" x="16" y="914.5" width="382" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6St-xY-2re" customClass="TastingPropertyView" customModule="PourOverflow" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="778.5" width="382" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="6cH-Wd-cra"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3C6-Kc-5cH">
                                                 <rect key="frame" x="16" y="222.5" width="382" height="540"/>
                                                 <subviews>
@@ -497,10 +504,12 @@
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="height" secondItem="o4w-UU-H0N" secondAttribute="height" id="2Jj-0a-flZ"/>
                                             <constraint firstItem="gdD-M5-Kzm" firstAttribute="height" secondItem="SDl-IO-iez" secondAttribute="height" id="31s-wF-RfR"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="top" secondItem="E8C-Ab-HNY" secondAttribute="top" id="7Ha-cY-ArQ"/>
+                                            <constraint firstItem="6St-xY-2re" firstAttribute="leading" secondItem="RdX-kq-hM5" secondAttribute="leading" id="9QZ-zo-w68"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="width" secondItem="gdD-M5-Kzm" secondAttribute="width" id="ByZ-xR-dmL"/>
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="top" secondItem="o4w-UU-H0N" secondAttribute="top" id="EP3-je-UzK"/>
                                             <constraint firstItem="E8C-Ab-HNY" firstAttribute="top" secondItem="SDl-IO-iez" secondAttribute="bottom" constant="8" id="Ijv-tz-QOb"/>
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="leading" secondItem="o4w-UU-H0N" secondAttribute="leading" id="KLh-G8-kE7"/>
+                                            <constraint firstItem="fPE-hB-QNM" firstAttribute="top" secondItem="6St-xY-2re" secondAttribute="bottom" constant="16" id="NP5-Jz-f54"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="width" secondItem="gdD-M5-Kzm" secondAttribute="width" id="T1o-Ou-9kL"/>
                                             <constraint firstItem="IJd-VS-58I" firstAttribute="width" secondItem="o4w-UU-H0N" secondAttribute="width" id="TPe-u2-dPh"/>
                                             <constraint firstItem="o4w-UU-H0N" firstAttribute="leading" secondItem="3C6-Kc-5cH" secondAttribute="leading" id="U8D-w5-ffq"/>
@@ -508,6 +517,7 @@
                                             <constraint firstItem="SDl-IO-iez" firstAttribute="top" secondItem="Sd1-NP-1M2" secondAttribute="bottom" constant="16" id="WaT-NP-Hee"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="leading" secondItem="gdD-M5-Kzm" secondAttribute="leading" id="Wgs-o4-oHq"/>
                                             <constraint firstItem="Sd1-NP-1M2" firstAttribute="centerX" secondItem="aAb-wg-fY0" secondAttribute="centerX" id="ZLw-c6-Ibq"/>
+                                            <constraint firstItem="6St-xY-2re" firstAttribute="top" secondItem="3C6-Kc-5cH" secondAttribute="bottom" constant="16" id="ZdH-58-KAK"/>
                                             <constraint firstItem="3C6-Kc-5cH" firstAttribute="trailing" secondItem="PZC-r3-kTZ" secondAttribute="trailing" id="aJF-Jf-o0m"/>
                                             <constraint firstItem="fPE-hB-QNM" firstAttribute="trailing" secondItem="3C6-Kc-5cH" secondAttribute="trailing" id="aie-DZ-y9A"/>
                                             <constraint firstItem="o4w-UU-H0N" firstAttribute="trailing" secondItem="3C6-Kc-5cH" secondAttribute="trailing" id="bTv-LH-2bM"/>
@@ -517,9 +527,9 @@
                                             <constraint firstItem="gdD-M5-Kzm" firstAttribute="top" secondItem="SDl-IO-iez" secondAttribute="top" id="f4U-w5-Xkn"/>
                                             <constraint firstItem="Sd1-NP-1M2" firstAttribute="top" secondItem="aAb-wg-fY0" secondAttribute="top" constant="16" id="fe2-Ee-3UA"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="trailing" secondItem="gdD-M5-Kzm" secondAttribute="trailing" id="fnf-LH-xfz"/>
-                                            <constraint firstItem="fPE-hB-QNM" firstAttribute="top" secondItem="3C6-Kc-5cH" secondAttribute="bottom" constant="16" id="gN1-Ej-yZ0"/>
                                             <constraint firstItem="E8C-Ab-HNY" firstAttribute="trailing" secondItem="SDl-IO-iez" secondAttribute="trailing" id="gnV-ef-4Vr"/>
                                             <constraint firstItem="SDl-IO-iez" firstAttribute="leading" secondItem="aAb-wg-fY0" secondAttribute="leading" constant="16" id="iCj-RY-icx"/>
+                                            <constraint firstItem="6St-xY-2re" firstAttribute="trailing" secondItem="RdX-kq-hM5" secondAttribute="trailing" id="iPO-6f-eA5"/>
                                             <constraint firstItem="PZC-r3-kTZ" firstAttribute="height" secondItem="gdD-M5-Kzm" secondAttribute="height" id="koj-e3-Tc9"/>
                                             <constraint firstItem="gdD-M5-Kzm" firstAttribute="leading" secondItem="SDl-IO-iez" secondAttribute="trailing" constant="16" id="lK9-FO-WPe"/>
                                             <constraint firstItem="3C6-Kc-5cH" firstAttribute="leading" secondItem="E8C-Ab-HNY" secondAttribute="leading" id="mmV-fk-y7B"/>
@@ -586,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYc-3e-Sqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857.9710144927537" y="454.6875"/>
+            <point key="canvasLocation" x="1872" y="392"/>
         </scene>
         <!--Brew Image View Controller-->
         <scene sceneID="dxi-bd-niT">
