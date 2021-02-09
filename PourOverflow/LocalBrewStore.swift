@@ -39,25 +39,15 @@ class LocalBrewStore: BrewStore {
         let availableImages = ["brew-2feb", "brew-3feb"]
         let selectedImage = shouldHaveImage ? availableImages[Int.random(in: 0...1)] : nil
 
-        let randomAromaQuantity = Int.random(in: 1...5)
-        let randomAromaQuality = Int.random(in: 1...5)
-        let aroma = TastingProperty(quantity: randomAromaQuantity, quality: randomAromaQuality)
+        let randomNumberUpToFive = {
+            return Int.random(in: 1...5)
+        }
 
-        let randomAcidityQuantity = Int.random(in: 1...5)
-        let randomAcidityQuality = Int.random(in: 1...5)
-        let acidity = TastingProperty(quantity: randomAcidityQuantity, quality: randomAcidityQuality)
-
-        let randomSweetnessQuantity = Int.random(in: 1...5)
-        let randomSweetnessQuality = Int.random(in: 1...5)
-        let sweetness = TastingProperty(quantity: randomSweetnessQuantity, quality: randomSweetnessQuality)
-
-        let randomBodyQuantity = Int.random(in: 1...5)
-        let randomBodyQuality = Int.random(in: 1...5)
-        let body = TastingProperty(quantity: randomBodyQuantity, quality: randomBodyQuality)
-
-        let randomAftertasteQuantity = Int.random(in: 1...5)
-        let randomAftertasteQuality = Int.random(in: 1...5)
-        let finish = TastingProperty(quantity: randomAftertasteQuantity, quality: randomAftertasteQuality)
+        let aroma = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let acidity = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let sweetness = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let body = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let finish = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
 
         let availableFlavourNotes = ["A dark roast, loved it but hard to find.", "Brew was too fast.", ""]
         let randomFlavourNotes = availableFlavourNotes[Int.random(in: 0...2)]
