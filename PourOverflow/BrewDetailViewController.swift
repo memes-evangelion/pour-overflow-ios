@@ -19,21 +19,6 @@ class BrewDetailViewController: UIViewController {
 
     @IBOutlet var squareViews: [UIView]!
 
-    @IBOutlet var aromaQuantitySlider: UISlider!
-    @IBOutlet var aromaQualitySlider: UISlider!
-
-    @IBOutlet var acidityQuantitySlider: UISlider!
-    @IBOutlet var acidityQualitySlider: UISlider!
-
-    @IBOutlet var sweetnessQuantitySlider: UISlider!
-    @IBOutlet var sweetnessQualitySlider: UISlider!
-
-    @IBOutlet var bodyQuantitySlider: UISlider!
-    @IBOutlet var bodyQualitySlider: UISlider!
-
-    @IBOutlet var aftertasteQuantitySlider: UISlider!
-    @IBOutlet var aftertasteQualitySlider: UISlider!
-
     @IBOutlet var notesTextField: UITextField!
 
     var brew: Brew!
@@ -62,31 +47,6 @@ class BrewDetailViewController: UIViewController {
         scoreLabel.text = brew.brewScore?.rawValue
         if let imageFromBrew = brew.imageAddress {
             brewImage.image = UIImage(named: imageFromBrew)
-        }
-
-        if let aromaQuantity = brew.aromaQuantity, let aromaQuality = brew.aromaQuantity {
-            aromaQuantitySlider.value = Float(aromaQuantity)
-            aromaQualitySlider.value = Float(aromaQuality)
-        }
-
-        if let acidityQuantity = brew.acidityQuantity, let acidityQuality = brew.acidityQuality {
-            acidityQualitySlider.value = Float(acidityQuality)
-            acidityQuantitySlider.value = Float(acidityQuantity)
-        }
-
-        if let sweetnessQuantity = brew.sweetnessQuantity, let sweetnessQuality = brew.sweetnessQuality {
-            sweetnessQuantitySlider.value = Float(sweetnessQuantity)
-            sweetnessQualitySlider.value = Float(sweetnessQuality)
-        }
-
-        if let bodyQuantity = brew.bodyQuantity, let bodyQuality = brew.bodyQuality {
-            bodyQuantitySlider.value = Float(bodyQuantity)
-            bodyQualitySlider.value = Float(bodyQuality)
-        }
-
-        if let aftertasteQuantity = brew.aftertasteQuantity, let aftertasteQuality = brew.aftertasteQuality {
-            aftertasteQuantitySlider.value = Float(aftertasteQuantity)
-            aftertasteQualitySlider.value = Float(aftertasteQuality)
         }
 
         if let notes = brew.notes {
