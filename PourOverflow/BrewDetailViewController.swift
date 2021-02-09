@@ -19,10 +19,25 @@ class BrewDetailViewController: UIViewController {
 
     @IBOutlet var squareViews: [UIView]!
 
+    @IBOutlet var notesTextField: UITextField!
+
+    @IBOutlet var aromaView: TastingPropertyView!
+    @IBOutlet var acidityView: TastingPropertyView!
+    @IBOutlet var sweetnessView: TastingPropertyView!
+    @IBOutlet var bodyView: TastingPropertyView!
+    @IBOutlet var finishView: TastingPropertyView!
+
+    @IBOutlet var brewImageButton: UIButton!
+
     var brew: Brew!
 
     @IBAction func showImageDetail(_ sender: UIButton) {
         performSegue(withIdentifier: "showFullImage", sender: sender)
+    }
+
+    private func setUpTastingPropertyView(tastingView: TastingPropertyView, tastingProperty: TastingProperty?) {
+        tastingView.firstSlider.value = Float(tastingProperty?.quantity ?? 1)
+        tastingView.secondSlider.value = Float(tastingProperty?.quality ?? 1)
     }
 
     override func viewDidLoad() {
@@ -45,11 +60,25 @@ class BrewDetailViewController: UIViewController {
         scoreLabel.text = brew.brewScore?.rawValue
         if let imageFromBrew = brew.imageAddress {
             brewImage.image = UIImage(named: imageFromBrew)
+            brewImageButton.isEnabled = true
+        } else {
+            brewImageButton.isEnabled = false
+        }
+
+        setUpTastingPropertyView(tastingView: aromaView, tastingProperty: brew.aroma)
+        setUpTastingPropertyView(tastingView: acidityView, tastingProperty: brew.acidity)
+        setUpTastingPropertyView(tastingView: sweetnessView, tastingProperty: brew.sweetness)
+        setUpTastingPropertyView(tastingView: bodyView, tastingProperty: brew.body)
+        setUpTastingPropertyView(tastingView: finishView, tastingProperty: brew.finish)
+
+        if let notes = brew.notes {
+            notesTextField.text = notes
         }
 
         for roundView in squareViews {
             roundView.layer.cornerRadius = 5
         }
+        brewImage.layer.cornerRadius = 5
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

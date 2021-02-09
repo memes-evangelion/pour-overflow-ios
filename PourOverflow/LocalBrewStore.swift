@@ -39,8 +39,37 @@ class LocalBrewStore: BrewStore {
         let availableImages = ["brew-2feb", "brew-3feb"]
         let selectedImage = shouldHaveImage ? availableImages[Int.random(in: 0...1)] : nil
 
-        return Brew(brewMethod: randomMethod, grains: randomGrains, coffee: randomCoffee, water: randomWater,
-                    duration: randomDuration, brewScore: randomValuation, creationDate: randomCreationDate, imageAddress: selectedImage)
+        let randomNumberUpToFive = {
+            return Int.random(in: 1...5)
+        }
+
+        let aroma = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let acidity = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let sweetness = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let body = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+        let finish = TastingProperty(quantity: randomNumberUpToFive(), quality: randomNumberUpToFive())
+
+        let availableFlavourNotes = ["A dark roast, loved it but hard to find.", "Brew was too fast.", ""]
+        let randomFlavourNotes = availableFlavourNotes[Int.random(in: 0...2)]
+
+        let availableRandomNotes = ["Fruits", "Like chocolate", "Tastes like cheesecake"]
+        let randomNotes = availableRandomNotes[Int.random(in: 0...2)]
+
+        return Brew(brewMethod: randomMethod,
+                    grains: randomGrains,
+                    coffee: randomCoffee,
+                    water: randomWater,
+                    duration: randomDuration,
+                    brewScore: randomValuation,
+                    creationDate: randomCreationDate,
+                    imageAddress: selectedImage,
+                    aroma: aroma,
+                    acidity: acidity,
+                    sweetness: sweetness,
+                    body: body,
+                    finish: finish,
+                    flavourNotes: randomFlavourNotes,
+                    notes: randomNotes)
     }
 
     func brewsInDateRange(fromDate from: Date, toDate: Date) -> [Brew] {
