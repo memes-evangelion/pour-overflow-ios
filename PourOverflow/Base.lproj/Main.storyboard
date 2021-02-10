@@ -19,22 +19,11 @@
                     <connections>
                         <segue destination="d3f-1M-oxi" kind="relationship" relationship="viewControllers" id="rq7-O0-ROm"/>
                         <segue destination="c6z-qH-07B" kind="relationship" relationship="viewControllers" id="gy8-3p-xN9"/>
-                        <segue destination="iRc-hH-ZzB" kind="relationship" relationship="viewControllers" id="fvx-7f-FcY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyk-XJ-Tel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-133" y="26"/>
-        </scene>
-        <!--CreateBrew-->
-        <scene sceneID="c8x-Du-VAu">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CreateBrew" id="iRc-hH-ZzB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="0nN-gz-v4V"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7iH-8E-DFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="503" y="202"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="NH1-7x-Mgh">
@@ -44,7 +33,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wD-d2-la7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="25"/>
+            <point key="canvasLocation" x="527" y="90"/>
         </scene>
         <!--BrewList-->
         <scene sceneID="Ft8-R9-RPc">
@@ -55,7 +44,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lR0-eC-HEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504" y="-156"/>
+            <point key="canvasLocation" x="557" y="-33"/>
         </scene>
     </scenes>
 </document>

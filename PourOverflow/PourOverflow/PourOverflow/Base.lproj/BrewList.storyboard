@@ -55,7 +55,13 @@
                             <outlet property="delegate" destination="qbR-lS-hXT" id="fuu-PE-XeL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Past Brews" id="ASt-PW-8o2"/>
+                    <navigationItem key="navigationItem" title="Past Brews" id="ASt-PW-8o2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tgu-oK-c8v">
+                            <connections>
+                                <segue destination="pjk-sl-5QN" kind="showDetail" identifier="createBrew" id="6kj-CN-ga5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="EHx-BL-0by" id="tbr-rr-DvZ"/>
                     </connections>
@@ -63,6 +69,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWs-hN-W6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2831.8840579710145" y="-470.08928571428567"/>
+        </scene>
+        <!--CreateBrew-->
+        <scene sceneID="aTw-BU-0WH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateBrew" id="pjk-sl-5QN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DsP-gi-knQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXv-u3-6NV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3455" y="-527"/>
         </scene>
         <!--BrewDetail-->
         <scene sceneID="iJ7-uy-fJf">
@@ -72,7 +88,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5p-8r-uH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3451" y="-514"/>
+            <point key="canvasLocation" x="3459" y="-412"/>
         </scene>
         <!--Brews-->
         <scene sceneID="h3X-os-upg">
