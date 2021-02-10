@@ -71,6 +71,10 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
                     brewDetailViewController.brew = brew
                 }
             }
+        case "createBrew":
+            if let createBrewNavigationViewController = segue.destination as? CreateBrewNavigationController {
+                createBrewNavigationViewController.brewStore = brewStore
+            }
         default:
             preconditionFailure("Unexpected segue")
         }
