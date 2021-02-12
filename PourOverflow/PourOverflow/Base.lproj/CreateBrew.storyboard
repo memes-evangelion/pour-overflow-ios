@@ -41,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gre-2b-Zfk">
-                                <rect key="frame" x="0.0" y="186" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="185.5" width="414" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="OHm-Wb-nbo"/>
                                 </constraints>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="wTm-NC-HTe">
-                                <rect key="frame" x="238" y="114" width="160" height="60"/>
+                                <rect key="frame" x="238" y="113.5" width="160" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ysT-XE-pze"/>
                                     <constraint firstAttribute="width" constant="160" id="zpG-dy-2ai"/>
@@ -99,14 +99,14 @@
         <scene sceneID="0hB-ol-dIe">
             <objects>
                 <tableViewController id="Omj-cy-hiM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iRY-u1-TSJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iRY-u1-TSJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection id="TCe-3c-npv">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="grq-rm-ajV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="grq-rm-ajV">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="grq-rm-ajV" id="MPO-XO-lWx">
@@ -144,7 +144,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0zu-pX-A6W">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="0zu-pX-A6W">
                                         <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0zu-pX-A6W" id="j0p-kn-Jpd">
@@ -182,7 +182,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d7D-eN-m7s">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="d7D-eN-m7s">
                                         <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d7D-eN-m7s" id="GQd-bu-kfK">
@@ -212,7 +212,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YKR-99-WNw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="YKR-99-WNw">
                                         <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YKR-99-WNw" id="IGy-7I-wU6">
@@ -279,6 +279,9 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="BlN-qJ-acL" secondAttribute="trailing" constant="40" id="4hP-v2-8Rg"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="guj-Ue-iJh" kind="showDetail" id="8mR-bD-0DD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -292,7 +295,17 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBh-p9-9ES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582.60869565217399" y="569.86607142857144"/>
+            <point key="canvasLocation" x="617" y="644"/>
+        </scene>
+        <!--TastingView-->
+        <scene sceneID="xAf-kj-VnT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TastingView" id="guj-Ue-iJh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gWv-ZC-yZn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4q0-on-XG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="662"/>
         </scene>
     </scenes>
     <resources>
