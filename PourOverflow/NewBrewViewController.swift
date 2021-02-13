@@ -20,6 +20,7 @@ class NewBrewViewController: UIViewController {
         brewMethodPicker.dataSource = self
         brewMethodPicker.delegate = self
     }
+
 }
 
 extension NewBrewViewController: UIPickerViewDataSource, UIPickerViewDelegate {
