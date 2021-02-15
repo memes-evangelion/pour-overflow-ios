@@ -15,6 +15,16 @@ class NewBrewDetailsTableViewController: UITableViewController {
 }
 
 extension NewBrewDetailsTableViewController: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "" {
+            // Delete button was called
+            textField.text = "0:00"
+            return true
+        }
+        return true
+    }
+
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard textField.text != nil else {
             return
@@ -30,8 +40,8 @@ extension NewBrewDetailsTableViewController: UITextFieldDelegate {
             var formatted = timeText
             formatted.remove(at: formatted.firstIndex(of: ":")!)
             // e.g. 34:4
-            let colonIndex = formatted.index(formatted.endIndex, offsetBy: -2)
-            formatted.insert(":", at: colonIndex)
+            let newColonIndex = formatted.index(formatted.endIndex, offsetBy: -2)
+            formatted.insert(":", at: newColonIndex)
             textField.text = formatted
         case 5:
             if timeText.starts(with: "0:0") {
