@@ -9,7 +9,9 @@ import UIKit
 
 class NewBrewViewController: UIViewController {
     @IBOutlet var brewMethodPicker: UIPickerView!
-
+    @IBOutlet var coffeeIcon: UIImageView!
+    @IBOutlet var brewPhotoImageView: UIImageView!
+    
     @IBAction func cancelCreation(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -21,6 +23,37 @@ class NewBrewViewController: UIViewController {
         brewMethodPicker.delegate = self
     }
 
+    @IBAction func chooseImage(_ sender: UIButton) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alertController.modalPresentationStyle = .automatic
+        
+
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
+            let imagePicker = self.imagePicker(for: .photoLibrary)
+            imagePicker.modalPresentationStyle = .popover
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+                let imagePicker = self.imagePicker(for: .camera)
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+            alertController.addAction(cameraAction)
+        }
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        return imagePicker
+    }
 }
 
 extension NewBrewViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -35,5 +68,14 @@ extension NewBrewViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return BrewMethod.allCases[row].rawValue
     }
+}
 
+extension NewBrewViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // UINavigationControllerDelegate, because UIImagePickerControllerDelegate delegate is inherited (?)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        brewPhotoImageView.image = image
+        coffeeIcon.isHidden = true
+        dismiss(animated: true, completion: nil)
+    }
 }
