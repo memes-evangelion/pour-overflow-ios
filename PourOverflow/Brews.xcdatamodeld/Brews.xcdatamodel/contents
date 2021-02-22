@@ -17,6 +17,7 @@
         <attribute name="finishQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="flavourNotes" optional="YES" attributeType="String"/>
         <attribute name="grainsRawValue" optional="YES" attributeType="String"/>
+        <attribute name="grind" optional="YES" attributeType="String"/>
         <attribute name="imageAddress" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="sweetnessQuality" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -24,6 +25,6 @@
         <attribute name="water" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="BrewModel" positionX="-63" positionY="-18" width="166.572998046875" height="358"/>
+        <element name="BrewModel" positionX="-63" positionY="-18" width="166.572998046875" height="373"/>
     </elements>
 </model>

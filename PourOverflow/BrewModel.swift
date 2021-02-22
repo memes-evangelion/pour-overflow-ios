@@ -17,6 +17,7 @@ class BrewModel: NSManagedObject {
     @NSManaged var creationDate: Date
     @NSManaged var brewScoreRawValue: String?
     @NSManaged var imageAddress: String?
+    @NSManaged var grind: String?
 
     @NSManaged var aromaQuantity: Int
     @NSManaged var aromaQuality: Int
@@ -43,6 +44,7 @@ class BrewModel: NSManagedObject {
         brewModel.brewScoreRawValue = brew.brewScore?.rawValue
         brewModel.creationDate = brew.creationDate
         brewModel.imageAddress = brew.imageAddress
+        brewModel.grind = brew.grind
 
         brewModel.aromaQuantity = brew.aroma?.quantity ?? -1
         brewModel.aromaQuality = brew.aroma?.quality ?? -1

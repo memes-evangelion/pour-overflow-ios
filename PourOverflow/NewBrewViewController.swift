@@ -29,7 +29,7 @@ class NewBrewViewController: UIViewController {
 
         let brewPickerRow = brewMethodPicker.selectedRow(inComponent: 0)
         let selectedBrewMethod = BrewMethod.allCases[brewPickerRow]
-        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, brewScore: nil, creationDate: Date(), imageAddress: nil, aroma: nil, acidity: nil, sweetness: nil, body: nil, finish: nil, flavourNotes: nil, notes: nil)
+        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, brewScore: nil, creationDate: Date(), imageAddress: nil, aroma: nil, acidity: nil, sweetness: nil, body: nil, finish: nil, flavourNotes: nil, notes: nil, grind: brewDetails!.grind)
 
         brewStore.saveBrew(brew: currentBrew)
         dismiss(animated: true, completion: nil)

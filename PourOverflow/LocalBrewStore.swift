@@ -55,6 +55,8 @@ class LocalBrewStore: BrewStore {
         let availableRandomNotes = ["Fruits", "Like chocolate", "Tastes like cheesecake"]
         let randomNotes = availableRandomNotes[Int.random(in: 0...2)]
 
+        let randomGrind = ["Medium Fine", "Fine", "Coarse"]
+
         return Brew(brewMethod: randomMethod,
                     grains: randomGrains,
                     coffee: randomCoffee,
@@ -69,7 +71,8 @@ class LocalBrewStore: BrewStore {
                     body: body,
                     finish: finish,
                     flavourNotes: randomFlavourNotes,
-                    notes: randomNotes)
+                    notes: randomNotes,
+                    grind: randomGrind.randomElement())
     }
 
     func brewsInDateRange(fromDate from: Date, toDate: Date) -> [Brew] {

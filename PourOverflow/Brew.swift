@@ -63,6 +63,7 @@ struct Brew {
     let creationDate: Date
     let brewScore: CoffeeValuation?
     let imageAddress: String?
+    let grind: String?
 
     let aroma: TastingProperty?
     let acidity: TastingProperty?
@@ -78,7 +79,7 @@ struct Brew {
          brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?,
          aroma: TastingProperty?, acidity: TastingProperty?, sweetness: TastingProperty?,
          body: TastingProperty?, finish: TastingProperty?, flavourNotes: String?,
-         notes: String?) {
+         notes: String?, grind: String?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -95,5 +96,6 @@ struct Brew {
         self.finish = finish
         self.flavourNotes = flavourNotes
         self.notes = notes
+        self.grind = grind
     }
 }
