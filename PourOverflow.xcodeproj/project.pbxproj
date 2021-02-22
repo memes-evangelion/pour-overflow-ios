@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2123766725E00527007DABA4 /* Brews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2123766525E00527007DABA4 /* Brews.xcdatamodeld */; };
+		218E5A0225DEA84B00B579A2 /* BrewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E5A0125DEA84B00B579A2 /* BrewModel.swift */; };
+		218E5A0725DEB69900B579A2 /* CoreDataBrewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E5A0625DEB69900B579A2 /* CoreDataBrewStore.swift */; };
+		218E5A0C25DEBFAD00B579A2 /* BrewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E5A0B25DEBFAD00B579A2 /* BrewDetails.swift */; };
 		90054D8325A69EC700941B32 /* NewBrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90054D8225A69EC700941B32 /* NewBrewViewController.swift */; };
 		9016D81425AA62B9003F6446 /* Brew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016D81325AA62B9003F6446 /* Brew.swift */; };
 		9016D81525D17E0000E81A78 /* TastingPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016D81425D17E0000E81A78 /* TastingPropertyView.swift */; };
@@ -56,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2123766625E00527007DABA4 /* Brews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Brews.xcdatamodel; sourceTree = "<group>"; };
+		218E5A0125DEA84B00B579A2 /* BrewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewModel.swift; sourceTree = "<group>"; };
+		218E5A0625DEB69900B579A2 /* CoreDataBrewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBrewStore.swift; sourceTree = "<group>"; };
+		218E5A0B25DEBFAD00B579A2 /* BrewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewDetails.swift; sourceTree = "<group>"; };
 		90054D8225A69EC700941B32 /* NewBrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBrewViewController.swift; sourceTree = "<group>"; };
 		9016D81325AA62B9003F6446 /* Brew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brew.swift; sourceTree = "<group>"; };
 		9016D81425D17E0000E81A78 /* TastingPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingPropertyView.swift; sourceTree = "<group>"; };
@@ -141,34 +149,38 @@
 		90BD41AA25A699E9002A2B78 /* PourOverflow */ = {
 			isa = PBXGroup;
 			children = (
-				9083D51E25C305B300F7FA51 /* Calendar.storyboard */,
-				FB455F1625C30B30003E94BB /* BrewList.storyboard */,
+				90BD41AB25A699E9002A2B78 /* AppDelegate.swift */,
+				90BD41B425A699EE002A2B78 /* Assets.xcassets */,
+				9016D81325AA62B9003F6446 /* Brew.swift */,
 				9083D51525C304C600F7FA51 /* BrewDetail.storyboard */,
+				9097751125C9978E00C72235 /* BrewDetailNavigationController.swift */,
+				218E5A0B25DEBFAD00B579A2 /* BrewDetails.swift */,
+				9035A85D25B4C41800653D49 /* BrewDetailViewController.swift */,
+				903432BF25CD993E0030EF25 /* BrewImageViewController.swift */,
+				FB455F1625C30B30003E94BB /* BrewList.storyboard */,
+				9035A85825B4C09D00653D49 /* BrewListNavigationController.swift */,
+				90B5D6D525B4106300E92FAE /* BrewListViewController.swift */,
+				218E5A0125DEA84B00B579A2 /* BrewModel.swift */,
+				2123766525E00527007DABA4 /* Brews.xcdatamodeld */,
+				FB3B0DEA25B5281D00A16936 /* BrewStore.swift */,
+				90B5D6E525B4148400E92FAE /* BrewTabBarController.swift */,
+				9084579F25C7388B00E92A6C /* BrewUtilities.swift */,
+				9083D51E25C305B300F7FA51 /* Calendar.storyboard */,
+				90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */,
+				218E5A0625DEB69900B579A2 /* CoreDataBrewStore.swift */,
+				9019B92925C3000B0029A30A /* CreateBrew.storyboard */,
+				90A6756925D42A36001B497D /* CreateBrewNavigationController.swift */,
+				90BD41B925A699EE002A2B78 /* Info.plist */,
+				90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */,
+				90B5D6CA25AD530800E92FAE /* LocalBrewStore.swift */,
+				90BD41B125A699E9002A2B78 /* Main.storyboard */,
+				905F6C9625D6CB410093F18D /* NewBrewDetailsTableViewController.swift */,
+				90054D8225A69EC700941B32 /* NewBrewViewController.swift */,
+				905F6C8E25D6C0400093F18D /* RatingsViewController.swift */,
+				90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */,
 				9016D81425D17E0000E81A78 /* TastingPropertyView.swift */,
 				9016D81925D17E2400E81A78 /* TastingPropertyView.xib */,
-				903432BF25CD993E0030EF25 /* BrewImageViewController.swift */,
-				9019B92925C3000B0029A30A /* CreateBrew.storyboard */,
 				9017BBA325D57A3400FBA0B2 /* TastingView.storyboard */,
-				905F6C8E25D6C0400093F18D /* RatingsViewController.swift */,
-				90BD41B125A699E9002A2B78 /* Main.storyboard */,
-				90BD41AB25A699E9002A2B78 /* AppDelegate.swift */,
-				90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */,
-				90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */,
-				9035A85D25B4C41800653D49 /* BrewDetailViewController.swift */,
-				9097751125C9978E00C72235 /* BrewDetailNavigationController.swift */,
-				9035A85825B4C09D00653D49 /* BrewListNavigationController.swift */,
-				90A6756925D42A36001B497D /* CreateBrewNavigationController.swift */,
-				90B5D6D525B4106300E92FAE /* BrewListViewController.swift */,
-				90B5D6E525B4148400E92FAE /* BrewTabBarController.swift */,
-				90054D8225A69EC700941B32 /* NewBrewViewController.swift */,
-				905F6C9625D6CB410093F18D /* NewBrewDetailsTableViewController.swift */,
-				90B5D6CA25AD530800E92FAE /* LocalBrewStore.swift */,
-				9084579F25C7388B00E92A6C /* BrewUtilities.swift */,
-				9016D81325AA62B9003F6446 /* Brew.swift */,
-				90BD41B425A699EE002A2B78 /* Assets.xcassets */,
-				90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */,
-				90BD41B925A699EE002A2B78 /* Info.plist */,
-				FB3B0DEA25B5281D00A16936 /* BrewStore.swift */,
 			);
 			path = PourOverflow;
 			sourceTree = "<group>";
@@ -339,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -x bin/swiftlint ]]; then\n    bin/swiftlint\nelse\n    \"warning: linter not found. Run **make install**\"\n    exit 0\nfi\n";
+			shellScript = "exit 0\nif [[ -x bin/swiftlint ]]; then\n#    bin/swiftlint\nelse\n    \"warning: linter not found. Run **make install**\"\n    exit 0\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -351,8 +363,12 @@
 			files = (
 				90BD41AC25A699E9002A2B78 /* AppDelegate.swift in Sources */,
 				FB3B0DEB25B5281D00A16936 /* BrewStore.swift in Sources */,
+				218E5A0725DEB69900B579A2 /* CoreDataBrewStore.swift in Sources */,
 				908457A025C7388B00E92A6C /* BrewUtilities.swift in Sources */,
 				9035A85925B4C09D00653D49 /* BrewListNavigationController.swift in Sources */,
+				218E5A0225DEA84B00B579A2 /* BrewModel.swift in Sources */,
+				218E5A0C25DEBFAD00B579A2 /* BrewDetails.swift in Sources */,
+				2123766725E00527007DABA4 /* Brews.xcdatamodeld in Sources */,
 				90F6C20925B7EB5300F3BFB2 /* CalendarViewController.swift in Sources */,
 				9016D81525D17E0000E81A78 /* TastingPropertyView.swift in Sources */,
 				90B5D6CB25AD530800E92FAE /* LocalBrewStore.swift in Sources */,
@@ -723,6 +739,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2123766525E00527007DABA4 /* Brews.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2123766625E00527007DABA4 /* Brews.xcdatamodel */,
+			);
+			currentVersion = 2123766625E00527007DABA4 /* Brews.xcdatamodel */;
+			path = Brews.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 90BD41A025A699E9002A2B78 /* Project object */;
 }

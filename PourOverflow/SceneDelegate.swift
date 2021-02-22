@@ -4,7 +4,7 @@
 //
 //  Created by marto on 06/01/21.
 //
-
+import CoreData
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -18,11 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // swiftlint:disable unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        // inject brewStore
-        let brewStore = LocalBrewStore()
-        if let brewTabController = window!.rootViewController as? BrewTabBarController {
+        let brewStore = CoreDataBrewStore()
+        
+        if let brewTabController = self.window!.rootViewController as? BrewTabBarController {
             brewTabController.brewStore = brewStore
         }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -52,5 +53,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
 }

@@ -11,22 +11,44 @@ class NewBrewViewController: UIViewController {
     @IBOutlet var brewMethodPicker: UIPickerView!
     @IBOutlet var coffeeIcon: UIImageView!
     @IBOutlet var brewPhotoImageView: UIImageView!
-    
+
+    var brewStore: BrewStore!
+    var brewDetails: BrewDetails?
+
     @IBAction func cancelCreation(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
 
-    var brewStore: BrewStore!
+    @IBAction func saveBrew(_ sender: UIBarButtonItem) {
+        guard brewDetails != nil else {
+            preconditionFailure("Brew Details expected to save a Brew.")
+        }
+        guard brewStore != nil else {
+            preconditionFailure("BrewStore not available.")
+        }
+
+        let brewPickerRow = brewMethodPicker.selectedRow(inComponent: 0)
+        let selectedBrewMethod = BrewMethod.allCases[brewPickerRow]
+        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, brewScore: nil, creationDate: Date(), imageAddress: nil, aroma: nil, acidity: nil, sweetness: nil, body: nil, finish: nil, flavourNotes: nil, notes: nil)
+
+        brewStore.saveBrew(brew: currentBrew)
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         brewMethodPicker.dataSource = self
         brewMethodPicker.delegate = self
+
+        for child in self.children {
+            if let tableViewDetails = child as? BrewDetails {
+                brewDetails = tableViewDetails
+            }
+        }
     }
 
     @IBAction func chooseImage(_ sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.modalPresentationStyle = .automatic
-        
 
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
             let imagePicker = self.imagePicker(for: .photoLibrary)
@@ -34,7 +56,7 @@ class NewBrewViewController: UIViewController {
             self.present(imagePicker, animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
+
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
                 let imagePicker = self.imagePicker(for: .camera)
@@ -44,10 +66,10 @@ class NewBrewViewController: UIViewController {
         }
         alertController.addAction(photoLibraryAction)
         alertController.addAction(cancelAction)
-        
+
         present(alertController, animated: true, completion: nil)
     }
-    
+
     func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = sourceType
@@ -72,10 +94,11 @@ extension NewBrewViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension NewBrewViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     // UINavigationControllerDelegate, because UIImagePickerControllerDelegate delegate is inherited (?)
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.originalImage] as! UIImage
-        brewPhotoImageView.image = image
-        coffeeIcon.isHidden = true
-        dismiss(animated: true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            brewPhotoImageView.image = image
+            coffeeIcon.isHidden = true
+            dismiss(animated: true, completion: nil)
+        }
     }
 }

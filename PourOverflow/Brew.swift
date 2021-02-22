@@ -36,7 +36,7 @@ enum BrewMethod: String, CaseIterable {
     }
 }
 
-enum GrainMethod: CaseIterable {
+enum GrainMethod: String, CaseIterable {
     case lavado, honey, natural
 }
 

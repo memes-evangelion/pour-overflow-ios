@@ -96,6 +96,10 @@ class LocalBrewStore: BrewStore {
 
         return brewsInDateRange(fromDate: start, toDate: endOfDay)
     }
+    
+    func saveBrew(brew: Brew) {
+        allBrews.append(brew)
+    }
 
     init() {
         for _ in 0..<80 {
