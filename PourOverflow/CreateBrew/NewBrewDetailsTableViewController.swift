@@ -8,6 +8,12 @@
 import UIKit
 
 class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
+    var tasteRatings: [(name: String, tasting: TastingProperty)] = []
+
+    var notes: String = ""
+
+    var rating: Int = -1
+
     var water: Int {
         get {
             return Int(waterTextField.text ?? "0") ?? 0
@@ -37,6 +43,7 @@ class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
         }
     }
 
+    @IBOutlet var tastingNotesStatus: UILabel!
     @IBOutlet var waterTextField: UITextField!
     @IBOutlet var coffeeTextField: UITextField!
     @IBOutlet var grindTextField: UITextField!
@@ -46,6 +53,26 @@ class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
         self.brewTimeTextField.delegate = self
     }
     @IBOutlet var brewTimeTextField: UITextField!
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showRatings":
+            if let ratingsNavigationViewController = segue.destination as? RatingsNavigationViewController {
+                ratingsNavigationViewController.ratingsViewDelegate = self
+            }
+        default:
+            preconditionFailure("Unknown segue")
+        }
+    }
+}
+
+extension NewBrewDetailsTableViewController: RatingsViewDelegate {
+    func saveRatings(tasteRatings: [(name: String, tasting: TastingProperty)], notes: String, rating: Int) {
+        self.tasteRatings = tasteRatings
+        self.notes = notes
+        self.rating = rating
+        self.tastingNotesStatus.text = "Rated"
+    }
 }
 
 extension NewBrewDetailsTableViewController: UITextFieldDelegate {

@@ -89,23 +89,13 @@ class TastingPropertyView: UIView {
         contentView.frame = self.bounds
     }
 
-    func setSlider(slider: UISlider) {
-        slider.minimumValue = 1
-        slider.maximumValue = 5
-        slider.isContinuous = false
-    }
-
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         createNib()
-        setSlider(slider: firstSlider)
-        setSlider(slider: secondSlider)
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         createNib()
-        setSlider(slider: firstSlider)
-        setSlider(slider: secondSlider)
     }
 }

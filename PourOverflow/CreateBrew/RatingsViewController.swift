@@ -9,6 +9,26 @@ import UIKit
 
 class RatingsViewController: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var tastingRatingViews: [TastingPropertyView]!
+
+    @IBOutlet var flavourNotes: UITextField!
+    @IBOutlet var ratingTextField: UITextField!
+
+    var delegate: RatingsViewDelegate?
+
+    @IBAction func saveRatings(_ sender: UIBarButtonItem) {
+        var tastingRatings : [(name: String, tasting: TastingProperty)] = []
+        for tastingView in tastingRatingViews {
+            let tastingPropertyValues = TastingProperty(quantity: Int(tastingView.firstSlider.value), quality: Int(tastingView.secondSlider.value))
+            tastingRatings.append((name: tastingView.propertyTitle.text!, tasting: tastingPropertyValues))
+        }
+        let notes = flavourNotes.text!
+        let rating = Int(ratingTextField.text!) ?? 0
+
+        dismiss(animated: true) {
+            self.delegate?.saveRatings(tasteRatings: tastingRatings, notes: notes, rating: rating)
+        }
+    }
 
     @IBAction func dismissController(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -20,7 +40,7 @@ class RatingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDissappear), name: UIResponder.keyboardWillHideNotification, object: nil)
 

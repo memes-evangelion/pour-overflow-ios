@@ -324,7 +324,7 @@
                                             <constraint firstAttribute="trailing" secondItem="BlN-qJ-acL" secondAttribute="trailing" constant="40" id="4hP-v2-8Rg"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="guj-Ue-iJh" kind="showDetail" id="8mR-bD-0DD"/>
+                                            <segue destination="guj-Ue-iJh" kind="showDetail" identifier="showRatings" id="8mR-bD-0DD"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -340,6 +340,7 @@
                         <outlet property="brewTimeTextField" destination="JxE-j5-Kbc" id="Cbj-7o-Hau"/>
                         <outlet property="coffeeTextField" destination="Gcp-in-13a" id="rt2-As-gmy"/>
                         <outlet property="grindTextField" destination="GBj-fI-Ifv" id="moP-CT-k99"/>
+                        <outlet property="tastingNotesStatus" destination="BlN-qJ-acL" id="sYd-If-Myh"/>
                         <outlet property="timeTextField" destination="JxE-j5-Kbc" id="wUD-Zg-4oF"/>
                         <outlet property="waterTextField" destination="SA1-HS-FYd" id="jkG-eV-ysZ"/>
                     </connections>
@@ -348,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="555" y="758"/>
         </scene>
-        <!--TastingView-->
+        <!--Ratings-->
         <scene sceneID="xAf-kj-VnT">
             <objects>
-                <viewControllerPlaceholder storyboardName="TastingView" id="guj-Ue-iJh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Ratings" id="guj-Ue-iJh" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gWv-ZC-yZn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4q0-on-XG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

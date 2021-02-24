@@ -8,7 +8,7 @@
 import UIKit
 
 enum BrewMethod: String, CaseIterable {
-    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso
+    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso, frenchPress, mokaPot
     init?(value: String) {
         switch value.lowercased() {
         case BrewMethod.harioSwitch.rawValue.lowercased():
@@ -23,6 +23,10 @@ enum BrewMethod: String, CaseIterable {
             self = BrewMethod.chemex
         case BrewMethod.espresso.rawValue.lowercased():
             self = BrewMethod.espresso
+        case BrewMethod.frenchPress.rawValue.lowercased():
+            self = BrewMethod.frenchPress
+        case BrewMethod.mokaPot.rawValue.lowercased():
+            self = BrewMethod.mokaPot
         default:
             return nil
         }

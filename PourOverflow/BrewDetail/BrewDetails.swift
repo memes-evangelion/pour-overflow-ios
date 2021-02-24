@@ -12,4 +12,7 @@ protocol BrewDetails {
     var coffee: Int { get }
     var grind: String { get }
     var time: Measurement<UnitDuration> { get }
+    var tasteRatings: [(name: String, tasting: TastingProperty)] { get }
+    var notes: String { get }
+    var rating: Int { get }
 }
