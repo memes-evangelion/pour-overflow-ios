@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Create Brew Navigation Controller-->
         <scene sceneID="PJM-Pf-pRY">
             <objects>
-                <navigationController id="ojb-mB-HLC" sceneMemberID="viewController">
+                <navigationController id="ojb-mB-HLC" customClass="CreateBrewNavigationController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dfB-Pp-Pgr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +123,11 @@
                                 <action selector="cancelCreation:" destination="30Z-r5-Kyo" id="9Xs-jQ-Ev9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sML-Hb-nKN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sML-Hb-nKN">
+                            <connections>
+                                <action selector="saveBrew:" destination="30Z-r5-Kyo" id="1xW-Xo-Wlz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="brewMethodPicker" destination="wTm-NC-HTe" id="nCa-PK-wZN"/>
@@ -320,7 +324,7 @@
                                             <constraint firstAttribute="trailing" secondItem="BlN-qJ-acL" secondAttribute="trailing" constant="40" id="4hP-v2-8Rg"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="guj-Ue-iJh" kind="showDetail" id="8mR-bD-0DD"/>
+                                            <segue destination="guj-Ue-iJh" kind="showDetail" identifier="showRatings" id="8mR-bD-0DD"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -334,16 +338,21 @@
                     <size key="freeformSize" width="414" height="280"/>
                     <connections>
                         <outlet property="brewTimeTextField" destination="JxE-j5-Kbc" id="Cbj-7o-Hau"/>
+                        <outlet property="coffeeTextField" destination="Gcp-in-13a" id="rt2-As-gmy"/>
+                        <outlet property="grindTextField" destination="GBj-fI-Ifv" id="moP-CT-k99"/>
+                        <outlet property="tastingNotesStatus" destination="BlN-qJ-acL" id="sYd-If-Myh"/>
+                        <outlet property="timeTextField" destination="JxE-j5-Kbc" id="wUD-Zg-4oF"/>
+                        <outlet property="waterTextField" destination="SA1-HS-FYd" id="jkG-eV-ysZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBh-p9-9ES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="747"/>
+            <point key="canvasLocation" x="555" y="758"/>
         </scene>
-        <!--TastingView-->
+        <!--Ratings-->
         <scene sceneID="xAf-kj-VnT">
             <objects>
-                <viewControllerPlaceholder storyboardName="TastingView" id="guj-Ue-iJh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Ratings" id="guj-Ue-iJh" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gWv-ZC-yZn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4q0-on-XG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

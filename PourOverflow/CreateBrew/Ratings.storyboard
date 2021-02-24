@@ -208,20 +208,31 @@
                                 <action selector="dismissController:" destination="yS2-dd-XeM" id="art-Xs-hjb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="4IK-0j-Fxt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="4IK-0j-Fxt">
+                            <connections>
+                                <action selector="saveRatings:" destination="yS2-dd-XeM" id="9GG-7O-BzP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="flavourNotes" destination="2k7-dR-EFa" id="tPQ-2r-CgT"/>
+                        <outlet property="ratingTextField" destination="we7-gP-Cmg" id="6kG-wR-xAX"/>
                         <outlet property="scrollView" destination="OkJ-hi-Br9" id="j6f-QP-k1d"/>
+                        <outletCollection property="tastingRatingViews" destination="SPw-98-Ymv" collectionClass="NSMutableArray" id="z0N-PC-rRj"/>
+                        <outletCollection property="tastingRatingViews" destination="Aab-cg-uQi" collectionClass="NSMutableArray" id="vcA-NX-tOZ"/>
+                        <outletCollection property="tastingRatingViews" destination="mLJ-PN-O6d" collectionClass="NSMutableArray" id="n8l-rR-IT5"/>
+                        <outletCollection property="tastingRatingViews" destination="E17-E8-bxB" collectionClass="NSMutableArray" id="mte-UX-lfq"/>
+                        <outletCollection property="tastingRatingViews" destination="cdP-vf-qPz" collectionClass="NSMutableArray" id="ey0-Nd-iEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpg-dD-fAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="51.5625"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Ratings Navigation View Controller-->
         <scene sceneID="5Ln-MW-m7H">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ll8-zw-1Oa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ll8-zw-1Oa" customClass="RatingsNavigationViewController" customModule="PourOverflow" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mvd-H5-hMu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

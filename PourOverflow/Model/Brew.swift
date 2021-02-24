@@ -8,7 +8,7 @@
 import UIKit
 
 enum BrewMethod: String, CaseIterable {
-    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso
+    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso, frenchPress, mokaPot
     init?(value: String) {
         switch value.lowercased() {
         case BrewMethod.harioSwitch.rawValue.lowercased():
@@ -23,6 +23,10 @@ enum BrewMethod: String, CaseIterable {
             self = BrewMethod.chemex
         case BrewMethod.espresso.rawValue.lowercased():
             self = BrewMethod.espresso
+        case BrewMethod.frenchPress.rawValue.lowercased():
+            self = BrewMethod.frenchPress
+        case BrewMethod.mokaPot.rawValue.lowercased():
+            self = BrewMethod.mokaPot
         default:
             return nil
         }
@@ -36,7 +40,7 @@ enum BrewMethod: String, CaseIterable {
     }
 }
 
-enum GrainMethod: CaseIterable {
+enum GrainMethod: String, CaseIterable {
     case lavado, honey, natural
 }
 
@@ -63,6 +67,7 @@ struct Brew {
     let creationDate: Date
     let brewScore: CoffeeValuation?
     let imageAddress: String?
+    let grind: String?
 
     let aroma: TastingProperty?
     let acidity: TastingProperty?
@@ -78,7 +83,7 @@ struct Brew {
          brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?,
          aroma: TastingProperty?, acidity: TastingProperty?, sweetness: TastingProperty?,
          body: TastingProperty?, finish: TastingProperty?, flavourNotes: String?,
-         notes: String?) {
+         notes: String?, grind: String?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -95,5 +100,6 @@ struct Brew {
         self.finish = finish
         self.flavourNotes = flavourNotes
         self.notes = notes
+        self.grind = grind
     }
 }

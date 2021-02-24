@@ -7,11 +7,72 @@
 
 import UIKit
 
-class NewBrewDetailsTableViewController: UITableViewController {
+class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
+    var tasteRatings: [(name: String, tasting: TastingProperty)] = []
+
+    var notes: String = ""
+
+    var rating: Int = -1
+
+    var water: Int {
+        get {
+            return Int(waterTextField.text ?? "0") ?? 0
+        }
+    }
+    var coffee: Int {
+        get {
+            return Int(coffeeTextField.text ?? "0") ?? 0
+        }
+    }
+    var grind: String {
+        get {
+            return grindTextField.text ?? ""
+        }
+    }
+    var time: Measurement<UnitDuration> {
+        get {
+            var seconds = 0
+            let timeText = timeTextField.text ?? ""
+            let twoPoints = timeText.firstIndex(of: ":")
+            let minutesFromString = timeText[..<twoPoints!]
+            let secondsFromString = timeText[timeText.index(twoPoints!, offsetBy: 1)..<timeText.endIndex]
+
+            seconds += (Int(String(minutesFromString)) ?? 0 ) * 60
+            seconds += Int(String(secondsFromString)) ?? 0
+            return Measurement(value: Double(seconds), unit: UnitDuration.seconds)
+        }
+    }
+
+    @IBOutlet var tastingNotesStatus: UILabel!
+    @IBOutlet var waterTextField: UITextField!
+    @IBOutlet var coffeeTextField: UITextField!
+    @IBOutlet var grindTextField: UITextField!
+    @IBOutlet var timeTextField: UITextField!
+
     override func viewDidLoad() {
         self.brewTimeTextField.delegate = self
     }
     @IBOutlet var brewTimeTextField: UITextField!
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showRatings":
+            if let ratingsNavigationViewController = segue.destination as? RatingsNavigationViewController {
+                ratingsNavigationViewController.ratingsViewDelegate = self
+            }
+        default:
+            preconditionFailure("Unknown segue")
+        }
+    }
+}
+
+extension NewBrewDetailsTableViewController: RatingsViewDelegate {
+    func saveRatings(tasteRatings: [(name: String, tasting: TastingProperty)], notes: String, rating: Int) {
+        self.tasteRatings = tasteRatings
+        self.notes = notes
+        self.rating = rating
+        self.tastingNotesStatus.text = "Rated"
+    }
 }
 
 extension NewBrewDetailsTableViewController: UITextFieldDelegate {
