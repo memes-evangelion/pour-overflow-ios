@@ -27,10 +27,6 @@ class LocalBrewStore: BrewStore {
         let randomSeconds = Double.random(in: 20...400)
         let randomDuration = Measurement(value: randomSeconds, unit: UnitDuration.seconds)
 
-        var randomValuation: CoffeeValuation?
-        if valuation {
-            randomValuation = CoffeeValuation.allCases.randomElement()!
-        }
 
         let previousDays = Int.random(in: 1...90)
         let randomCreationDate = Calendar.current.date(byAdding: .day, value: -previousDays, to: Date())!
@@ -62,7 +58,7 @@ class LocalBrewStore: BrewStore {
                     coffee: randomCoffee,
                     water: randomWater,
                     duration: randomDuration,
-                    brewScore: randomValuation,
+                    score: Int.random(in: -1...10),
                     creationDate: randomCreationDate,
                     imageAddress: selectedImage,
                     aroma: aroma,

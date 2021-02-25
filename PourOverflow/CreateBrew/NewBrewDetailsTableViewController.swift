@@ -29,13 +29,16 @@ class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
             return grindTextField.text ?? ""
         }
     }
-    var time: Measurement<UnitDuration> {
+    var time: Measurement<UnitDuration>? {
         get {
             var seconds = 0
             let timeText = timeTextField.text ?? ""
-            let twoPoints = timeText.firstIndex(of: ":")
-            let minutesFromString = timeText[..<twoPoints!]
-            let secondsFromString = timeText[timeText.index(twoPoints!, offsetBy: 1)..<timeText.endIndex]
+            guard let twoPoints = timeText.firstIndex(of: ":") else {
+                return nil
+            }
+
+            let minutesFromString = timeText[..<twoPoints]
+            let secondsFromString = timeText[timeText.index(twoPoints, offsetBy: 1)..<timeText.endIndex]
 
             seconds += (Int(String(minutesFromString)) ?? 0 ) * 60
             seconds += Int(String(secondsFromString)) ?? 0

@@ -54,8 +54,9 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
         let brew = selectedBrewsBySections[indexPath.section][indexPath.row]
 
         cell.textLabel?.text = "\(brew.brewMethod)"
-        if let score = brew.brewScore?.rawValue {
-            cell.detailTextLabel?.text = score
+
+        if let brewScore = brew.score {
+            cell.detailTextLabel?.text =  brewScore >= 0 ? "\(brewScore)/10" : "-"
         } else {
             cell.detailTextLabel?.text = "-"
         }
