@@ -29,7 +29,13 @@ class NewBrewViewController: UIViewController {
 
         let brewPickerRow = brewMethodPicker.selectedRow(inComponent: 0)
         let selectedBrewMethod = BrewMethod.allCases[brewPickerRow]
-        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, brewScore: nil, creationDate: Date(), imageAddress: nil, aroma: nil, acidity: nil, sweetness: nil, body: nil, finish: nil, flavourNotes: nil, notes: nil, grind: brewDetails!.grind)
+        var tastingValues: [String: TastingProperty] = [:]
+        
+        for tastingRating in brewDetails!.tasteRatings {
+            tastingValues[tastingRating.name] = tastingRating.tasting
+        }
+
+        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, brewScore: nil, creationDate: Date(), imageAddress: nil, aroma: tastingValues["Aroma"], acidity: tastingValues["Acidity"], sweetness: tastingValues["Sweetness"], body:  tastingValues["Body"], finish: tastingValues["Finish"], flavourNotes: nil, notes: brewDetails!.notes, grind: brewDetails!.grind)
 
         brewStore.saveBrew(brew: currentBrew)
         dismiss(animated: true, completion: nil)
