@@ -51,7 +51,8 @@ class CalendarViewController: UIViewController {
                 let button = dayButtons[brewIndex + day]
                 let buttonTitle = button.currentTitle!
                 let lines = buttonTitle.split(whereSeparator: \.isNewline)
-                let score = brew.brewScore?.rawValue ?? "☕️"
+                let score = CoffeeValuation(score: brew.score)?.rawValue ?? "☕️"
+
 
                 if lines.count > 1 {
                     button.setTitle("\(day)\n\(score)+", for: .normal)

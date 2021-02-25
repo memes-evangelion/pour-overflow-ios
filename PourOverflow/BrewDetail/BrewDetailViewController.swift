@@ -57,7 +57,10 @@ class BrewDetailViewController: UIViewController {
             timeLabel.text = "\(truncatedValue) s"
         }
         brewDateLabel.text = "Brewed: \(dateFormatter.string(from: brew.creationDate))"
-        scoreLabel.text = brew.brewScore?.rawValue
+        if let brewScore = brew.score {
+            scoreLabel.text = brewScore >= 0 ? "\(brewScore)/10" : "-"
+        }
+        
         if let imageFromBrew = brew.imageAddress {
             brewImage.image = UIImage(named: imageFromBrew)
             brewImageButton.isEnabled = true

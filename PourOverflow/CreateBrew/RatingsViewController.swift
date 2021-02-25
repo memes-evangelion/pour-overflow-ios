@@ -23,7 +23,7 @@ class RatingsViewController: UIViewController {
             tastingRatings.append((name: tastingView.propertyTitle.text!, tasting: tastingPropertyValues))
         }
         let notes = flavourNotes.text!
-        let rating = Int(ratingTextField.text!) ?? 0
+        let rating = Int(ratingTextField.text!) ?? -1
 
         dismiss(animated: true) {
             self.delegate?.saveRatings(tasteRatings: tastingRatings, notes: notes, rating: rating)

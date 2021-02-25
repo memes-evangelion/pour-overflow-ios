@@ -20,11 +20,12 @@
         <attribute name="grind" optional="YES" attributeType="String"/>
         <attribute name="imageAddress" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="score" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="sweetnessQuality" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sweetnessQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="water" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="BrewModel" positionX="-63" positionY="-18" width="166.572998046875" height="373"/>
+        <element name="BrewModel" positionX="-63" positionY="-18" width="166.572998046875" height="374"/>
     </elements>
 </model>

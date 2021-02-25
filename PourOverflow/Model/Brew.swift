@@ -50,6 +50,26 @@ enum CoffeeValuation: String, CaseIterable {
     case neutral = "😐"
     case good = "🙂"
     case amazing = "🤩"
+
+    init?(score: Int?) {
+        guard let brewScore = score else {
+            return nil
+        }
+        switch brewScore {
+        case 0...2:
+            self = .horrible
+        case 3...4:
+            self = .bad
+        case 5...6:
+            self = .neutral
+        case 7...8:
+            self = .good
+        case 9...10:
+            self = .amazing
+        default:
+            return nil
+        }
+    }
 }
 
 struct TastingProperty {
@@ -65,7 +85,7 @@ struct Brew {
     let water: Int // in ml
     let duration: Measurement<UnitDuration>? // in seconds
     let creationDate: Date
-    let brewScore: CoffeeValuation?
+    let score: Int?
     let imageAddress: String?
     let grind: String?
 
@@ -80,7 +100,7 @@ struct Brew {
 
     init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int,
          duration: Measurement<UnitDuration>?,
-         brewScore: CoffeeValuation?, creationDate: Date, imageAddress: String?,
+         score: Int?, creationDate: Date, imageAddress: String?,
          aroma: TastingProperty?, acidity: TastingProperty?, sweetness: TastingProperty?,
          body: TastingProperty?, finish: TastingProperty?, flavourNotes: String?,
          notes: String?, grind: String?) {
@@ -90,7 +110,7 @@ struct Brew {
         self.coffee = coffee
         self.water = water
         self.duration = duration
-        self.brewScore = brewScore
+        self.score = score
         self.creationDate = creationDate
         self.imageAddress = imageAddress
         self.aroma = aroma
