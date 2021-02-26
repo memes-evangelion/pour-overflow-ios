@@ -122,4 +122,17 @@ struct Brew {
         self.notes = notes
         self.grind = grind
     }
+
+    init(from model: BrewModel) {
+        let brewMethod = BrewMethod(rawValue: model.brewMethodRawValue)!
+        let grains = GrainMethod(rawValue: model.grainsRawValue ?? "")
+        let duration = Measurement(value: Double(model.duration), unit: UnitDuration.seconds)
+        let aromaTastingProperty = TastingProperty(quantity: model.aromaQuantity, quality: model.aromaQuality)
+        let acidityTastingProperty = TastingProperty(quantity: model.acidityQuantity, quality: model.acidityQuality)
+        let sweetnessTastingProperty = TastingProperty(quantity: model.sweetnessQuantity, quality: model.sweetnessQuality)
+        let bodyTastingProperty = TastingProperty(quantity: model.bodyQuantity, quality: model.bodyQuality)
+        let finishTastingProperty = TastingProperty(quantity: model.finishQuantity, quality: model.finishQuality)
+
+        self.init(brewMethod: brewMethod, grains: grains, coffee: model.coffee, water: model.water, duration: duration, score: model.score, creationDate: model.creationDate, imageAddress: model.imageAddress, aroma: aromaTastingProperty, acidity: acidityTastingProperty, sweetness: sweetnessTastingProperty, body: bodyTastingProperty, finish: finishTastingProperty, flavourNotes: model.flavourNotes, notes: model.notes, grind: model.grind)
+    }
 }

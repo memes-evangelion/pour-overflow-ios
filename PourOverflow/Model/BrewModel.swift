@@ -71,4 +71,12 @@ class BrewModel: NSManagedObject {
 
         super.init(entity: brewEntity!, insertInto: context)
     }
+
+    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
+
+    static func brewFetchRequest() -> NSFetchRequest<BrewModel> {
+        return NSFetchRequest<BrewModel>(entityName: "BrewModel")
+    }
 }
