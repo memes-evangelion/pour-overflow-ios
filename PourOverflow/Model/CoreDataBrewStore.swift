@@ -9,6 +9,13 @@ import CoreData
 class CoreDataBrewStore: BrewStore {
     var allBrews: [Brew] {
         get {
+            let context = container.viewContext
+            do {
+                let allBrewModels = try context.fetch(BrewModel.brewFetchRequest())
+                return allBrewModels.map { Brew(from: $0) }
+            } catch {
+                print("Error querying Brew Models")
+            }
             return []
         }
     }
@@ -24,14 +31,18 @@ class CoreDataBrewStore: BrewStore {
     }()
 
     func brewsInDateRange(fromDate: Date, toDate: Date) -> [Brew] {
-        return []
-    }
-
-    func brewsInDate(date: Date) -> [Brew] {
-        return []
-    }
-
-    func brewsByMethod(brewMethods: [BrewMethod], fromDate: Date?, toDate: Date?) -> [Brew] {
+        let context = container.viewContext
+        let fetchRequest = BrewModel.brewFetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "creationDate >= %@ && creationDate <= %@", argumentArray: [fromDate, toDate])
+        do {
+            let brews = try context.fetch(fetchRequest)
+            let brewsInDateRange =  brews.map { Brew(from: $0) }
+            return brewsInDateRange.sorted {
+                $0.creationDate < $1.creationDate
+            }
+        } catch {
+            print("Error fetching brews in date range")
+        }
         return []
     }
 
