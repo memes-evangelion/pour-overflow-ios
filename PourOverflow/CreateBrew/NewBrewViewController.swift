@@ -35,7 +35,12 @@ class NewBrewViewController: UIViewController {
             tastingValues[tastingRating.name] = tastingRating.tasting
         }
 
-        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, score: brewDetails!.rating, creationDate: Date(), imageAddress: nil, aroma: tastingValues["Aroma"], acidity: tastingValues["Acidity"], sweetness: tastingValues["Sweetness"], body:  tastingValues["Body"], finish: tastingValues["Finish"], flavourNotes: nil, notes: brewDetails!.notes, grind: brewDetails!.grind)
+        var imageData: Data?
+        if let brewImage = brewPhotoImageView.image {
+            imageData = brewImage.jpegData(compressionQuality: 0.7)
+        }
+
+        let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, score: brewDetails!.rating, creationDate: Date(), aroma: tastingValues["Aroma"], acidity: tastingValues["Acidity"], sweetness: tastingValues["Sweetness"], body:  tastingValues["Body"], finish: tastingValues["Finish"], flavourNotes: nil, notes: brewDetails!.notes, grind: brewDetails!.grind, image: imageData)
 
         brewStore.saveBrew(brew: currentBrew)
         dismiss(animated: true, completion: nil)

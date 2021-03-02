@@ -16,7 +16,6 @@ class BrewModel: NSManagedObject {
     @NSManaged var duration: Int
     @NSManaged var creationDate: Date
     @NSManaged var score: Int
-    @NSManaged var imageAddress: String?
     @NSManaged var grind: String?
 
     @NSManaged var aromaQuantity: Int
@@ -29,6 +28,8 @@ class BrewModel: NSManagedObject {
     @NSManaged var bodyQuality: Int
     @NSManaged var finishQuantity: Int
     @NSManaged var finishQuality: Int
+
+    @NSManaged var image: Data?
 
     @NSManaged var notes: String?
     @NSManaged var flavourNotes: String?
@@ -43,8 +44,8 @@ class BrewModel: NSManagedObject {
         brewModel.duration = Int(brew.duration?.value ?? -1.0)
         brewModel.score = brew.score ?? -1
         brewModel.creationDate = brew.creationDate
-        brewModel.imageAddress = brew.imageAddress
         brewModel.grind = brew.grind
+        brewModel.image = brew.image
 
         brewModel.aromaQuantity = brew.aroma?.quantity ?? -1
         brewModel.aromaQuality = brew.aroma?.quality ?? -1
