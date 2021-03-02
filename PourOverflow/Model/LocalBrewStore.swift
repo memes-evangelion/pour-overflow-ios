@@ -31,10 +31,6 @@ class LocalBrewStore: BrewStore {
         let previousDays = Int.random(in: 1...90)
         let randomCreationDate = Calendar.current.date(byAdding: .day, value: -previousDays, to: Date())!
 
-        let shouldHaveImage = Bool.random()
-        let availableImages = ["brew-2feb", "brew-3feb"]
-        let selectedImage = shouldHaveImage ? availableImages[Int.random(in: 0...1)] : nil
-
         let randomNumberUpToFive = {
             return Int.random(in: 1...5)
         }
@@ -60,7 +56,6 @@ class LocalBrewStore: BrewStore {
                     duration: randomDuration,
                     score: Int.random(in: -1...10),
                     creationDate: randomCreationDate,
-                    imageAddress: selectedImage,
                     aroma: aroma,
                     acidity: acidity,
                     sweetness: sweetness,
@@ -68,7 +63,8 @@ class LocalBrewStore: BrewStore {
                     finish: finish,
                     flavourNotes: randomFlavourNotes,
                     notes: randomNotes,
-                    grind: randomGrind.randomElement())
+                    grind: randomGrind.randomElement(),
+                    image: nil)
     }
 
     func brewsInDateRange(fromDate from: Date, toDate: Date) -> [Brew] {
@@ -83,7 +79,7 @@ class LocalBrewStore: BrewStore {
     }
 
     init() {
-        for _ in 0..<80 {
+        for _ in 0..<10 {
             addRandomBrew(hasValuation: true)
         }
         for _ in 0..<10 {

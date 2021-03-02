@@ -18,7 +18,7 @@
         <attribute name="flavourNotes" optional="YES" attributeType="String"/>
         <attribute name="grainsRawValue" optional="YES" attributeType="String"/>
         <attribute name="grind" optional="YES" attributeType="String"/>
-        <attribute name="imageAddress" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="score" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="sweetnessQuality" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>

@@ -61,8 +61,8 @@ class BrewDetailViewController: UIViewController {
             scoreLabel.text = brewScore >= 0 ? "\(brewScore)/10" : "-"
         }
         
-        if let imageFromBrew = brew.imageAddress {
-            brewImage.image = UIImage(named: imageFromBrew)
+        if let imageData = brew.image {
+            brewImage.image = UIImage(data: imageData)
             brewImageButton.isEnabled = true
         } else {
             brewImageButton.isEnabled = false

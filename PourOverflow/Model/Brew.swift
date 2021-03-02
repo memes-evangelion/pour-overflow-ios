@@ -86,8 +86,8 @@ struct Brew {
     let duration: Measurement<UnitDuration>? // in seconds
     let creationDate: Date
     let score: Int?
-    let imageAddress: String?
     let grind: String?
+    let image: Data?
 
     let aroma: TastingProperty?
     let acidity: TastingProperty?
@@ -100,10 +100,10 @@ struct Brew {
 
     init(brewMethod: BrewMethod, grains: GrainMethod?, coffee: Int, water: Int,
          duration: Measurement<UnitDuration>?,
-         score: Int?, creationDate: Date, imageAddress: String?,
+         score: Int?, creationDate: Date,
          aroma: TastingProperty?, acidity: TastingProperty?, sweetness: TastingProperty?,
          body: TastingProperty?, finish: TastingProperty?, flavourNotes: String?,
-         notes: String?, grind: String?) {
+         notes: String?, grind: String?, image: Data?) {
         self.brewId = UUID()
         self.brewMethod = brewMethod
         self.grains = grains
@@ -112,7 +112,6 @@ struct Brew {
         self.duration = duration
         self.score = score
         self.creationDate = creationDate
-        self.imageAddress = imageAddress
         self.aroma = aroma
         self.acidity = acidity
         self.sweetness = sweetness
@@ -121,6 +120,7 @@ struct Brew {
         self.flavourNotes = flavourNotes
         self.notes = notes
         self.grind = grind
+        self.image = image
     }
 
     init(from model: BrewModel) {
@@ -133,6 +133,6 @@ struct Brew {
         let bodyTastingProperty = TastingProperty(quantity: model.bodyQuantity, quality: model.bodyQuality)
         let finishTastingProperty = TastingProperty(quantity: model.finishQuantity, quality: model.finishQuality)
 
-        self.init(brewMethod: brewMethod, grains: grains, coffee: model.coffee, water: model.water, duration: duration, score: model.score, creationDate: model.creationDate, imageAddress: model.imageAddress, aroma: aromaTastingProperty, acidity: acidityTastingProperty, sweetness: sweetnessTastingProperty, body: bodyTastingProperty, finish: finishTastingProperty, flavourNotes: model.flavourNotes, notes: model.notes, grind: model.grind)
+        self.init(brewMethod: brewMethod, grains: grains, coffee: model.coffee, water: model.water, duration: duration, score: model.score, creationDate: model.creationDate, aroma: aromaTastingProperty, acidity: acidityTastingProperty, sweetness: sweetnessTastingProperty, body: bodyTastingProperty, finish: finishTastingProperty, flavourNotes: model.flavourNotes, notes: model.notes, grind: model.grind, image: model.image)
     }
 }
