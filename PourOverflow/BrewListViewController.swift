@@ -10,6 +10,7 @@ import UIKit
 class BrewListViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet var searchBar: UISearchBar!
 
+    let notificationCenter = NotificationCenter.default
     var brewStore: BrewStore!
     var selectedDay: Date?
 
@@ -28,7 +29,17 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
             tableView.tableHeaderView = nil
         } else {
             setBrewsByMonth(brews: brewStore.allBrews)
+            notificationCenter.addObserver(self, selector: #selector(reloadAllBrews), name: Notification.Name(Notifications.BrewCreated.rawValue), object: nil)
         }
+    }
+
+    deinit {
+        notificationCenter.removeObserver(self)
+    }
+
+    @objc func reloadAllBrews() {
+        setBrewsByMonth(brews: brewStore.allBrews)
+        tableView.reloadData()
     }
 
     func setBrewsByMonth(brews: [Brew]) {

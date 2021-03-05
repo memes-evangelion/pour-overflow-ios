@@ -9,6 +9,7 @@ import UIKit
 
 class CalendarViewController: UIViewController {
     var brewStore: BrewStore!
+    let notificationCenter = NotificationCenter.default
 
     @IBOutlet var currentMonthLabel: UILabel!
     @IBOutlet var dayButtons: [UIButton]!
@@ -23,6 +24,16 @@ class CalendarViewController: UIViewController {
 
         displayMonthLabel()
         fillCalendar()
+
+        notificationCenter.addObserver(self, selector: #selector(refreshCalendar), name: Notification.Name(Notifications.BrewCreated.rawValue), object: nil)
+    }
+
+    @objc func refreshCalendar() {
+        fillCalendar()
+    }
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     func fillCalendar() {
