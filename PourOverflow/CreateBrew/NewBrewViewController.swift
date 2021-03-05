@@ -43,7 +43,10 @@ class NewBrewViewController: UIViewController {
         let currentBrew = Brew(brewMethod: selectedBrewMethod, grains: nil, coffee: brewDetails!.coffee, water: brewDetails!.water, duration: brewDetails?.time, score: brewDetails!.rating, creationDate: Date(), aroma: tastingValues["Aroma"], acidity: tastingValues["Acidity"], sweetness: tastingValues["Sweetness"], body:  tastingValues["Body"], finish: tastingValues["Finish"], flavourNotes: nil, notes: brewDetails!.notes, grind: brewDetails!.grind, image: imageData)
 
         brewStore.saveBrew(brew: currentBrew)
-        dismiss(animated: true, completion: nil)
+        let notificationCenter = NotificationCenter.default
+        dismiss(animated: true) {
+            notificationCenter.post(name: Notification.Name(Notifications.BrewCreated.rawValue), object: nil)
+        }
     }
 
     override func viewDidLoad() {
