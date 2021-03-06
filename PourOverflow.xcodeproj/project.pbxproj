@@ -42,6 +42,7 @@
 		90F6C20925B7EB5300F3BFB2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */; };
 		FB3B0DEB25B5281D00A16936 /* BrewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B0DEA25B5281D00A16936 /* BrewStore.swift */; };
 		FB455F1825C30B30003E94BB /* BrewList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB455F1625C30B30003E94BB /* BrewList.storyboard */; };
+		FBBC762D25F1D18C00ABB327 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC762C25F1D18C00ABB327 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		90F6C20825B7EB5300F3BFB2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FB3B0DEA25B5281D00A16936 /* BrewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStore.swift; sourceTree = "<group>"; };
 		FB455F1725C30B30003E94BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PourOverflow/PourOverflow/Base.lproj/BrewList.storyboard; sourceTree = "<group>"; };
+		FBBC762C25F1D18C00ABB327 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 				90BD41B625A699EE002A2B78 /* LaunchScreen.storyboard */,
 				90BD41B125A699E9002A2B78 /* Main.storyboard */,
 				90BD41AD25A699E9002A2B78 /* SceneDelegate.swift */,
+				FBBC762C25F1D18C00ABB327 /* Notifications.swift */,
 			);
 			path = PourOverflow;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				90A6756A25D42A36001B497D /* CreateBrewNavigationController.swift in Sources */,
 				9016D81425AA62B9003F6446 /* Brew.swift in Sources */,
 				90BD41AE25A699E9002A2B78 /* SceneDelegate.swift in Sources */,
+				FBBC762D25F1D18C00ABB327 /* Notifications.swift in Sources */,
 				905F6C8F25D6C0400093F18D /* RatingsViewController.swift in Sources */,
 				905F6C9725D6CB410093F18D /* NewBrewDetailsTableViewController.swift in Sources */,
 				90B5D6E625B4148400E92FAE /* BrewTabBarController.swift in Sources */,
