@@ -49,33 +49,54 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RAX-U6-xda">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-P1-nGY">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-P1-nGY">
                                                         <rect key="frame" x="0.0" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="S"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-Vy-fD6">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-Vy-fD6">
                                                         <rect key="frame" x="57" y="0.0" width="56.5" height="50"/>
                                                         <state key="normal" title="M"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBU-1N-fGw">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBU-1N-fGw">
                                                         <rect key="frame" x="113.5" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="T"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-YN-YCh">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-YN-YCh">
                                                         <rect key="frame" x="170.5" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="W"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-NX-e1g">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-NX-e1g">
                                                         <rect key="frame" x="227.5" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="T"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKr-eC-RlB">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKr-eC-RlB">
                                                         <rect key="frame" x="284.5" y="0.0" width="56.5" height="50"/>
                                                         <state key="normal" title="F"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDj-Jt-rYG">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDj-Jt-rYG">
                                                         <rect key="frame" x="341" y="0.0" width="57" height="50"/>
                                                         <state key="normal" title="S"/>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" systemColor="linkColor"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -568,6 +589,9 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
