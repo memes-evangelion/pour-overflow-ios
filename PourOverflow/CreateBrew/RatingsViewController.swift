@@ -55,8 +55,8 @@ class RatingsViewController: UIViewController {
         guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
             return
         }
-        if self.view.frame.origin.y == 0 {
-            self.view.frame.origin.y -= keyboardFrame.cgRectValue.height
+        if self.view.frame.origin.y <= 0 {
+            self.view.frame.origin.y = -keyboardFrame.cgRectValue.height
         }
 
     }
