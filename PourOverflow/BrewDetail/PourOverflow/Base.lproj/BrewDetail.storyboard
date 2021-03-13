@@ -220,7 +220,7 @@
                                                 <rect key="frame" x="16" y="230.5" width="382" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaP-De-7Ha">
-                                                        <rect key="frame" x="8" y="8" width="61" height="26.5"/>
+                                                        <rect key="frame" x="8" y="17" width="61" height="26.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -235,10 +235,10 @@
                                                 <color key="backgroundColor" red="0.87238103693181812" green="0.50286353537744943" blue="0.20971186570293077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="3QO-tM-swz"/>
+                                                    <constraint firstItem="HaP-De-7Ha" firstAttribute="centerY" secondItem="208-yd-c94" secondAttribute="centerY" id="7Ev-TZ-r2F"/>
                                                     <constraint firstAttribute="bottom" secondItem="hNw-2g-GR1" secondAttribute="bottom" constant="12" id="B8l-bu-dlB"/>
                                                     <constraint firstItem="HaP-De-7Ha" firstAttribute="leading" secondItem="208-yd-c94" secondAttribute="leading" constant="8" id="V5X-qu-YyZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="hNw-2g-GR1" secondAttribute="trailing" constant="8" id="eaL-zg-na3"/>
-                                                    <constraint firstItem="HaP-De-7Ha" firstAttribute="top" secondItem="208-yd-c94" secondAttribute="top" constant="8" id="vFb-ax-Wqu"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3C6-Kc-5cH" userLabel="Sliders Stack View">
