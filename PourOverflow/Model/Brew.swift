@@ -38,6 +38,27 @@ enum BrewMethod: String, CaseIterable {
         let matchingMethodNames = methodsNames.filter { $0.starts(with: lowercasedText) }
         return matchingMethodNames.compactMap { BrewMethod(value: $0) }
     }
+
+    func formattedName() -> String {
+        switch self {
+        case .aeroPress:
+            return "AeroPress"
+        case .chemex:
+            return "Chemex"
+        case .espresso:
+            return "Espresso"
+        case .frenchPress:
+            return "French Press"
+        case .harioSwitch:
+            return "Hario Switch"
+        case .kalitaWave:
+            return "Kalita Wave"
+        case .mokaPot:
+            return "Moka Pot"
+        case .v60:
+            return "V60"
+        }
+    }
 }
 
 enum GrainMethod: String, CaseIterable {

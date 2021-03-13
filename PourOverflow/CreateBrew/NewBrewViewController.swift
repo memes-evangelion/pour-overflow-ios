@@ -102,7 +102,7 @@ extension NewBrewViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return BrewMethod.allCases[row].rawValue
+        return BrewMethod.allCases[row].formattedName()
     }
 }
 
