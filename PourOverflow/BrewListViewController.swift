@@ -64,7 +64,7 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrewCell", for: indexPath)
         let brew = selectedBrewsBySections[indexPath.section][indexPath.row]
 
-        cell.textLabel?.text = "\(brew.brewMethod.formattedName())"
+        cell.textLabel?.text = "\(brew.brewMethod.rawValue)"
 
         if let brewScore = brew.score {
             cell.detailTextLabel?.text =  brewScore >= 0 ? "\(brewScore)/10" : "-"

@@ -48,7 +48,7 @@ class BrewDetailViewController: UIViewController {
         dateFormatter.timeStyle = .none
         dateFormatter.locale = Locale(identifier: "en_US")
 
-        navigationItem.title = "\(brew.brewMethod.formattedName())"
+        navigationItem.title = "\(brew.brewMethod.rawValue)"
         coffeeLabel.text = "\(brew.coffee)"
         waterLabel.text = "\(brew.water)"
         if let duration = brew.duration {

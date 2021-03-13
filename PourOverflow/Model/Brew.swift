@@ -8,7 +8,16 @@
 import UIKit
 
 enum BrewMethod: String, CaseIterable {
-    case harioSwitch, aeroPress, v60, kalitaWave, chemex, espresso, frenchPress, mokaPot
+
+    case aeroPress = "AeroPress"
+    case chemex = "Chemex"
+    case espresso = "Espresso"
+    case frenchPress = "French Press"
+    case harioSwitch = "Hario Switch"
+    case kalitaWave = "Kalita Wave"
+    case mokaPot = "Moka Pot"
+    case v60 = "V60"
+
     init?(value: String) {
         switch value.lowercased() {
         case BrewMethod.harioSwitch.rawValue.lowercased():
@@ -39,26 +48,6 @@ enum BrewMethod: String, CaseIterable {
         return matchingMethodNames.compactMap { BrewMethod(value: $0) }
     }
 
-    func formattedName() -> String {
-        switch self {
-        case .aeroPress:
-            return "AeroPress"
-        case .chemex:
-            return "Chemex"
-        case .espresso:
-            return "Espresso"
-        case .frenchPress:
-            return "French Press"
-        case .harioSwitch:
-            return "Hario Switch"
-        case .kalitaWave:
-            return "Kalita Wave"
-        case .mokaPot:
-            return "Moka Pot"
-        case .v60:
-            return "V60"
-        }
-    }
 }
 
 enum GrainMethod: String, CaseIterable {
