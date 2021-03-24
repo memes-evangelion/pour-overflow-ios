@@ -31,6 +31,7 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
             setBrewsByMonth(brews: brewStore.allBrews)
             notificationCenter.addObserver(self, selector: #selector(reloadAllBrews), name: Notification.Name(Notifications.BrewCreated.rawValue), object: nil)
         }
+        self.tableView.keyboardDismissMode = .onDrag
     }
 
     deinit {
