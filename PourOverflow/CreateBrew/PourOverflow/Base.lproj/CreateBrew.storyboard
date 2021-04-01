@@ -56,19 +56,19 @@
                                 </constraints>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlM-53-QhC" userLabel="Photo View">
-                                <rect key="frame" x="57" y="437.5" width="300" height="300"/>
+                                <rect key="frame" x="94.5" y="421.5" width="225" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qi0-cq-Wgm" userLabel="Brew Photo Image View">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="250"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixy-dz-5N3">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="250"/>
                                         <connections>
                                             <action selector="chooseImage:" destination="30Z-r5-Kyo" eventType="touchUpInside" id="YgP-2f-SDh"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffeeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-LE-MGl">
-                                        <rect key="frame" x="126" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="88.5" y="101" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="8vu-Ao-HE7"/>
                                             <constraint firstAttribute="width" constant="48" id="FEG-eB-fFR"/>
@@ -78,11 +78,11 @@
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="Ixy-dz-5N3" firstAttribute="height" secondItem="UlM-53-QhC" secondAttribute="height" id="2Xw-qA-kwm"/>
-                                    <constraint firstAttribute="height" constant="300" id="7Nq-1y-qgV"/>
+                                    <constraint firstAttribute="height" constant="250" id="7Nq-1y-qgV"/>
                                     <constraint firstItem="Ixy-dz-5N3" firstAttribute="centerY" secondItem="UlM-53-QhC" secondAttribute="centerY" id="CSu-qv-VKe"/>
                                     <constraint firstItem="Ixy-dz-5N3" firstAttribute="width" secondItem="UlM-53-QhC" secondAttribute="width" id="DkX-hK-zao"/>
                                     <constraint firstItem="qi0-cq-Wgm" firstAttribute="centerY" secondItem="UlM-53-QhC" secondAttribute="centerY" id="IRe-FW-fjW"/>
-                                    <constraint firstAttribute="width" constant="300" id="RQK-pS-8sK"/>
+                                    <constraint firstAttribute="width" constant="225" id="RQK-pS-8sK"/>
                                     <constraint firstItem="Uh6-LE-MGl" firstAttribute="centerY" secondItem="UlM-53-QhC" secondAttribute="centerY" id="TK4-SX-d6v"/>
                                     <constraint firstItem="qi0-cq-Wgm" firstAttribute="height" secondItem="UlM-53-QhC" secondAttribute="height" id="Uvx-pO-2TH"/>
                                     <constraint firstItem="qi0-cq-Wgm" firstAttribute="centerX" secondItem="UlM-53-QhC" secondAttribute="centerX" id="Xze-s5-8Ed"/>
@@ -92,7 +92,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-0C-3KG">
-                                <rect key="frame" x="171" y="745.5" width="72" height="30"/>
+                                <rect key="frame" x="171" y="679.5" width="72" height="30"/>
                                 <state key="normal" title="Add Photo"/>
                                 <connections>
                                     <action selector="chooseImage:" destination="30Z-r5-Kyo" eventType="touchUpInside" id="ImH-nx-vPf"/>
@@ -109,7 +109,7 @@
                             <constraint firstItem="R2X-FO-VfA" firstAttribute="trailing" secondItem="wTm-NC-HTe" secondAttribute="trailing" constant="16" id="MSI-vR-0SR"/>
                             <constraint firstItem="R2X-FO-VfA" firstAttribute="trailing" secondItem="gre-2b-Zfk" secondAttribute="trailing" id="bSi-n7-mAO"/>
                             <constraint firstItem="UlM-53-QhC" firstAttribute="centerX" secondItem="R2X-FO-VfA" secondAttribute="centerX" id="bTr-1q-dfM"/>
-                            <constraint firstItem="UlM-53-QhC" firstAttribute="top" secondItem="gre-2b-Zfk" secondAttribute="bottom" constant="32" id="gwm-ej-jx8"/>
+                            <constraint firstItem="UlM-53-QhC" firstAttribute="top" secondItem="gre-2b-Zfk" secondAttribute="bottom" constant="16" id="gwm-ej-jx8"/>
                             <constraint firstItem="gre-2b-Zfk" firstAttribute="top" secondItem="gPB-Vc-tWy" secondAttribute="bottom" constant="32" id="kc4-Gm-AXw"/>
                             <constraint firstItem="gPB-Vc-tWy" firstAttribute="top" secondItem="R2X-FO-VfA" secondAttribute="top" constant="45" id="mX5-aO-z0s"/>
                             <constraint firstItem="NvD-0C-3KG" firstAttribute="centerX" secondItem="Ixy-dz-5N3" secondAttribute="centerX" id="zXo-cB-vHx"/>
