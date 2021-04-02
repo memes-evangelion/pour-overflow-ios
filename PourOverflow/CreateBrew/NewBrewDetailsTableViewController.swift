@@ -51,11 +51,34 @@ class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
     @IBOutlet var coffeeTextField: UITextField!
     @IBOutlet var grindTextField: UITextField!
     @IBOutlet var timeTextField: UITextField!
+    @IBOutlet var brewTimeTextField: UITextField!
 
     override func viewDidLoad() {
         self.brewTimeTextField.delegate = self
+        addBarButtonItems(textField: waterTextField, nextOne: coffeeTextField)
+        addBarButtonItems(textField: coffeeTextField, nextOne: grindTextField)
     }
-    @IBOutlet var brewTimeTextField: UITextField!
+
+    func addBarButtonItems(textField: UITextField, nextOne: UITextField) {
+        let bar = UIToolbar()
+        var next = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextInputIsGrind))
+        if nextOne == coffeeTextField {
+            next = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextInputIsCoffee))
+        }
+
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.items = [spacer, next]
+        bar.sizeToFit()
+        textField.inputAccessoryView = bar
+    }
+
+    @objc func nextInputIsCoffee() {
+        coffeeTextField.becomeFirstResponder()
+    }
+
+    @objc func nextInputIsGrind() {
+        grindTextField.becomeFirstResponder()
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
