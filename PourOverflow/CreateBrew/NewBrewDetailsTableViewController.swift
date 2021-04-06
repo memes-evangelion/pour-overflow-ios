@@ -32,7 +32,7 @@ class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
     var time: Measurement<UnitDuration>? {
         get {
             var seconds = 0
-            let timeText = timeTextField.text ?? ""
+            let timeText = brewTimeTextField.text ?? ""
             guard let twoPoints = timeText.firstIndex(of: ":") else {
                 return nil
             }
@@ -50,34 +50,35 @@ class NewBrewDetailsTableViewController: UITableViewController, BrewDetails {
     @IBOutlet var waterTextField: UITextField!
     @IBOutlet var coffeeTextField: UITextField!
     @IBOutlet var grindTextField: UITextField!
-    @IBOutlet var timeTextField: UITextField!
     @IBOutlet var brewTimeTextField: UITextField!
 
     override func viewDidLoad() {
         self.brewTimeTextField.delegate = self
-        addBarButtonItems(textField: waterTextField, nextOne: coffeeTextField)
-        addBarButtonItems(textField: coffeeTextField, nextOne: grindTextField)
+        self.grindTextField.delegate = self
+        addBarButtonItem(toTextField: waterTextField, withTitle: "Next")
+        addBarButtonItem(toTextField: coffeeTextField, withTitle: "Next")
+        addBarButtonItem(toTextField: brewTimeTextField, withTitle: "Done")
     }
 
-    func addBarButtonItems(textField: UITextField, nextOne: UITextField) {
+    func addBarButtonItem(toTextField textField: UITextField, withTitle title: String) {
         let bar = UIToolbar()
-        var next = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextInputIsGrind))
-        if nextOne == coffeeTextField {
-            next = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextInputIsCoffee))
-        }
-
+        let next = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(moveToNextResponder))
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         bar.items = [spacer, next]
         bar.sizeToFit()
         textField.inputAccessoryView = bar
     }
 
-    @objc func nextInputIsCoffee() {
-        coffeeTextField.becomeFirstResponder()
-    }
-
-    @objc func nextInputIsGrind() {
-        grindTextField.becomeFirstResponder()
+    @objc func moveToNextResponder() {
+        if waterTextField.isFirstResponder {
+            coffeeTextField.becomeFirstResponder()
+        } else if coffeeTextField.isFirstResponder {
+            grindTextField.becomeFirstResponder()
+        } else if grindTextField.isFirstResponder {
+            brewTimeTextField.becomeFirstResponder()
+        } else if brewTimeTextField.isFirstResponder {
+            brewTimeTextField.resignFirstResponder()
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,6 +103,13 @@ extension NewBrewDetailsTableViewController: RatingsViewDelegate {
 }
 
 extension NewBrewDetailsTableViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == grindTextField {
+            moveToNextResponder()
+        }
+        return false
+    }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string == "" {

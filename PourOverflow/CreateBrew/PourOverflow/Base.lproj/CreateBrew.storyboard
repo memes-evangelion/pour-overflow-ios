@@ -245,7 +245,7 @@
                                                         <constraint firstAttribute="width" constant="120" id="G1k-yd-Dml"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -341,7 +341,6 @@
                         <outlet property="coffeeTextField" destination="Gcp-in-13a" id="rt2-As-gmy"/>
                         <outlet property="grindTextField" destination="GBj-fI-Ifv" id="moP-CT-k99"/>
                         <outlet property="tastingNotesStatus" destination="BlN-qJ-acL" id="sYd-If-Myh"/>
-                        <outlet property="timeTextField" destination="JxE-j5-Kbc" id="wUD-Zg-4oF"/>
                         <outlet property="waterTextField" destination="SA1-HS-FYd" id="jkG-eV-ysZ"/>
                     </connections>
                 </tableViewController>
