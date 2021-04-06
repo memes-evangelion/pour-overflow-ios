@@ -21,13 +21,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QR1-7J-EX8" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-Lw-BfI">
-                                                <rect key="frame" x="16" y="16" width="382" height="550"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="700"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPw-98-Ymv" userLabel="Aroma Property View" customClass="TastingPropertyView" customModule="PourOverflow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="97"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="127"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Aroma"/>
@@ -45,7 +45,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aab-cg-uQi" userLabel="Acidity Property View" customClass="TastingPropertyView" customModule="PourOverflow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="113" width="382" height="97.5"/>
+                                                        <rect key="frame" x="0.0" y="143" width="382" height="127.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Acidity"/>
@@ -63,7 +63,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLJ-PN-O6d" userLabel="Sweetness Property View" customClass="TastingPropertyView" customModule="PourOverflow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="226.5" width="382" height="97"/>
+                                                        <rect key="frame" x="0.0" y="286.5" width="382" height="127"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Sweetness"/>
@@ -81,7 +81,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E17-E8-bxB" userLabel="Body Property View" customClass="TastingPropertyView" customModule="PourOverflow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="339.5" width="382" height="97.5"/>
+                                                        <rect key="frame" x="0.0" y="429.5" width="382" height="127.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Body"/>
@@ -99,7 +99,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-vf-qPz" userLabel="Finish Property View" customClass="TastingPropertyView" customModule="PourOverflow" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="453" width="382" height="97"/>
+                                                        <rect key="frame" x="0.0" y="573" width="382" height="127"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Finish"/>
@@ -118,11 +118,11 @@
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="550" id="zga-GC-43l"/>
+                                                    <constraint firstAttribute="height" constant="700" id="zga-GC-43l"/>
                                                 </constraints>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notes on flavours" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2k7-dR-EFa" userLabel="Notes Text Field">
-                                                <rect key="frame" x="16" y="598" width="382" height="40"/>
+                                                <rect key="frame" x="16" y="748" width="382" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="8bN-HW-jpE"/>
                                                 </constraints>
@@ -130,7 +130,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h37-oF-Tyy">
-                                                <rect key="frame" x="16" y="654" width="61" height="28"/>
+                                                <rect key="frame" x="16" y="804" width="61" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="ivA-ho-mW5"/>
                                                 </constraints>
@@ -139,19 +139,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srs-Fh-31L">
-                                                <rect key="frame" x="85" y="656" width="25" height="24"/>
+                                                <rect key="frame" x="85" y="806" width="25" height="24"/>
                                                 <connections>
                                                     <action selector="showRatingInfo:" destination="yS2-dd-XeM" eventType="touchUpInside" id="oCu-LR-2Zz"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ay-WH-UfI">
-                                                <rect key="frame" x="370" y="654" width="28" height="25.5"/>
+                                                <rect key="frame" x="370" y="804" width="28" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="we7-gP-Cmg">
-                                                <rect key="frame" x="314" y="650" width="48" height="34"/>
+                                                <rect key="frame" x="314" y="800" width="48" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="48" id="Na1-7l-wba"/>
                                                 </constraints>
