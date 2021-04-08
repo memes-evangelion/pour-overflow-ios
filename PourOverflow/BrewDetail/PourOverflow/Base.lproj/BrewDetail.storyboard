@@ -409,6 +409,7 @@
                         <outlet property="brewDateLabel" destination="Sd1-NP-1M2" id="Wmk-qf-Buz"/>
                         <outlet property="brewImage" destination="o4w-UU-H0N" id="8yx-B5-bsY"/>
                         <outlet property="brewImageButton" destination="IJd-VS-58I" id="QUD-9c-r5y"/>
+                        <outlet property="coffeeGLabel" destination="N2b-jV-NcW" id="SL7-2G-wYO"/>
                         <outlet property="coffeeLabel" destination="mjL-bt-BeA" id="Yoj-gR-5J4"/>
                         <outlet property="finishView" destination="JGb-FI-XXR" id="ffx-mE-bXM"/>
                         <outlet property="grindLabel" destination="Oll-c0-tzh" id="8zy-4v-O6e"/>
@@ -417,6 +418,7 @@
                         <outlet property="sweetnessView" destination="xgl-X2-lnR" id="B2y-Zv-34G"/>
                         <outlet property="timeLabel" destination="GQ3-OX-KnF" id="zr8-fm-V8Z"/>
                         <outlet property="waterLabel" destination="fxw-hX-igW" id="EVj-wV-2aI"/>
+                        <outlet property="waterMlLabel" destination="nmW-Ra-pNf" id="RqC-ug-MfS"/>
                         <outletCollection property="squareViews" destination="SDl-IO-iez" collectionClass="NSMutableArray" id="dxa-R9-0uv"/>
                         <outletCollection property="squareViews" destination="E8C-Ab-HNY" collectionClass="NSMutableArray" id="Sju-1D-Lhj"/>
                         <outletCollection property="squareViews" destination="gdD-M5-Kzm" collectionClass="NSMutableArray" id="5Z9-M0-IHb"/>
