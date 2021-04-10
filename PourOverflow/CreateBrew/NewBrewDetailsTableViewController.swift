@@ -112,6 +112,9 @@ extension NewBrewDetailsTableViewController: UITextFieldDelegate {
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard textField == brewTimeTextField else {
+            return true
+        }
         if string == "" {
             // Delete button was called
             textField.text = "0:00"
@@ -121,6 +124,9 @@ extension NewBrewDetailsTableViewController: UITextFieldDelegate {
     }
 
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard textField == brewTimeTextField else {
+            return
+        }
         guard textField.text != nil else {
             return
         }
