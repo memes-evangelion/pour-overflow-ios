@@ -28,6 +28,8 @@ class BrewDetailViewController: UIViewController {
     @IBOutlet var finishView: TastingPropertyView!
 
     @IBOutlet var brewImageButton: UIButton!
+    @IBOutlet var waterMlLabel: UILabel!
+    @IBOutlet var coffeeGLabel: UILabel!
 
     var brew: Brew!
 
@@ -62,12 +64,34 @@ class BrewDetailViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US")
 
         navigationItem.title = "\(brew.brewMethod.rawValue)"
-        coffeeLabel.text = "\(brew.coffee)"
-        waterLabel.text = "\(brew.water)"
-        if let duration = brew.duration {
-            let truncatedValue = String(format: "%.2f", duration.value)
+        if brew.coffee > 0 {
+            coffeeLabel.text = "\(brew.coffee)"
+        } else {
+            coffeeLabel.text = "-"
+            coffeeGLabel.text = ""
+        }
+        if brew.water > 0 {
+            waterLabel.text = "\(brew.water)"
+        } else {
+            waterLabel.text = "-"
+            waterMlLabel.text = ""
+        }
 
-            timeLabel.text = "\(truncatedValue) s"
+        grindLabel.text = "-"
+        if let grind = brew.grind {
+            if grind != "" {
+                grindLabel.text = "\(grind)"
+            }
+        }
+        
+        if let duration = brew.duration {
+            if duration.value >= 0 {
+                let truncatedValue = String(format: "%.2f", duration.value)
+
+                timeLabel.text = "\(truncatedValue) s"
+            } else {
+                timeLabel.text = "-"
+            }
         }
         brewDateLabel.text = "Brewed: \(dateFormatter.string(from: brew.creationDate))"
         if let brewScore = brew.score {
