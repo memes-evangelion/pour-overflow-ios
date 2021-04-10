@@ -37,7 +37,20 @@ class BrewDetailViewController: UIViewController {
 
     private func setUpTastingPropertyView(tastingView: TastingPropertyView, tastingProperty: TastingProperty?) {
         tastingView.firstSlider.value = Float(tastingProperty?.quantity ?? 1)
+        let quantityValue = tastingProperty?.quantity ?? 1
+        if quantityValue >= 0 {
+            tastingView.quantityValue.text = "\(quantityValue)"
+        } else {
+            tastingView.quantityValue.text = "-"
+        }
+
         tastingView.secondSlider.value = Float(tastingProperty?.quality ?? 1)
+        let qualityValue = tastingProperty?.quality ?? 1
+        if qualityValue >= 0 {
+            tastingView.qualityValue.text = "\(qualityValue)"
+        } else {
+            tastingView.qualityValue.text = "-"
+        }
     }
 
     override func viewDidLoad() {

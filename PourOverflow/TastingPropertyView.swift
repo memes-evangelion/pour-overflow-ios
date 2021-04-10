@@ -18,6 +18,9 @@ class TastingPropertyView: UIView {
     @IBOutlet weak var firstSlider: UISlider!
     @IBOutlet weak var secondSlider: UISlider!
 
+    @IBOutlet var quantityValue: UILabel!
+    @IBOutlet var qualityValue: UILabel!
+
     @IBInspectable
     var title: String? {
         get {
@@ -79,8 +82,23 @@ class TastingPropertyView: UIView {
             secondLabel.textColor = newValue
             firstSlider.tintColor = newValue
             secondSlider.tintColor = newValue
+            quantityValue.textColor = newValue
+            qualityValue.textColor = newValue
         }
     }
+
+    @IBAction func firstSliderUpdate(_ sender: UISlider) {
+        let integerValue = Int(sender.value)
+        sender.setValue(Float(integerValue), animated: true)
+        quantityValue.text = "\(integerValue)"
+    }
+
+    @IBAction func secondSliderUpdate(_ sender: UISlider) {
+        let integerValue = Int(sender.value)
+        sender.setValue(Float(integerValue), animated: true)
+        qualityValue.text = "\(integerValue)"
+    }
+
 
     func createNib() {
         let nib = UINib(nibName: "TastingPropertyView", bundle: Bundle(for: type(of: self)))
