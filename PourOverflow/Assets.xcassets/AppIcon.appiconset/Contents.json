@@ -21,11 +21,13 @@
       "size" : "29x29"
     },
     {
+      "filename" : "spotlight.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "pourlogo@2x-1.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
