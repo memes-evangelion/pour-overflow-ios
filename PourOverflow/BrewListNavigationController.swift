@@ -8,7 +8,7 @@
 import UIKit
 
 class BrewListNavigationController: UINavigationController, UINavigationControllerDelegate {
-    var brewStore: BrewStore!
+    unowned var brewStore: BrewStore!
     var selectedDay: Date?
     var setDoneButton = false
 

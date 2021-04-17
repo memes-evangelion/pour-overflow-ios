@@ -4,7 +4,7 @@
 //
 import Foundation
 
-protocol BrewStore {
+protocol BrewStore: AnyObject {
     var allBrews: [Brew] { get }
     func brewsInDateRange(fromDate: Date, toDate: Date) -> [Brew]
     func brewsInDate(date: Date) -> [Brew]
