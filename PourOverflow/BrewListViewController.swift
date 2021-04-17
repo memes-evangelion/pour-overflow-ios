@@ -11,7 +11,7 @@ class BrewListViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet var searchBar: UISearchBar!
 
     let notificationCenter = NotificationCenter.default
-    var brewStore: BrewStore!
+    unowned var brewStore: BrewStore!
     var selectedDay: Date?
 
     var sectionNames: [String]!

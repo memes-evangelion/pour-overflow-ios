@@ -8,7 +8,7 @@
 import UIKit
 
 class CalendarViewController: UIViewController {
-    var brewStore: BrewStore!
+    unowned var brewStore: BrewStore!
     let notificationCenter = NotificationCenter.default
 
     @IBOutlet var currentMonthLabel: UILabel!

@@ -8,7 +8,7 @@
 import UIKit
 
 class RatingsNavigationViewController: UINavigationController {
-    var ratingsViewDelegate: RatingsViewDelegate?
+    weak var ratingsViewDelegate: RatingsViewDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

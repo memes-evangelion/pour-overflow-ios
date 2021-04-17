@@ -14,7 +14,7 @@ class RatingsViewController: UIViewController {
     @IBOutlet var flavourNotes: UITextField!
     @IBOutlet var ratingTextField: UITextField!
 
-    var delegate: RatingsViewDelegate?
+    weak var delegate: RatingsViewDelegate?
 
     @IBAction func saveRatings(_ sender: UIBarButtonItem) {
         var tastingRatings : [(name: String, tasting: TastingProperty)] = []

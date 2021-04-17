@@ -8,7 +8,7 @@
 import UIKit
 
 class CreateBrewNavigationController: UINavigationController {
-    var brewStore: BrewStore!
+    unowned var brewStore: BrewStore!
 
     override func viewDidLoad() {
         super.viewDidLoad()

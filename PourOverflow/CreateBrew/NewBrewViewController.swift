@@ -12,7 +12,7 @@ class NewBrewViewController: UIViewController {
     @IBOutlet var coffeeIcon: UIImageView!
     @IBOutlet var brewPhotoImageView: UIImageView!
 
-    var brewStore: BrewStore!
+    unowned var brewStore: BrewStore!
     var brewDetails: BrewDetails?
 
     @IBAction func cancelCreation(_ sender: UIBarButtonItem) {
