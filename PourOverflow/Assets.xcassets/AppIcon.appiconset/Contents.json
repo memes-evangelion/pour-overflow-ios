@@ -21,25 +21,24 @@
       "size" : "29x29"
     },
     {
-      "filename" : "spotlight.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "pourlogo@2x-1.png",
+      "filename" : "60 x 60 @2x-1.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "pourlogo@2x.png",
+      "filename" : "60 x 60 @2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "pourlogo@3x.png",
+      "filename" : "60 x 60 @3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -85,12 +84,13 @@
       "size" : "76x76"
     },
     {
+      "filename" : "83.5 x 83.5 @2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "appstorepourover.png",
+      "filename" : "1024 x1024 @1x.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

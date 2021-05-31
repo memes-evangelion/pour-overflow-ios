@@ -60,6 +60,7 @@ class NewBrewViewController: UIViewController {
         }
     }
 
+    @available(iOS 13.0, *)
     @IBAction func chooseImage(_ sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.modalPresentationStyle = .automatic
@@ -92,6 +93,7 @@ class NewBrewViewController: UIViewController {
     }
 }
 
+//@available(iOS 13.0, *)
 extension NewBrewViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
